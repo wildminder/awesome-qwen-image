@@ -112,6 +112,11 @@
 [badge-UD-Q2_K_XL]: https://img.shields.io/badge/UD-Q2__K__XL-e05d44?style=flat-square
 [badge-UD-Q3_K_XL]: https://img.shields.io/badge/UD-Q3__K__XL-fe7d37?style=flat-square
 
+<!-- TASK BADGES -->
+[task-t2i]: https://img.shields.io/badge/text%20%E2%86%92%20image-0077cc?style=flat-square
+[task-i2i]: https://img.shields.io/badge/image%20%E2%86%92%20image-6f42c1?style=flat-square
+[task-both]: https://img.shields.io/badge/both-17a2b8?style=flat-square
+
 <!-- TYPE BADGES -->
 [ltype-fix]: https://img.shields.io/badge/Fix-0077cc?style=flat-square
 [ltype-style]: https://img.shields.io/badge/Style-6f42c1?style=flat-square
