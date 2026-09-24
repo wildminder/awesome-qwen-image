@@ -12,7 +12,11 @@ Non-CUDA runtimes and specialized accelerator backends.
 | :--- | :---: | :---: | :---: | :---: | :--- |
 | **MLX 8bit** | MLX (mflux) | ![int8][badge-int8] | 24.04 GB | [![][gh-JoyFusionAI]](https://huggingface.co/JoyFusionAI/Qwen-Image-2.1-MLX-8bit) | For [mflux](https://github.com/filipstrand/mflux). 13 TE shards. |
 | **Coreml** | CoreML `.mlpackage` | ![bf16][badge-bf16] | 14.74 GB | [![][gh-devin--lai]](https://huggingface.co/devin-lai/Qwen-Image-2.1-Coreml) | 4 transformer blocks (~3.5 GB each) + embed + VAE decoder. |
+| **QIPACK base** | QIPACK1 `.qipack` | ![fp16][badge-fp16] | 14.23 GB | [![][gh-netdur]](https://huggingface.co/netdur/Qwen-Image-2.1-QIPACK) | For the native C++/Metal [qwen-image-cplus](https://github.com/netdur/qwen-image-cplus) runtime. 40-step base, defaults to TaylorSeer caching. |
+| **QIPACK distilled** | QIPACK1 `.qipack` | ![fp16][badge-fp16] | 14.23 GB | [![][gh-netdur]](https://huggingface.co/netdur/Qwen-Image-2.1-QIPACK) | Same runtime, 4-step. The Viggle v0.1 **full fine-tune**, not its LoRA and not v0.2.1. |
 | **MLX 4bit** | MLX | ![int4][badge-int4] | 11.59 GB | [![][gh-themindstudio]](https://huggingface.co/themindstudio/Qwen-Image-2.1-MLX-4bit) | Smallest viable Apple build. |
+
+The two QIPACK packs carry the transformer only — the text encoder, VAE, tokenizer and processor still come from the official Qwen snapshot, so you need a local copy of those alongside them. Needs macOS 14+. 1024×1024 works; 2048×2048 does not yet.
 
 <p id="port-mnn" align="center">· · · · · · · · · · · · · ·</p>
 

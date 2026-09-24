@@ -47,6 +47,7 @@
 [gh-kkxao]: https://img.shields.io/badge/kkxao-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-ling0322]: https://img.shields.io/badge/ling0322-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-mingyi456]: https://img.shields.io/badge/mingyi456-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-netdur]: https://img.shields.io/badge/netdur-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-ped4enko]: https://img.shields.io/badge/ped4enko-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-pottokao]: https://img.shields.io/badge/pottokao-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-prithivMLmods]: https://img.shields.io/badge/prithivMLmods-lightgrey?style=flat-square&logo=huggingface&logoColor=white
@@ -54,6 +55,7 @@
 [gh-t8star]: https://img.shields.io/badge/t8star-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-themindstudio]: https://img.shields.io/badge/themindstudio-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-unsloth]: https://img.shields.io/badge/unsloth-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-xingewh]: https://img.shields.io/badge/xingewh-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-yunfengwang]: https://img.shields.io/badge/yunfengwang-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-zcf0508]: https://img.shields.io/badge/zcf0508-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 

@@ -1,28 +1,10 @@
-<!--
-  README.md is generated: scripts/build_readme.py concatenates blocks/*.md in
-  filename order. To change this document, edit the block for your section --
-  never README.md, or the next build will overwrite it.
-
-    00_header.md                        title, badges, TOC, quick start
-    10_official_checkpoints.md          base model, ComfyUI official
-    20_text_encoders_prompt_engines.md  rewriters, heretic, text encoders
-    30_quantizations.md                 GGUF, 4/8-bit, FP8, Nunchaku
-    40_turbo.md                         turbo & step distillation
-    50_loras.md                         LoRA & adapters
-    60_platform_ports.md                Apple, MNN, AMD/domestic, VAE
-    70_tools.md                         tools & notebooks
-    80_contributing.md                  how to add an entry
-    99_footer.md                        badge and link definitions
-
-  The GGUF table in 30_quantizations.md is generated from Hugging Face API
-  data and spliced in at a marker line; edit around the marker, not the rows.
--->
-
 # Awesome Qwen-Image 2.1
 
 A curated list of checkpoints, quants, prompt engines, LoRAs, and tooling for **Qwen-Image 2.1** — Alibaba's 7B unified text-to-image and image-editing model.
 
 <div align="center">
+
+<img alt="awesome-qwen-image" src="https://github.com/user-attachments/assets/ea5c1e84-e58b-498f-9627-15e63154059d" />
 
 [![Hugging Face][hf-shield]][hf-url]
 [![License][lic-shield]][lic-url]
@@ -268,7 +250,7 @@ Every FP4 / NVFP4 / MXFP4 / INT8 / INT4 / W4A4 conversion in one place.
 | :--- | :---: | :---: | :---: | :--- |
 | **Darkstar ModelOpt FP8** | ![fp8][badge-fp8] | 26.33 GB | [![][gh-HangGlidersRule]](https://huggingface.co/HangGlidersRule/Darkstar-Qwen-Image-2.1-Base-ModelOpt-FP8) | NVIDIA ModelOpt-derived, full repo. |
 | **FP8** | ![fp8][badge-fp8] | 17.96 GB | [![][gh-Rin247]](https://huggingface.co/Rin247/Qwen-Image-2.1-FP8) | Closest thing to a drop-in smaller BF16. |
-| **Uncensored BF16 SafeTensor** | ![bf16][badge-bf16] | 14.23 GB | ⚠️ [![][gh-dh123456789123]](https://huggingface.co/dh123456789123/Qwen-Image-2.1-Uncensored-BF16-SafeTensor/resolve/main/qwen-image-2.1-UC-BF16_bf16.safetensors) | Single file. |
+| **Uncensored BF16 SafeTensor** | ![bf16][badge-bf16] | 14.23 GB | ⚠️ [![][gh-dh123456789123]](https://huggingface.co/dh123456789123/Qwen-Image-2.1-Uncensored-BF16-SafeTensor/resolve/main/qwen-image-2.1-UC-BF16_bf16.safetensors) ┊ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-bf16-unet/resolve/main/Qwen-Image-2.1-_bf16%E6%97%A0%E5%AE%A1%E6%9F%A5.safetensors) | Single 14.23 GB file — the full DiT in one piece, mirrored by both repos. |
 | **DF11 ComfyUI** | ![bf16][badge-bf16] | 9.72 GB | [![][gh-mingyi456]](https://huggingface.co/mingyi456/Qwen-Image-2.1-DF11-ComfyUI/resolve/main/qwen_image_2.1_bf16-DF11.safetensors) | `qwen_image_2.1_bf16-DF11.safetensors`. |
 
 <p id="quant-nunchaku" align="center">· · · · · · · · · · · · · ·</p>
@@ -312,21 +294,24 @@ DiT-only quants for ComfyUI-GGUF, from the **v0.1 full fine-tune** (4-step). Bot
 
 ### ▣ Official &amp; converted
 
-Repo links: **[Viggle](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo)** · **[alibaba-pai](https://huggingface.co/alibaba-pai/Qwen-Image-2.1-Fun-Acc-LoRAs)** · **[chfm](https://huggingface.co/chfm/Qwen-Image-2.1-viggle-turbo)** (v0.2 snapshot) · **[t8star](https://huggingface.co/t8star/Qwen-Image-2.1-viggle-turbo-4step-r64-comfy)** · **[RunningHubAI](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-viggle-turbo-4step-r64-comfyui-t8-lora)** · **[addlabsviral](https://huggingface.co/addlabsviral/qwen-image2.1-turbo-bf16)** · **[cgb](https://huggingface.co/cgb/Qwen-Image-2.1-Turbo-ONNX)**
+Repo links: **[Viggle](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo)** · **[alibaba-pai](https://huggingface.co/alibaba-pai/Qwen-Image-2.1-Fun-Acc-LoRAs)** · **[chfm](https://huggingface.co/chfm/Qwen-Image-2.1-viggle-turbo)** (v0.2 snapshot) · **[t8star](https://huggingface.co/t8star/Qwen-Image-2.1-viggle-turbo-4step-r64-comfy)** · **[xingewh](https://huggingface.co/xingewh/Qwen-Image-2.1-viggle-turbo-v0.2-5step-lora-r256_comfy)** · **[RunningHubAI](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-viggle-turbo-4step-r64-comfyui-t8-lora)** · **[addlabsviral](https://huggingface.co/addlabsviral/qwen-image2.1-turbo-bf16)** · **[cgb](https://huggingface.co/cgb/Qwen-Image-2.1-Turbo-ONNX)**
+
+Two ComfyUI conversions of the v0.2.1 adapters exist and are not interchangeable. **[xingewh](https://huggingface.co/xingewh/Qwen-Image-2.1-viggle-turbo-v0.2-5step-lora-r256_comfy)** re-keys the weights for ComfyUI and loads with the stock `Load LoRA` node. **[t8star](https://huggingface.co/t8star/Qwen-Image-2.1-viggle-turbo-4step-r64-comfy)** fuses gate/up for ComfyUI's merged MLP, which is why its files are larger; load those with the built-in `LoraLoaderBypassModelOnly` at strength 1.0 on a **BF16** base, because ordinary merging loaders lose adapter updates to rounding.
 
 | Name | Steps | Precision | Size | Links | Notes |
 | :--- | :---: | :---: | :---: | :---: | :--- |
-| **v0.2.1 LoRA r256** | 6 | ![bf16][badge-bf16] | 1.36 GB | [![][gh-Viggle]](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/resolve/main/Qwen-Image-2.1-viggle-turbo-v0.2.1-6step-lora-r256.safetensors) | **Start here.** Sharpest and most faithful to the 40-step base; runs the demo Space. Load on the base transformer at runtime — do not merge. |
-| **v0.2.1 LoRA r128** | 6 | ![bf16][badge-bf16] | 0.68 GB | [![][gh-Viggle]](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/resolve/main/Qwen-Image-2.1-viggle-turbo-v0.2.1-6step-lora-r128.safetensors) | Same adapter cut to rank 128; what the shipped ComfyUI workflows use. |
+| **v0.2.1 LoRA r256** | 6 | ![bf16][badge-bf16] | 1.36 / 1.36 / 1.76 GB | [![][gh-Viggle]](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/resolve/main/Qwen-Image-2.1-viggle-turbo-v0.2.1-6step-lora-r256.safetensors) ┊ [![][gh-xingewh]](https://huggingface.co/xingewh/Qwen-Image-2.1-viggle-turbo-v0.2-5step-lora-r256_comfy/resolve/main/Qwen-Image-2.1-viggle-turbo-v0.2.1-6step-lora-r256_comfy.safetensors) ┊ [![][gh-t8star]](https://huggingface.co/t8star/Qwen-Image-2.1-viggle-turbo-4step-r64-comfy/resolve/main/qwen_image_2.1_viggle_turbo_v0.2.1_r256_comfy.safetensors) | **Start here.** Sharpest and most faithful to the 40-step base; runs the demo Space. Load on the base transformer at runtime — do not merge. |
+| **v0.2.1 LoRA r128** | 6 | ![bf16][badge-bf16] | 0.68 / 0.68 / 0.88 GB | [![][gh-Viggle]](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/resolve/main/Qwen-Image-2.1-viggle-turbo-v0.2.1-6step-lora-r128.safetensors) ┊ [![][gh-xingewh]](https://huggingface.co/xingewh/Qwen-Image-2.1-viggle-turbo-v0.2-5step-lora-r256_comfy/resolve/main/Qwen-Image-2.1-viggle-turbo-v0.2.1-6step-lora-r128_comfy.safetensors) ┊ [![][gh-t8star]](https://huggingface.co/t8star/Qwen-Image-2.1-viggle-turbo-4step-r64-comfy/resolve/main/qwen_image_2.1_viggle_turbo_v0.2.1_r128_comfy.safetensors) | Same adapter cut to rank 128; what the shipped ComfyUI workflows use. |
 | **v0.2.1 adapter (peft)** | 6 | ![fp32][badge-fp32] | 2.72 GB | [![][gh-Viggle]](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/tree/main/peft_v0.2.1) | The v0.2.1 LoRA in PEFT key format, F32 as trained. |
-| **v0.2 LoRA r256** | 5 / 6 | ![bf16][badge-bf16] | 1.36 GB | [![][gh-Viggle]](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/resolve/main/Qwen-Image-2.1-viggle-turbo-v0.2-5step-lora-r256.safetensors) ┊ [![][gh-chfm]](https://huggingface.co/chfm/Qwen-Image-2.1-viggle-turbo/resolve/main/Qwen-Image-2.1-viggle-turbo-v0.2-5step-lora-r256.safetensors) | Step 600 of the same run. The `5step` in the name is the launch schedule; sample at 6 like v0.2.1. |
+| **v0.2 LoRA r256** | 5 / 6 | ![bf16][badge-bf16] | 1.36 GB | [![][gh-Viggle]](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/resolve/main/Qwen-Image-2.1-viggle-turbo-v0.2-5step-lora-r256.safetensors) ┊ [![][gh-chfm]](https://huggingface.co/chfm/Qwen-Image-2.1-viggle-turbo/resolve/main/Qwen-Image-2.1-viggle-turbo-v0.2-5step-lora-r256.safetensors) ┊ [![][gh-xingewh]](https://huggingface.co/xingewh/Qwen-Image-2.1-viggle-turbo-v0.2-5step-lora-r256_comfy/resolve/main/Qwen-Image-2.1-viggle-turbo-v0.2-5step-lora-r256_comfy.safetensors) | Step 600 of the same run. The `5step` in the name is the launch schedule; sample at 6 like v0.2.1. |
 | **v0.2 LoRA r128** | 5 / 6 | ![bf16][badge-bf16] | 0.68 GB | [![][gh-Viggle]](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/resolve/main/Qwen-Image-2.1-viggle-turbo-v0.2-5step-lora-r128.safetensors) | Rank-128 cut of v0.2. |
 | **v0.1 full fine-tune** | 4 | ![bf16][badge-bf16] | 14.23 GB | [![][gh-Viggle]](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/tree/main/transformer) | Merged transformer, no LoRA needed. This is what the GGUF quants above were built from. |
 | **v0.1 LoRA r64** | 4 | ![bf16][badge-bf16] | 0.34 GB | [![][gh-Viggle]](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/resolve/main/Qwen-Image-2.1-viggle-turbo-4step-lora-r64.safetensors) ┊ [![][gh-t8star]](https://huggingface.co/t8star/Qwen-Image-2.1-viggle-turbo-4step-r64-comfy/resolve/main/Qwen-Image-2.1-viggle-turbo-4step-r64-comfyui-T8.safetensors) ┊ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-viggle-turbo-4step-r64-comfyui-t8-lora/resolve/main/Qwen-Image-2.1-viggle-turbo-4step-r64-comfyui-T8.safetensors) | Superseded — diversity collapsed to 0.75× base and the output was visibly softer. Kept for reproducibility. |
 | **Fun-Acc 4Step (PDD)** | 4 | ![bf16][badge-bf16] | 0.35 GB | [![][gh-alibaba--pai]](https://huggingface.co/alibaba-pai/Qwen-Image-2.1-Fun-Acc-LoRAs/resolve/main/models/Qwen-Image-2.1-Fun-Acc-4Step.safetensors) | **Official Alibaba PAI line**, rank 64, via Parallel Decoding Distillation. Independent of Viggle — 4 NFE for both T2I and instruction editing. | 
-| **Turbo BF16 diffusers** | 4 | ![bf16][badge-bf16] | 32.44 GB | [![][gh-addlabsviral]](https://huggingface.co/addlabsviral/qwen-image2.1-turbo-bf16) | Full pipeline (TE + DiT + VAE), ready to load with `QwenImage21Pipeline`. DiT is byte-identical in size to the v0.1 transformer above, re-sharded 2-way. |
+| **Turbo BF16 diffusers** | 4 | ![bf16][badge-bf16] | 32.44 GB | [![][gh-addlabsviral]](https://huggingface.co/addlabsviral/qwen-image2.1-turbo-bf16) | Full pipeline (TE + DiT + VAE), ready to load with `QwenImage21Pipeline`. |
 | **Turbo FP4 diffusers** | 4 | ![fp4][badge-fp4] | 11.41 GB | [![][gh-addlabsviral]](https://huggingface.co/addlabsviral/qwen-image2.1-turbo-fp4) | Same v0.1 pipeline with an FP4 DiT; the TE is the larger half at 6.73 GB. |
 | **Turbo ONNX (browser)** | 4 | ![int4][badge-int4] | ~17.2 GB | [![][gh-cgb]](https://huggingface.co/cgb/Qwen-Image-2.1-Turbo-ONNX) | r64 LoRA merged into the denoiser, then Q4 MatMulNBits. WebGPU in-browser; needs the FreeGen pipeline and a desktop adapter. Experimental. |
+
 <p id="lora" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
 
 ## ◉ LoRA &amp; adapters
@@ -339,6 +324,7 @@ Style, control, and fix adapters. All target the base DiT unless noted.
 | **Fix** | ![Fix][ltype-fix] | ![bf16][badge-bf16] | 0.11 GB | [![][gh-e--n--v--y]](https://huggingface.co/e-n-v-y/Qwen-Image-2.1-Fix/resolve/main/qwen-image-2.1-fix-1.0-comfy.safetensors) | The most-liked community LoRA. |
 | **De-AI LoRA pack** | ![Style][ltype-style] | ![bf16][badge-bf16] | 2.45 GB | [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1ai-lora) | 8-file "remove the AI look" pack (CN filenames). |
 | **Object Mover Bbox Preview** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.50 GB | [![][gh-prithivMLmods]](https://huggingface.co/prithivMLmods/Qwen-Image-2.1-Object-Mover-Bbox-Preview) | Bbox object *moving*, 6 checkpoints. |
+| **Orbit Alpha** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.17 GB | [![][gh-ML--Intern--lab]](https://huggingface.co/ML-Intern-lab/Qwen-Image-2.1-camera-control/resolve/main/checkpoints/steps2000res768/orbit_alpha_lora_gate_up_split.safetensors) | **Official ML-Intern-lab.** One RGBA image in, the same object from a new viewpoint out. Rank 32, 2,000 steps at 768 px. Use the `_gate_up_split` file — the other checkpoint in the repo does not load correctly. `<orbit>` grammar, 40 steps, no CFG. |
 | **Object Remover Bbox Preview** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.50 GB | [![][gh-prithivMLmods]](https://huggingface.co/prithivMLmods/Qwen-Image-2.1-Object-Remover-Bbox-Preview) | Bbox object removal, full-quality variant. |
 | **Natural Exposure LoRA** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.42 GB | [![][gh-prithivMLmods]](https://huggingface.co/prithivMLmods/Qwen-Image-2.1-Natural-Exposure-LoRA) | Exposure correction, 5 checkpoints. |
 | **Object Remover Bbox turbo** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.42 GB | [![][gh-prithivMLmods]](https://huggingface.co/prithivMLmods/Qwen-Image-2.1-Object-Remover-Bbox-turbo) | 4-step-compatible variant. |
@@ -366,7 +352,11 @@ Non-CUDA runtimes and specialized accelerator backends.
 | :--- | :---: | :---: | :---: | :---: | :--- |
 | **MLX 8bit** | MLX (mflux) | ![int8][badge-int8] | 24.04 GB | [![][gh-JoyFusionAI]](https://huggingface.co/JoyFusionAI/Qwen-Image-2.1-MLX-8bit) | For [mflux](https://github.com/filipstrand/mflux). 13 TE shards. |
 | **Coreml** | CoreML `.mlpackage` | ![bf16][badge-bf16] | 14.74 GB | [![][gh-devin--lai]](https://huggingface.co/devin-lai/Qwen-Image-2.1-Coreml) | 4 transformer blocks (~3.5 GB each) + embed + VAE decoder. |
+| **QIPACK base** | QIPACK1 `.qipack` | ![fp16][badge-fp16] | 14.23 GB | [![][gh-netdur]](https://huggingface.co/netdur/Qwen-Image-2.1-QIPACK) | For the native C++/Metal [qwen-image-cplus](https://github.com/netdur/qwen-image-cplus) runtime. 40-step base, defaults to TaylorSeer caching. |
+| **QIPACK distilled** | QIPACK1 `.qipack` | ![fp16][badge-fp16] | 14.23 GB | [![][gh-netdur]](https://huggingface.co/netdur/Qwen-Image-2.1-QIPACK) | Same runtime, 4-step. The Viggle v0.1 **full fine-tune**, not its LoRA and not v0.2.1. |
 | **MLX 4bit** | MLX | ![int4][badge-int4] | 11.59 GB | [![][gh-themindstudio]](https://huggingface.co/themindstudio/Qwen-Image-2.1-MLX-4bit) | Smallest viable Apple build. |
+
+The two QIPACK packs carry the transformer only — the text encoder, VAE, tokenizer and processor still come from the official Qwen snapshot, so you need a local copy of those alongside them. Needs macOS 14+. 1024×1024 works; 2048×2048 does not yet.
 
 <p id="port-mnn" align="center">· · · · · · · · · · · · · ·</p>
 
@@ -517,6 +507,7 @@ new number.
 [gh-kkxao]: https://img.shields.io/badge/kkxao-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-ling0322]: https://img.shields.io/badge/ling0322-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-mingyi456]: https://img.shields.io/badge/mingyi456-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-netdur]: https://img.shields.io/badge/netdur-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-ped4enko]: https://img.shields.io/badge/ped4enko-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-pottokao]: https://img.shields.io/badge/pottokao-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-prithivMLmods]: https://img.shields.io/badge/prithivMLmods-lightgrey?style=flat-square&logo=huggingface&logoColor=white
@@ -524,6 +515,7 @@ new number.
 [gh-t8star]: https://img.shields.io/badge/t8star-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-themindstudio]: https://img.shields.io/badge/themindstudio-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-unsloth]: https://img.shields.io/badge/unsloth-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-xingewh]: https://img.shields.io/badge/xingewh-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-yunfengwang]: https://img.shields.io/badge/yunfengwang-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-zcf0508]: https://img.shields.io/badge/zcf0508-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 

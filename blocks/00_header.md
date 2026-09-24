@@ -1,28 +1,10 @@
-<!--
-  README.md is generated: scripts/build_readme.py concatenates blocks/*.md in
-  filename order. To change this document, edit the block for your section --
-  never README.md, or the next build will overwrite it.
-
-    00_header.md                        title, badges, TOC, quick start
-    10_official_checkpoints.md          base model, ComfyUI official
-    20_text_encoders_prompt_engines.md  rewriters, heretic, text encoders
-    30_quantizations.md                 GGUF, 4/8-bit, FP8, Nunchaku
-    40_turbo.md                         turbo & step distillation
-    50_loras.md                         LoRA & adapters
-    60_platform_ports.md                Apple, MNN, AMD/domestic, VAE
-    70_tools.md                         tools & notebooks
-    80_contributing.md                  how to add an entry
-    99_footer.md                        badge and link definitions
-
-  The GGUF table in 30_quantizations.md is generated from Hugging Face API
-  data and spliced in at a marker line; edit around the marker, not the rows.
--->
-
 # Awesome Qwen-Image 2.1
 
 A curated list of checkpoints, quants, prompt engines, LoRAs, and tooling for **Qwen-Image 2.1** — Alibaba's 7B unified text-to-image and image-editing model.
 
 <div align="center">
+
+<img alt="awesome-qwen-image" src="https://github.com/user-attachments/assets/ea5c1e84-e58b-498f-9627-15e63154059d" />
 
 [![Hugging Face][hf-shield]][hf-url]
 [![License][lic-shield]][lic-url]
