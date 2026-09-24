@@ -208,11 +208,11 @@ Community conversions of the base DiT. Sizes are total weight bytes per repo. Di
 
 ### ▣ GGUF
 
-For llama.cpp and anything that reads GGUF. Q4_K_M is the usual quality/size balance point. Each row is one downloadable file — the owner badge in the last column links straight to it.
+Transformer-only weights for llama.cpp, sorted from the highest quant down. **Q4_K_M** is the usual quality/size balance point. **[Unsloth](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF)** is the primary source — it carries the widest ladder, so it wins every quant it ships. Where two repos offer a quant Unsloth does not, both are linked in the same cell.
 
 <!--GGUF_ROWS-->
 
-For **sd.cpp**, not stock llama.cpp. `gguf-org` was transferred from `chatpig` — the old URL redirects.
+**On the omitted repos.** [realrebelai](https://huggingface.co/realrebelai/Qwen-Image-2.1_GGUFs) (legacy Q2–Q8), [vantagewithai](https://huggingface.co/vantagewithai/Qwen-Image-2.1-ComfyUI-GGUF) (Q3_K_M–Q8_0) and [pottokao](https://huggingface.co/pottokao/Qwen-Image-2.1-DiT-GGUF) (Q4_K_M/Q6_K/Q8_0) each ship a subset of the Unsloth ladder under another name, so their duplicates are dropped here. [0xSojalSec](https://huggingface.co/0xSojalSec/Qwen-Image-2.1-Uncensored-HF) mirrors the abenzerps uncensored weights byte for byte. `gguf-org` was transferred from `chatpig` — the old URL redirects.
 
 <p id="quant-lowbit" align="center">· · · · · · · · · · · · · ·</p>
 

@@ -73,6 +73,7 @@
 <!-- PRECISION BADGES -->
 [badge-bf16]: https://img.shields.io/badge/bf16-0077cc?style=flat-square
 [badge-fp16]: https://img.shields.io/badge/fp16-0077cc?style=flat-square
+[badge-f16]: https://img.shields.io/badge/F16-0077cc?style=flat-square
 [badge-fp32]: https://img.shields.io/badge/fp32-6c757d?style=flat-square
 [badge-fp8]: https://img.shields.io/badge/fp8-28a745?style=flat-square
 [badge-fp4]: https://img.shields.io/badge/fp4-20c997?style=flat-square
@@ -90,19 +91,25 @@
 [badge-Q6]: https://img.shields.io/badge/Q6-0077cc?style=flat-square
 [badge-Q8]: https://img.shields.io/badge/Q8-28a745?style=flat-square
 [badge-Q2_K]: https://img.shields.io/badge/Q2__K-e05d44?style=flat-square
+[badge-q2k]: https://img.shields.io/badge/Q2__K-e05d44?style=flat-square
 [badge-Q3_K_M]: https://img.shields.io/badge/Q3__K__M-fe7d37?style=flat-square
+[badge-q3km]: https://img.shields.io/badge/Q3__K__M-fe7d37?style=flat-square
 [badge-Q3_K_S]: https://img.shields.io/badge/Q3__K__S-fe7d37?style=flat-square
 [badge-Q3_K_XL]: https://img.shields.io/badge/Q3__K__XL-ff3b30?style=flat-square
 [badge-Q4_0]: https://img.shields.io/badge/Q4__0-dfb317?style=flat-square
 [badge-Q4_1]: https://img.shields.io/badge/Q4__1-dfb317?style=flat-square
 [badge-Q4_K_M]: https://img.shields.io/badge/Q4__K__M-dfb317?style=flat-square
+[badge-q4km]: https://img.shields.io/badge/Q4__K__M-dfb317?style=flat-square
 [badge-Q4_K_S]: https://img.shields.io/badge/Q4__K__S-dfb317?style=flat-square
 [badge-Q5_0]: https://img.shields.io/badge/Q5__0-97c00f?style=flat-square
 [badge-Q5_1]: https://img.shields.io/badge/Q5__1-97c00f?style=flat-square
 [badge-Q5_K_M]: https://img.shields.io/badge/Q5__K__M-97c00f?style=flat-square
+[badge-q5km]: https://img.shields.io/badge/Q5__K__M-97c00f?style=flat-square
 [badge-Q5_K_S]: https://img.shields.io/badge/Q5__K__S-97c00f?style=flat-square
 [badge-Q6_K]: https://img.shields.io/badge/Q6__K-0077cc?style=flat-square
+[badge-q6k]: https://img.shields.io/badge/Q6__K-0077cc?style=flat-square
 [badge-Q8_0]: https://img.shields.io/badge/Q8__0-28a745?style=flat-square
+[badge-q8]: https://img.shields.io/badge/Q8__0-28a745?style=flat-square
 [badge-IQ1_S]: https://img.shields.io/badge/IQ1__S-b02a37?style=flat-square
 [badge-IQ1_M]: https://img.shields.io/badge/IQ1__M-d64545?style=flat-square
 [badge-UD-Q2_K_XL]: https://img.shields.io/badge/UD-Q2__K__XL-e05d44?style=flat-square

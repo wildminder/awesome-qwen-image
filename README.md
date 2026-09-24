@@ -208,61 +208,33 @@ Community conversions of the base DiT. Sizes are total weight bytes per repo. Di
 
 ### ▣ GGUF
 
-For llama.cpp and anything that reads GGUF. Q4_K_M is the usual quality/size balance point. Each row is one downloadable file — the owner badge in the last column links straight to it.
+Transformer-only weights for llama.cpp, sorted from the highest quant down. **Q4_K_M** is the usual quality/size balance point. **[Unsloth](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF)** is the primary source — it carries the widest ladder, so it wins every quant it ships. Where two repos offer a quant Unsloth does not, both are linked in the same cell.
 
-| Name | Quant | Size | Links |
-| :--- | :---: | ---: | :---: |
-| **Unsloth GGUF** | ![F16][badge-fp16] | 14.23 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF/resolve/main/qwen-image-2.1-F16.gguf) |
-| **Unsloth GGUF** | ![Q2_K][badge-Q2_K] | 2.47 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF/resolve/main/qwen-image-2.1-Q2_K.gguf) |
-| **Unsloth GGUF** | ![Q3_K_M][badge-Q3_K_M] | 3.17 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF/resolve/main/qwen-image-2.1-Q3_K_M.gguf) |
-| **Unsloth GGUF** | ![Q3_K_S][badge-Q3_K_S] | 2.72 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF/resolve/main/qwen-image-2.1-Q3_K_S.gguf) |
-| **Unsloth GGUF** | ![Q3_K_XL][badge-Q3_K_XL] | 3.61 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF/resolve/main/qwen-image-2.1-Q3_K_XL.gguf) |
-| **Unsloth GGUF** | ![Q4_K_M][badge-Q4_K_M] | 4.20 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF/resolve/main/qwen-image-2.1-Q4_K_M.gguf) |
-| **Unsloth GGUF** | ![Q4_K_S][badge-Q4_K_S] | 3.91 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF/resolve/main/qwen-image-2.1-Q4_K_S.gguf) |
-| **Unsloth GGUF** | ![Q5_K_M][badge-Q5_K_M] | 5.39 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF/resolve/main/qwen-image-2.1-Q5_K_M.gguf) |
-| **Unsloth GGUF** | ![Q5_K_S][badge-Q5_K_S] | 4.50 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF/resolve/main/qwen-image-2.1-Q5_K_S.gguf) |
-| **Unsloth GGUF** | ![Q6_K][badge-Q6_K] | 6.27 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF/resolve/main/qwen-image-2.1-Q6_K.gguf) |
-| **Unsloth GGUF** | ![Q6_K][badge-Q6_K] | 6.72 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF/resolve/main/qwen-image-2.1-Q6_K_XL.gguf) |
-| **Unsloth GGUF** | ![Q8_0][badge-Q8_0] | 7.64 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF/resolve/main/qwen-image-2.1-Q8_0.gguf) |
-| **Uncensored GGUF** | ![BF16][badge-bf16] | 14.23 GB | [![][gh-abenzerps]](https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF/resolve/main/qwen-image-2.1-UC-BF16.gguf) |
-| **Uncensored GGUF** | ![Q4_0][badge-Q4_0] | 4.15 GB | [![][gh-abenzerps]](https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF/resolve/main/qwen-image-2.1-UC-Q4_0.gguf) |
-| **Uncensored GGUF** | ![Q4_K_M][badge-Q4_K_M] | 4.60 GB | [![][gh-abenzerps]](https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF/resolve/main/qwen-image-2.1-UC-Q4_K_M.gguf) |
-| **Uncensored GGUF** | ![Q5_K_M][badge-Q5_K_M] | 5.22 GB | [![][gh-abenzerps]](https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF/resolve/main/qwen-image-2.1-UC-Q5_K_M.gguf) |
-| **Uncensored GGUF** | ![Q6_K][badge-Q6_K] | 5.88 GB | [![][gh-abenzerps]](https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF/resolve/main/qwen-image-2.1-UC-Q6_K.gguf) |
-| **Uncensored GGUF** | ![Q8_0][badge-Q8_0] | 7.59 GB | [![][gh-abenzerps]](https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF/resolve/main/qwen-image-2.1-UC-Q8_0.gguf) |
-| **Uncensored HF** | ![BF16][badge-bf16] | 14.23 GB | [![][gh-0xSojalSec]](https://huggingface.co/0xSojalSec/Qwen-Image-2.1-Uncensored-HF/resolve/main/qwen-image-2.1-UC-BF16.gguf) |
-| **Uncensored HF** | ![Q4_0][badge-Q4_0] | 4.15 GB | [![][gh-0xSojalSec]](https://huggingface.co/0xSojalSec/Qwen-Image-2.1-Uncensored-HF/resolve/main/qwen-image-2.1-UC-Q4_0.gguf) |
-| **Uncensored HF** | ![Q4_K_M][badge-Q4_K_M] | 4.60 GB | [![][gh-0xSojalSec]](https://huggingface.co/0xSojalSec/Qwen-Image-2.1-Uncensored-HF/resolve/main/qwen-image-2.1-UC-Q4_K_M.gguf) |
-| **Uncensored HF** | ![Q5_K_M][badge-Q5_K_M] | 5.22 GB | [![][gh-0xSojalSec]](https://huggingface.co/0xSojalSec/Qwen-Image-2.1-Uncensored-HF/resolve/main/qwen-image-2.1-UC-Q5_K_M.gguf) |
-| **Uncensored HF** | ![Q6_K][badge-Q6_K] | 5.88 GB | [![][gh-0xSojalSec]](https://huggingface.co/0xSojalSec/Qwen-Image-2.1-Uncensored-HF/resolve/main/qwen-image-2.1-UC-Q6_K.gguf) |
-| **Uncensored HF** | ![Q8_0][badge-Q8_0] | 7.59 GB | [![][gh-0xSojalSec]](https://huggingface.co/0xSojalSec/Qwen-Image-2.1-Uncensored-HF/resolve/main/qwen-image-2.1-UC-Q8_0.gguf) |
-| **Dessi GGUF** | ![Q4_0][badge-Q4_0] | 4.05 GB | [![][gh-ped4enko]](https://huggingface.co/ped4enko/Qwen-Image-2.1-Dessi/resolve/main/qwen-image-2.1-Q4_0.gguf) |
-| **Dessi GGUF** | ![Q4_K_M][badge-Q4_K_M] | 4.60 GB | [![][gh-ped4enko]](https://huggingface.co/ped4enko/Qwen-Image-2.1-Dessi/resolve/main/qwen-image-2.1-Q4_K_M.gguf) |
-| **Dessi GGUF** | ![Q5_K_M][badge-Q5_K_M] | 5.22 GB | [![][gh-ped4enko]](https://huggingface.co/ped4enko/Qwen-Image-2.1-Dessi/resolve/main/qwen-image-2.1-Q5_K_M.gguf) |
-| **Dessi GGUF** | ![Q6_K][badge-Q6_K] | 5.88 GB | [![][gh-ped4enko]](https://huggingface.co/ped4enko/Qwen-Image-2.1-Dessi/resolve/main/qwen-image-2.1-Q6_K.gguf) |
-| **Dessi GGUF** | ![Q8_0][badge-Q8_0] | 7.59 GB | [![][gh-ped4enko]](https://huggingface.co/ped4enko/Qwen-Image-2.1-Dessi/resolve/main/qwen-image-2.1-Q8_0.gguf) |
-| **GGUFs** | ![Q2][badge-Q2] | 4.10 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/Qwen-Image-2.1_GGUFs/resolve/main/Qwen-Image-2.1-Q2.gguf) |
-| **GGUFs** | ![Q3][badge-Q3] | 4.62 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/Qwen-Image-2.1_GGUFs/resolve/main/Qwen-Image-2.1-Q3.gguf) |
-| **GGUFs** | ![Q4][badge-Q4] | 5.96 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/Qwen-Image-2.1_GGUFs/resolve/main/Qwen-Image-2.1-Q4.gguf) |
-| **GGUFs** | ![Q5][badge-Q5] | 6.39 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/Qwen-Image-2.1_GGUFs/resolve/main/Qwen-Image-2.1-Q5.gguf) |
-| **GGUFs** | ![Q8][badge-Q8] | 7.69 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/Qwen-Image-2.1_GGUFs/resolve/main/Qwen-Image-2.1-Q8.gguf) |
-| **ComfyUI GGUF** | ![Q3_K_M][badge-Q3_K_M] | 3.29 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/Qwen-Image-2.1-ComfyUI-GGUF/resolve/main/qwen_image_2.1-Q3_K_M.gguf) |
-| **ComfyUI GGUF** | ![Q4_K_M][badge-Q4_K_M] | 4.21 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/Qwen-Image-2.1-ComfyUI-GGUF/resolve/main/qwen_image_2.1-Q4_K_M.gguf) |
-| **ComfyUI GGUF** | ![Q5_K_M][badge-Q5_K_M] | 5.04 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/Qwen-Image-2.1-ComfyUI-GGUF/resolve/main/qwen_image_2.1-Q5_K_M.gguf) |
-| **ComfyUI GGUF** | ![Q6_K][badge-Q6_K] | 5.84 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/Qwen-Image-2.1-ComfyUI-GGUF/resolve/main/qwen_image_2.1-Q6_K.gguf) |
-| **ComfyUI GGUF** | ![Q8_0][badge-Q8_0] | 7.56 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/Qwen-Image-2.1-ComfyUI-GGUF/resolve/main/qwen_image_2.1-Q8_0.gguf) |
-| **DiT GGUF** | ![Q4_K_M][badge-Q4_K_M] | 4.34 GB | [![][gh-pottokao]](https://huggingface.co/pottokao/Qwen-Image-2.1-DiT-GGUF/resolve/main/qwen_image_2.1-Q4_K_M.gguf) |
-| **DiT GGUF** | ![Q6_K][badge-Q6_K] | 6.00 GB | [![][gh-pottokao]](https://huggingface.co/pottokao/Qwen-Image-2.1-DiT-GGUF/resolve/main/qwen_image_2.1-Q6_K.gguf) |
-| **DiT GGUF** | ![Q8_0][badge-Q8_0] | 7.69 GB | [![][gh-pottokao]](https://huggingface.co/pottokao/Qwen-Image-2.1-DiT-GGUF/resolve/main/qwen_image_2.1-Q8_0.gguf) |
-| **GGUF + mmproj + VAE** | ![Q8_0][badge-Q8_0] | 0.75 GB | [![][gh-gguf-org]](https://huggingface.co/gguf-org/qwen-image-2.1-gguf/resolve/main/mmproj-qwen3vl-8b-it-q8_0.gguf) |
-| **GGUF + mmproj + VAE** | ![VAE bf16][badge-bf16] | 0.68 GB | [![][gh-gguf-org]](https://huggingface.co/gguf-org/qwen-image-2.1-gguf/resolve/main/pig_qwen_image_2.1_vae_bf16.gguf) |
-| **GGUF + mmproj + VAE** | ![VAE f16][badge-fp16] | 0.68 GB | [![][gh-gguf-org]](https://huggingface.co/gguf-org/qwen-image-2.1-gguf/resolve/main/pig_qwen_image_2.1_vae_fp32-f16.gguf) |
-| **GGUF + mmproj + VAE** | ![NVFP4][badge-nvfp4] | 4.05 GB | [![][gh-gguf-org]](https://huggingface.co/gguf-org/qwen-image-2.1-gguf/resolve/main/qwen-image-2.1-nvfp4.gguf) |
-| **GGUF + mmproj + VAE** | ![Q4_K_M][badge-Q4_K_M] | 5.03 GB | [![][gh-gguf-org]](https://huggingface.co/gguf-org/qwen-image-2.1-gguf/resolve/main/qwen3vl-8b-it-q4_k_m.gguf) |
-| **GGUF + mmproj + VAE** | ![NVFP4][badge-nvfp4] | 6.30 GB | [![][gh-gguf-org]](https://huggingface.co/gguf-org/qwen-image-2.1-gguf/resolve/main/qwen3vl-8b-nvfp4.gguf) |
-| **HVQ3 Q4 (sd.cpp)** | ![Q4][badge-Q4] | 5.96 GB | [![][gh-zcf0508]](https://huggingface.co/zcf0508/qwen-image-2.1-hqv3-sdcpp-fixed/resolve/main/Qwen-Image-2.1-Q4-sd.cpp.gguf) |
+| Quant | Size | Download |
+| :---: | ---: | :---: |
+| ![F16][badge-bf16] | 14.23 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF/resolve/main/qwen-image-2.1-F16.gguf) |
+| ![BF16][badge-bf16] | 14.23 GB | [![][gh-abenzerps]](https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF/resolve/main/qwen-image-2.1-UC-BF16.gguf) |
+| ![Q8_0][badge-q8] | 7.64 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF/resolve/main/qwen-image-2.1-Q8_0.gguf) |
+| ![Q6_K_XL][badge-q6k] | 6.72 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF/resolve/main/qwen-image-2.1-Q6_K_XL.gguf) |
+| ![Q6_K][badge-q6k] | 6.27 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF/resolve/main/qwen-image-2.1-Q6_K.gguf) |
+| ![Q5_K_M][badge-q5km] | 5.39 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF/resolve/main/qwen-image-2.1-Q5_K_M.gguf) |
+| ![Q5_K_S][badge-q5km] | 4.50 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF/resolve/main/qwen-image-2.1-Q5_K_S.gguf) |
+| ![Q4 · HVQ3 (sd.cpp)][badge-q4km] | 5.96 GB | [![][gh-zcf0508]](https://huggingface.co/zcf0508/qwen-image-2.1-hqv3-sdcpp-fixed/resolve/main/Qwen-Image-2.1-Q4-sd.cpp.gguf) |
+| ![NVFP4][badge-nvfp4] | 4.05 GB | [![][gh-gguf-org]](https://huggingface.co/gguf-org/qwen-image-2.1-gguf/resolve/main/qwen-image-2.1-nvfp4.gguf) |
+| ![Q4_K_M][badge-q4km] | 4.20 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF/resolve/main/qwen-image-2.1-Q4_K_M.gguf) |
+| ![Q4_0][badge-q4km] | 4.15 GB | [![][gh-abenzerps]](https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF/resolve/main/qwen-image-2.1-UC-Q4_0.gguf) ┊ [![][gh-ped4enko]](https://huggingface.co/ped4enko/Qwen-Image-2.1-Dessi/resolve/main/qwen-image-2.1-Q4_0.gguf) |
+| ![Q4_K_S][badge-q4km] | 3.91 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF/resolve/main/qwen-image-2.1-Q4_K_S.gguf) |
+| ![Q3_K_XL][badge-q3km] | 3.61 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF/resolve/main/qwen-image-2.1-Q3_K_XL.gguf) |
+| ![Q3_K_M][badge-q3km] | 3.17 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF/resolve/main/qwen-image-2.1-Q3_K_M.gguf) |
+| ![Q3_K_S][badge-q3km] | 2.72 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF/resolve/main/qwen-image-2.1-Q3_K_S.gguf) |
+| ![Q2_K][badge-q2k] | 2.47 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF/resolve/main/qwen-image-2.1-Q2_K.gguf) |
+| Text encoder ![NVFP4][badge-nvfp4] | 6.30 GB | [![][gh-gguf-org]](https://huggingface.co/gguf-org/qwen-image-2.1-gguf/resolve/main/qwen3vl-8b-nvfp4.gguf) |
+| Text encoder ![Q4_K_M][badge-q4km] | 5.03 GB | [![][gh-gguf-org]](https://huggingface.co/gguf-org/qwen-image-2.1-gguf/resolve/main/qwen3vl-8b-it-q4_k_m.gguf) |
+| mmproj projector ![Q8_0][badge-q8] | 0.75 GB | [![][gh-gguf-org]](https://huggingface.co/gguf-org/qwen-image-2.1-gguf/resolve/main/mmproj-qwen3vl-8b-it-q8_0.gguf) |
+| VAE ![BF16][badge-bf16] | 0.68 GB | [![][gh-gguf-org]](https://huggingface.co/gguf-org/qwen-image-2.1-gguf/resolve/main/pig_qwen_image_2.1_vae_bf16.gguf) |
+| VAE ![F16][badge-f16] | 0.68 GB | [![][gh-gguf-org]](https://huggingface.co/gguf-org/qwen-image-2.1-gguf/resolve/main/pig_qwen_image_2.1_vae_fp32-f16.gguf) |
 
-For **sd.cpp**, not stock llama.cpp. `gguf-org` was transferred from `chatpig` — the old URL redirects.
+**On the omitted repos.** [realrebelai](https://huggingface.co/realrebelai/Qwen-Image-2.1_GGUFs) (legacy Q2–Q8), [vantagewithai](https://huggingface.co/vantagewithai/Qwen-Image-2.1-ComfyUI-GGUF) (Q3_K_M–Q8_0) and [pottokao](https://huggingface.co/pottokao/Qwen-Image-2.1-DiT-GGUF) (Q4_K_M/Q6_K/Q8_0) each ship a subset of the Unsloth ladder under another name, so their duplicates are dropped here. [0xSojalSec](https://huggingface.co/0xSojalSec/Qwen-Image-2.1-Uncensored-HF) mirrors the abenzerps uncensored weights byte for byte. `gguf-org` was transferred from `chatpig` — the old URL redirects.
 
 <p id="quant-lowbit" align="center">· · · · · · · · · · · · · ·</p>
 
@@ -502,6 +474,7 @@ Alibaba MNN runtime for on-device inference. The full repos are large — the MN
 <!-- PRECISION BADGES -->
 [badge-bf16]: https://img.shields.io/badge/bf16-0077cc?style=flat-square
 [badge-fp16]: https://img.shields.io/badge/fp16-0077cc?style=flat-square
+[badge-f16]: https://img.shields.io/badge/F16-0077cc?style=flat-square
 [badge-fp32]: https://img.shields.io/badge/fp32-6c757d?style=flat-square
 [badge-fp8]: https://img.shields.io/badge/fp8-28a745?style=flat-square
 [badge-fp4]: https://img.shields.io/badge/fp4-20c997?style=flat-square
@@ -519,19 +492,25 @@ Alibaba MNN runtime for on-device inference. The full repos are large — the MN
 [badge-Q6]: https://img.shields.io/badge/Q6-0077cc?style=flat-square
 [badge-Q8]: https://img.shields.io/badge/Q8-28a745?style=flat-square
 [badge-Q2_K]: https://img.shields.io/badge/Q2__K-e05d44?style=flat-square
+[badge-q2k]: https://img.shields.io/badge/Q2__K-e05d44?style=flat-square
 [badge-Q3_K_M]: https://img.shields.io/badge/Q3__K__M-fe7d37?style=flat-square
+[badge-q3km]: https://img.shields.io/badge/Q3__K__M-fe7d37?style=flat-square
 [badge-Q3_K_S]: https://img.shields.io/badge/Q3__K__S-fe7d37?style=flat-square
 [badge-Q3_K_XL]: https://img.shields.io/badge/Q3__K__XL-ff3b30?style=flat-square
 [badge-Q4_0]: https://img.shields.io/badge/Q4__0-dfb317?style=flat-square
 [badge-Q4_1]: https://img.shields.io/badge/Q4__1-dfb317?style=flat-square
 [badge-Q4_K_M]: https://img.shields.io/badge/Q4__K__M-dfb317?style=flat-square
+[badge-q4km]: https://img.shields.io/badge/Q4__K__M-dfb317?style=flat-square
 [badge-Q4_K_S]: https://img.shields.io/badge/Q4__K__S-dfb317?style=flat-square
 [badge-Q5_0]: https://img.shields.io/badge/Q5__0-97c00f?style=flat-square
 [badge-Q5_1]: https://img.shields.io/badge/Q5__1-97c00f?style=flat-square
 [badge-Q5_K_M]: https://img.shields.io/badge/Q5__K__M-97c00f?style=flat-square
+[badge-q5km]: https://img.shields.io/badge/Q5__K__M-97c00f?style=flat-square
 [badge-Q5_K_S]: https://img.shields.io/badge/Q5__K__S-97c00f?style=flat-square
 [badge-Q6_K]: https://img.shields.io/badge/Q6__K-0077cc?style=flat-square
+[badge-q6k]: https://img.shields.io/badge/Q6__K-0077cc?style=flat-square
 [badge-Q8_0]: https://img.shields.io/badge/Q8__0-28a745?style=flat-square
+[badge-q8]: https://img.shields.io/badge/Q8__0-28a745?style=flat-square
 [badge-IQ1_S]: https://img.shields.io/badge/IQ1__S-b02a37?style=flat-square
 [badge-IQ1_M]: https://img.shields.io/badge/IQ1__M-d64545?style=flat-square
 [badge-UD-Q2_K_XL]: https://img.shields.io/badge/UD-Q2__K__XL-e05d44?style=flat-square
