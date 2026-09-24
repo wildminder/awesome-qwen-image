@@ -58,6 +58,7 @@ A curated list of checkpoints, quants, prompt engines, LoRAs, and tooling for **
   * [Apple Silicon](#port-apple)
   * [Mobile &amp; edge (MNN)](#port-mnn)
   * [AMD &amp; domestic accelerators](#port-alt)
+  * [ComfyUI package formats](#port-pkg)
   * [Experimental VAE](#port-vae)
 * [Tools &amp; notebooks](#tools)
 * [Contributing](#contributing)

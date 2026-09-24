@@ -58,6 +58,7 @@ A curated list of checkpoints, quants, prompt engines, LoRAs, and tooling for **
   * [Apple Silicon](#port-apple)
   * [Mobile &amp; edge (MNN)](#port-mnn)
   * [AMD &amp; domestic accelerators](#port-alt)
+  * [ComfyUI package formats](#port-pkg)
   * [Experimental VAE](#port-vae)
 * [Tools &amp; notebooks](#tools)
 * [Contributing](#contributing)
@@ -287,7 +288,9 @@ SVDQ-based 4-bit for Nunchaku, which targets low-VRAM systems and 4090-class car
 
 Few-step students of the base model, distilled with Distribution Matching Distillation. They trade fidelity for speed: useful for iteration and batch work, weaker than 40 steps on multi-reference composition and identity-preserving edits.
 
-**Current release: `v0.2.1` (2026-09-24), 6 steps.** It supersedes `v0.2` (5-step name, sampled at 6) and `v0.1` (4 steps). Sample with `sigmas=[1.0, 0.9375, 0.875, 0.75, 0.5, 0.25]`, CFG 1.0, empty negative prompt. Official source: **[Viggle/Qwen-Image-2.1-viggle-turbo](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo)**.
+**Current Viggle release: `v0.2.1` (2026-09-24), 6 steps.** It supersedes `v0.2` (5-step name, sampled at 6) and `v0.1` (4 steps). Sample with `sigmas=[1.0, 0.9375, 0.875, 0.75, 0.5, 0.25]`, CFG 1.0, empty negative prompt. Official source: **[Viggle/Qwen-Image-2.1-viggle-turbo](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo)**.
+
+Alibaba PAI ships a **separate official 4-step line** via Parallel Decoding Distillation (PDD) in VideoX-Fun: the `Fun-Acc-4Step` LoRA below. It is independent of Viggle's DMD runs, so the two are not interchangeable checkpoints — pick one.
 
 <p id="turbo-gguf" align="center">· · · · · · · · · · · · · ·</p>
 
@@ -309,7 +312,7 @@ DiT-only quants for ComfyUI-GGUF, from the **v0.1 full fine-tune** (4-step). Bot
 
 ### ▣ Official &amp; converted
 
-Repo links: **[Viggle](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo)** · **[chfm](https://huggingface.co/chfm/Qwen-Image-2.1-viggle-turbo)** (v0.2 snapshot) · **[t8star](https://huggingface.co/t8star/Qwen-Image-2.1-viggle-turbo-4step-r64-comfy)** · **[RunningHubAI](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-viggle-turbo-4step-r64-comfyui-t8-lora)** · **[addlabsviral](https://huggingface.co/addlabsviral/qwen-image2.1-turbo-bf16)** · **[cgb](https://huggingface.co/cgb/Qwen-Image-2.1-Turbo-ONNX)**
+Repo links: **[Viggle](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo)** · **[alibaba-pai](https://huggingface.co/alibaba-pai/Qwen-Image-2.1-Fun-Acc-LoRAs)** · **[chfm](https://huggingface.co/chfm/Qwen-Image-2.1-viggle-turbo)** (v0.2 snapshot) · **[t8star](https://huggingface.co/t8star/Qwen-Image-2.1-viggle-turbo-4step-r64-comfy)** · **[RunningHubAI](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-viggle-turbo-4step-r64-comfyui-t8-lora)** · **[addlabsviral](https://huggingface.co/addlabsviral/qwen-image2.1-turbo-bf16)** · **[cgb](https://huggingface.co/cgb/Qwen-Image-2.1-Turbo-ONNX)**
 
 | Name | Steps | Precision | Size | Links | Notes |
 | :--- | :---: | :---: | :---: | :---: | :--- |
@@ -320,6 +323,7 @@ Repo links: **[Viggle](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo
 | **v0.2 LoRA r128** | 5 / 6 | ![bf16][badge-bf16] | 0.68 GB | [![][gh-Viggle]](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/resolve/main/Qwen-Image-2.1-viggle-turbo-v0.2-5step-lora-r128.safetensors) | Rank-128 cut of v0.2. |
 | **v0.1 full fine-tune** | 4 | ![bf16][badge-bf16] | 14.23 GB | [![][gh-Viggle]](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/tree/main/transformer) | Merged transformer, no LoRA needed. This is what the GGUF quants above were built from. |
 | **v0.1 LoRA r64** | 4 | ![bf16][badge-bf16] | 0.34 GB | [![][gh-Viggle]](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/resolve/main/Qwen-Image-2.1-viggle-turbo-4step-lora-r64.safetensors) ┊ [![][gh-t8star]](https://huggingface.co/t8star/Qwen-Image-2.1-viggle-turbo-4step-r64-comfy/resolve/main/Qwen-Image-2.1-viggle-turbo-4step-r64-comfyui-T8.safetensors) ┊ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-viggle-turbo-4step-r64-comfyui-t8-lora/resolve/main/Qwen-Image-2.1-viggle-turbo-4step-r64-comfyui-T8.safetensors) | Superseded — diversity collapsed to 0.75× base and the output was visibly softer. Kept for reproducibility. |
+| **Fun-Acc 4Step (PDD)** | 4 | ![bf16][badge-bf16] | 0.35 GB | [![][gh-alibaba--pai]](https://huggingface.co/alibaba-pai/Qwen-Image-2.1-Fun-Acc-LoRAs/resolve/main/models/Qwen-Image-2.1-Fun-Acc-4Step.safetensors) | **Official Alibaba PAI line**, rank 64, via Parallel Decoding Distillation. Independent of Viggle — 4 NFE for both T2I and instruction editing. | 
 | **Turbo BF16 diffusers** | 4 | ![bf16][badge-bf16] | 32.44 GB | [![][gh-addlabsviral]](https://huggingface.co/addlabsviral/qwen-image2.1-turbo-bf16) | Full pipeline (TE + DiT + VAE), ready to load with `QwenImage21Pipeline`. DiT is byte-identical in size to the v0.1 transformer above, re-sharded 2-way. |
 | **Turbo FP4 diffusers** | 4 | ![fp4][badge-fp4] | 11.41 GB | [![][gh-addlabsviral]](https://huggingface.co/addlabsviral/qwen-image2.1-turbo-fp4) | Same v0.1 pipeline with an FP4 DiT; the TE is the larger half at 6.73 GB. |
 | **Turbo ONNX (browser)** | 4 | ![int4][badge-int4] | ~17.2 GB | [![][gh-cgb]](https://huggingface.co/cgb/Qwen-Image-2.1-Turbo-ONNX) | r64 LoRA merged into the denoiser, then Q4 MatMulNBits. WebGPU in-browser; needs the FreeGen pipeline and a desktop adapter. Experimental. |
@@ -331,6 +335,7 @@ Style, control, and fix adapters. All target the base DiT unless noted.
 
 | Name | Type | Precision | Size | Links | Notes |
 | :--- | :---: | :---: | :---: | :---: | :--- |
+| **ControlNet-Union** | ![Control][ltype-control] | ![bf16][badge-bf16] | 7.55 GB | [![][gh-alibaba--pai]](https://huggingface.co/alibaba-pai/Qwen-Image-2.1-Fun-Controlnet-Union/resolve/main/Qwen-Image-2.1-Fun-Controlnet-Union.safetensors) | **Official Alibaba PAI / VideoX-Fun.** One checkpoint for 8 conditions (Canny, Depth, Grayscale, HED, Lineart, MLSD, Pose, Scribble) plus inpainting. Control branch only, 16 injection points, loaded `strict=False`. | 
 | **Fix** | ![Fix][ltype-fix] | ![bf16][badge-bf16] | 0.11 GB | [![][gh-e--n--v--y]](https://huggingface.co/e-n-v-y/Qwen-Image-2.1-Fix/resolve/main/qwen-image-2.1-fix-1.0-comfy.safetensors) | The most-liked community LoRA. |
 | **De-AI LoRA pack** | ![Style][ltype-style] | ![bf16][badge-bf16] | 2.45 GB | [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1ai-lora) | 8-file "remove the AI look" pack (CN filenames). |
 | **Object Mover Bbox Preview** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.50 GB | [![][gh-prithivMLmods]](https://huggingface.co/prithivMLmods/Qwen-Image-2.1-Object-Mover-Bbox-Preview) | Bbox object *moving*, 6 checkpoints. |
@@ -396,6 +401,17 @@ Alibaba MNN runtime for on-device inference. The full repos are large — the MN
 | **BF16 zhenwu** | Zhenwu MUSA | ![bf16][badge-bf16] | 33.13 GB | [![][gh-FlagRelease]](https://huggingface.co/FlagRelease/Qwen-Image-2.1-BF16-zhenwu-FlagOS) |
 | **BF16 mthreads** | Moore Threads MUSA | ![bf16][badge-bf16] | 33.13 GB | [![][gh-FlagRelease]](https://huggingface.co/FlagRelease/Qwen-Image-2.1-BF16-mthreads-FlagOS) |
 | **W8A8 arm** | ARM | ![w8a8][badge-w8a8] | 29.38 GB | [![][gh-FlagRelease]](https://huggingface.co/FlagRelease/Qwen-Image-2.1-W8A8-arm-FlagOS) |
+
+<p id="port-pkg" align="center">· · · · · · · · · · · · · ·</p>
+
+### ▣ ComfyUI package formats
+
+Same weights, re-laid-out for a ComfyUI-side loader. Each ships a YAML manifest next to the shards, so no diffusers config is needed.
+
+| Name | Format | Precision | Size | Links | Notes |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| **libwaifu bf16** | libwaifu (yaml + 8 shards) | ![bf16][badge-bf16] | 30.03 GB | [![][gh-ling0322]](https://huggingface.co/ling0322/libwaifu-qwen-image-2.1) | Full-precision layout for the `libwaifu` loader. |
+| **libwaifu fp8** | libwaifu (yaml + 4 shards) | ![fp8][badge-fp8] | 15.98 GB | [![][gh-ling0322]](https://huggingface.co/ling0322/libwaifu-qwen-image-2.1) | Same layout, `weight_format: fp8`. Half the download. |
 
 <p id="port-vae" align="center">· · · · · · · · · · · · · ·</p>
 
@@ -465,6 +481,7 @@ new number.
 [gh-Abiray]: https://img.shields.io/badge/Abiray-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Aero--Ex]: https://img.shields.io/badge/Aero--Ex-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-addlabsviral]: https://img.shields.io/badge/addlabsviral-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-alibaba--pai]: https://img.shields.io/badge/alibaba--pai-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Airmongsity]: https://img.shields.io/badge/Airmongsity-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-BlazeMCworld]: https://img.shields.io/badge/BlazeMCworld-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Comfy--Org]: https://img.shields.io/badge/Comfy--Org-lightgrey?style=flat-square&logo=huggingface&logoColor=white
@@ -498,6 +515,7 @@ new number.
 [gh-foofifoo]: https://img.shields.io/badge/foofifoo-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-iamvts]: https://img.shields.io/badge/iamvts-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-kkxao]: https://img.shields.io/badge/kkxao-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-ling0322]: https://img.shields.io/badge/ling0322-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-mingyi456]: https://img.shields.io/badge/mingyi456-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-ped4enko]: https://img.shields.io/badge/ped4enko-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-pottokao]: https://img.shields.io/badge/pottokao-lightgrey?style=flat-square&logo=huggingface&logoColor=white

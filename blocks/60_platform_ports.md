@@ -48,6 +48,17 @@ Alibaba MNN runtime for on-device inference. The full repos are large — the MN
 | **BF16 mthreads** | Moore Threads MUSA | ![bf16][badge-bf16] | 33.13 GB | [![][gh-FlagRelease]](https://huggingface.co/FlagRelease/Qwen-Image-2.1-BF16-mthreads-FlagOS) |
 | **W8A8 arm** | ARM | ![w8a8][badge-w8a8] | 29.38 GB | [![][gh-FlagRelease]](https://huggingface.co/FlagRelease/Qwen-Image-2.1-W8A8-arm-FlagOS) |
 
+<p id="port-pkg" align="center">· · · · · · · · · · · · · ·</p>
+
+### ▣ ComfyUI package formats
+
+Same weights, re-laid-out for a ComfyUI-side loader. Each ships a YAML manifest next to the shards, so no diffusers config is needed.
+
+| Name | Format | Precision | Size | Links | Notes |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| **libwaifu bf16** | libwaifu (yaml + 8 shards) | ![bf16][badge-bf16] | 30.03 GB | [![][gh-ling0322]](https://huggingface.co/ling0322/libwaifu-qwen-image-2.1) | Full-precision layout for the `libwaifu` loader. |
+| **libwaifu fp8** | libwaifu (yaml + 4 shards) | ![fp8][badge-fp8] | 15.98 GB | [![][gh-ling0322]](https://huggingface.co/ling0322/libwaifu-qwen-image-2.1) | Same layout, `weight_format: fp8`. Half the download. |
+
 <p id="port-vae" align="center">· · · · · · · · · · · · · ·</p>
 
 ### ▣ Experimental VAE
