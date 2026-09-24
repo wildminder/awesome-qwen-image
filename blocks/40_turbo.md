@@ -1,6 +1,6 @@
 <p id="turbo" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
 
-## ⚡ Turbo &amp; step distillation
+## ▸ Turbo &amp; step distillation
 
 4-step generation. Useful for iteration and batch work; expect some quality loss versus 40 steps.
 

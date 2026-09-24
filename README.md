@@ -240,7 +240,6 @@ Transformer-only weights for llama.cpp, sorted from the highest quant down. **Q4
 | mmproj projector ![Q8_0][badge-q8] | 0.75 GB | [![][gh-gguf-org]](https://huggingface.co/gguf-org/qwen-image-2.1-gguf/resolve/main/mmproj-qwen3vl-8b-it-q8_0.gguf) |
 | VAE ![BF16][badge-bf16] | 0.68 GB | [![][gh-gguf-org]](https://huggingface.co/gguf-org/qwen-image-2.1-gguf/resolve/main/pig_qwen_image_2.1_vae_bf16.gguf) |
 | VAE ![F16][badge-f16] | 0.68 GB | [![][gh-gguf-org]](https://huggingface.co/gguf-org/qwen-image-2.1-gguf/resolve/main/pig_qwen_image_2.1_vae_fp32-f16.gguf) |
-**On the omitted repos.** [realrebelai](https://huggingface.co/realrebelai/Qwen-Image-2.1_GGUFs) (legacy Q2–Q8), [vantagewithai](https://huggingface.co/vantagewithai/Qwen-Image-2.1-ComfyUI-GGUF) (Q3_K_M–Q8_0) and [pottokao](https://huggingface.co/pottokao/Qwen-Image-2.1-DiT-GGUF) (Q4_K_M/Q6_K/Q8_0) each ship a subset of the Unsloth ladder under another name, so their duplicates are dropped here. [0xSojalSec](https://huggingface.co/0xSojalSec/Qwen-Image-2.1-Uncensored-HF) mirrors the abenzerps uncensored weights byte for byte. `gguf-org` was transferred from `chatpig` — the old URL redirects.
 
 <p id="quant-lowbit" align="center">· · · · · · · · · · · · · ·</p>
 
@@ -288,7 +287,7 @@ SVDQ-based 4-bit for Nunchaku, which targets low-VRAM systems and 4090-class car
 
 <p id="turbo" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
 
-## ⚡ Turbo &amp; step distillation
+## ▸ Turbo &amp; step distillation
 
 4-step generation. Useful for iteration and batch work; expect some quality loss versus 40 steps.
 
