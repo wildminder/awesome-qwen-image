@@ -51,6 +51,8 @@ A curated list of checkpoints, quants, prompt engines, LoRAs, and tooling for **
   * [FP8 &amp; bf16](#quant-fp8)
   * [Nunchaku (SVDQ)](#quant-nunchaku)
 * [Turbo &amp; step distillation](#turbo)
+  * [Turbo GGUF](#turbo-gguf)
+  * [Official &amp; converted](#turbo-models)
 * [LoRA &amp; adapters](#lora)
 * [Platform ports](#port)
   * [Apple Silicon](#port-apple)
