@@ -20,7 +20,6 @@
 [gh-HarleyWang]: https://img.shields.io/badge/HarleyWang-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-JoyFusionAI]: https://img.shields.io/badge/JoyFusionAI-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Karsus1997]: https://img.shields.io/badge/Karsus1997-lightgrey?style=flat-square&logo=huggingface&logoColor=white
-[gh-KasugaiSakura]: https://img.shields.io/badge/KasugaiSakura-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-ML--Intern--lab]: https://img.shields.io/badge/ML--Intern--lab-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-ModelsLab]: https://img.shields.io/badge/ModelsLab-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Qwen]: https://img.shields.io/badge/Qwen-lightgrey?style=flat-square&logo=huggingface&logoColor=white
