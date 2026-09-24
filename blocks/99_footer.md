@@ -128,3 +128,5 @@
 [ltype-notebook]: https://img.shields.io/badge/Notebook-0077cc?style=flat-square
 [ltype-skill]: https://img.shields.io/badge/Agent%20Skill-fe7d37?style=flat-square
 [ltype-port]: https://img.shields.io/badge/Port-17a2b8?style=flat-square
+[ltype-pe]: https://img.shields.io/badge/PE-6f42c1?style=flat-square
+[ltype-te]: https://img.shields.io/badge/TE-17a2b8?style=flat-square
