@@ -89,7 +89,7 @@ The reference weights. Start here before touching any community conversion.
 ### ▣ Base model
 
 | Name | Precision | Layout | DiT | Text encoder | VAE | Links |
-| :--- | :--- | :--- | ---: | ---: | ---: | :---: |
+| :--- | :---: | :---: | ---: | ---: | ---: | :---: |
 | **Qwen-Image-2.1** | ![bf16][badge-bf16] | diffusers | 14.23 GB | 17.53 GB (Qwen3-VL-8B) | 1.35 GB | [![][gh-Qwen]](https://huggingface.co/Qwen/Qwen-Image-2.1) |
 | **Original** | ![bf16][badge-bf16] | diffusers | 14.23 GB | 17.53 GB | 1.35 GB | [![][gh-KasugaiSakura]](https://huggingface.co/KasugaiSakura/Qwen-Image-2.1-Original) |
 
@@ -102,7 +102,7 @@ Unmodified mirror, same shard layout as the official repo.
 **[Comfy-Org](https://huggingface.co/Comfy-Org/Qwen-Image-2.1)** — the Day-0 ComfyUI repackage. Files land directly in `models/` with no renaming.
 
 | Name | Precision | Size | Links |
-| :--- | :--- | ---: | :---: |
+| :--- | :---: | ---: | :---: |
 | `qwen_image_2.1_bf16` | ![bf16][badge-bf16] | 14.23 GB | [![][gh-Comfy--Org]](https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/diffusion_models/qwen_image_2.1_bf16.safetensors) |
 | `qwen_image_2.1_int8_convrot` | ![int8][badge-int8] | 7.26 GB | [![][gh-Comfy--Org]](https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/diffusion_models/qwen_image_2.1_int8_convrot.safetensors) |
 | `qwen3vl_8b_bf16` | ![bf16][badge-bf16] | 17.53 GB | [![][gh-Comfy--Org]](https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/text_encoders/qwen3vl_8b_bf16.safetensors) |
@@ -126,7 +126,7 @@ Qwen-Image 2.1 conditions on **Qwen3-VL-8B**, which at BF16 is the largest file 
 ### ▣ Official rewriters
 
 | Name | Task | Precision | Size | Links |
-| :--- | :--- | :--- | ---: | :---: |
+| :--- | :---: | :---: | ---: | :---: |
 | **PE-T2I** | text → image | ![bf16][badge-bf16] | 18.82 GB | [![][gh-Qwen]](https://huggingface.co/Qwen/Qwen-Image-2.1-PE-T2I/resolve/main/model-00001.safetensors) |
 | **PE-I2I** | image → image | ![bf16][badge-bf16] | 18.82 GB | [![][gh-Qwen]](https://huggingface.co/Qwen/Qwen-Image-2.1-PE-I2I/resolve/main/model-00001.safetensors) |
 
@@ -139,7 +139,7 @@ Both are fine-tuned Qwen3.5-VL 9B, ship a `system_prompt.txt`, and work with `Au
 Fine-tuned from Qwen3.5 base models instead of the 9B VL model. Roughly 5× smaller than the official rewriter.
 
 | Name | Params | Precision | Size | Links |
-| :--- | :---: | :--- | ---: | :---: |
+| :--- | :---: | :---: | ---: | :---: |
 | **PE-T2I Pocket 2B** | 2B | ![bf16][badge-bf16] | 3.76 GB | [![][gh-ML--Intern--lab]](https://huggingface.co/ML-Intern-lab/Qwen-Image-2.1-PE-T2I-Pocket-2B) |
 | **PE-T2I Pocket 0.8B** | 0.8B | ![Q8_0][badge-Q8_0] | 1.50 GB | [![][gh-ML--Intern--lab]](https://huggingface.co/ML-Intern-lab/Qwen-Image-2.1-PE-T2I-Pocket-0.8B) |
 
@@ -153,7 +153,7 @@ The 0.8B build also ships a `Q8_0` GGUF (0.81 GB) for llama.cpp.
 > These repos have the safety refusal direction **abliterated**. The model no longer refuses prompt content, which means it will happily rewrite anything you ask. Same Qwen Research License as the base weights — the license does not grant you additional rights.
 
 | Name | Task | Precision | Size | Links |
-| :--- | :--- | :--- | ---: | :---: |
+| :--- | :---: | :---: | ---: | :---: |
 | **PE-T2I Heretic GGUF** | text → image | ![Q4_K_M][badge-Q4_K_M] | 5.89 GB | [![][gh-pottokao]](https://huggingface.co/pottokao/Qwen-Image-2.1-PE-T2I-Heretic-GGUF/resolve/main/pe_t2i_heretic-Q4_K_M.gguf) |
 | **PE-I2I Heretic GGUF** | image → image | ![Q4_K_M][badge-Q4_K_M] | 6.81 GB | [![][gh-pottokao]](https://huggingface.co/pottokao/Qwen-Image-2.1-PE-I2I-Heretic-GGUF/resolve/main/pe_i2i_heretic-Q4_K_M.gguf) |
 | **ComfyUI PE bundle** | both | ![Q4_K_M][badge-Q4_K_M] | 18.07 GB | [![][gh-t8star]](https://huggingface.co/t8star/qwen-image-2.1-comfy) |
@@ -168,7 +168,7 @@ The 0.8B build also ships a `Q8_0` GGUF (0.81 GB) for llama.cpp.
 ### ▣ Quantized &amp; ported
 
 | Name | Format | Precision | Size | Links |
-| :--- | :--- | :--- | ---: | :---: |
+| :--- | :---: | :---: | ---: | :---: |
 | **PE ComfyUI pack** | BF16 + int8 ConvRot | ![bf16][badge-bf16] ![int8][badge-int8] | 64.68 GB | [![][gh-HarleyWang]](https://huggingface.co/HarleyWang/Qwen-Image-2.1-PE-ComfyUI) |
 | **PE-T2I MLX** | MLX (4/8/16-bit) | ![int4][badge-int4] ![int8][badge-int8] ![bf16][badge-bf16] | 35.20 GB | [![][gh-prithivMLmods]](https://huggingface.co/prithivMLmods/Qwen-Image-2.1-PE-T2I-MLX) |
 | **PE-I2I MLX** | MLX (4/8/16-bit) | ![int4][badge-int4] ![int8][badge-int8] ![bf16][badge-bf16] | 35.20 GB | [![][gh-prithivMLmods]](https://huggingface.co/prithivMLmods/Qwen-Image-2.1-PE-I2I-MLX) |
@@ -189,7 +189,7 @@ The INT8 ConvRot pack is the only single download covering both PE-T2I and PE-I2
 The same abliteration applied to the **text encoder** rather than the rewriter — the conditioning signal itself no longer refuses.
 
 | Name | Format | Precision | Size | Links |
-| :--- | :--- | :--- | ---: | :---: |
+| :--- | :---: | :---: | ---: | :---: |
 | **Heretic TE GGUF** | GGUF + mmproj | ![Q4_K_M][badge-Q4_K_M] ![fp8][badge-fp8] ![bf16][badge-bf16] | 33.07 GB | [![][gh-pottokao]](https://huggingface.co/pottokao/Qwen-Image-2.1-Text-Encoder-Heretic-GGUF/resolve/main/qwen3vl_8b_heretic-Q4_K_M.gguf) |
 | **Heretic TE NVFP4** | NVFP4 | ![nvfp4][badge-nvfp4] | 6.31 GB | [![][gh-pottokao]](https://huggingface.co/pottokao/Qwen-Image-2.1-Text-Encoder-Heretic-NVFP4/resolve/main/qwen3vl_8b_nvfp4_heretic.safetensors) |
 | **Heretic TE int8 ConvRot** | int8 ConvRot | ![int8][badge-int8] | 9.35 GB | [![][gh-pottokao]](https://huggingface.co/pottokao/Qwen-Image-2.1-Text-Encoder-Heretic-int8-convrot/resolve/main/qwen3vl_8b_int8_convrot_heretic.safetensors) |
@@ -221,7 +221,7 @@ Transformer-only weights for llama.cpp, sorted from the highest quant down. **Q4
 Every FP4 / NVFP4 / MXFP4 / INT8 / INT4 / W4A4 conversion in one place.
 
 | Name | Precision | Size | Links | Notes |
-| :--- | :--- | ---: | :---: | :--- |
+| :--- | :---: | ---: | :---: | :--- |
 | **INT4ConvRot-ComfyUI** | ![bf16][badge-bf16] ![int8][badge-int8] ![int4][badge-int4] ![w4a8][badge-w4a8] | 65.91 GB | [![][gh-chfm]](https://huggingface.co/chfm/Qwen-Image-2.1-INT4ConvRot-ComfyUI) | **Best all-in-one ComfyUI pack.** DiT and TE at three precisions plus VAE, in correct folder layout. |
 | **Darkstar ModelOpt W4A4 NVFP4** | ![nvfp4][badge-nvfp4] | 23.66 GB | [![][gh-HangGlidersRule]](https://huggingface.co/HangGlidersRule/Darkstar-Qwen-Image-2.1-Base-ModelOpt-W4A4-NVFP4) | NVIDIA ModelOpt-derived, full repo. |
 | **INT8** | ![int8][badge-int8] | 17.96 GB | [![][gh-Rin247]](https://huggingface.co/Rin247/Qwen-Image-2.1-INT8) | Full diffusers repo. |
@@ -241,7 +241,7 @@ Every FP4 / NVFP4 / MXFP4 / INT8 / INT4 / W4A4 conversion in one place.
 ### ▣ FP8 &amp; bf16
 
 | Name | Precision | Size | Links | Notes |
-| :--- | :--- | ---: | :---: | :--- |
+| :--- | :---: | ---: | :---: | :--- |
 | **Darkstar ModelOpt FP8** | ![fp8][badge-fp8] | 26.33 GB | [![][gh-HangGlidersRule]](https://huggingface.co/HangGlidersRule/Darkstar-Qwen-Image-2.1-Base-ModelOpt-FP8) | NVIDIA ModelOpt-derived, full repo. |
 | **FP8** | ![fp8][badge-fp8] | 17.96 GB | [![][gh-Rin247]](https://huggingface.co/Rin247/Qwen-Image-2.1-FP8) | Closest thing to a drop-in smaller BF16. |
 | **Uncensored BF16 SafeTensor** | ![bf16][badge-bf16] | 14.23 GB | ⚠️ [![][gh-dh123456789123]](https://huggingface.co/dh123456789123/Qwen-Image-2.1-Uncensored-BF16-SafeTensor/resolve/main/qwen-image-2.1-UC-BF16_bf16.safetensors) | Single file. |
@@ -255,7 +255,7 @@ Every FP4 / NVFP4 / MXFP4 / INT8 / INT4 / W4A4 conversion in one place.
 SVDQ-based 4-bit for Nunchaku, which targets low-VRAM systems and 4090-class cards.
 
 | Name | Precision | Size | Links | Notes |
-| :--- | :--- | ---: | :---: | :--- |
+| :--- | :---: | ---: | :---: | :--- |
 | **nunchaku** | ![fp4][badge-fp4] | 8.75 GB | [![][gh-catplusplus]](https://huggingface.co/catplusplus/nunchaku-qwen-image-2.1/resolve/main/best_quality_fp4.safetensors) | Two builds: `best_quality_fp4` and `svdq-fp4_r32`. |
 | **nunchaku lite int4** | ![int4][badge-int4] | 4.15 GB | [![][gh-BlazeMCworld]](https://huggingface.co/BlazeMCworld/Qwen-Image-2.1-nunchaku-lite-int4) | Half the size of the FP4 build. |
 
@@ -266,7 +266,7 @@ SVDQ-based 4-bit for Nunchaku, which targets low-VRAM systems and 4090-class car
 4-step generation. Useful for iteration and batch work; expect some quality loss versus 40 steps.
 
 | Name | Steps | Precision | Size | Links | Notes |
-| :--- | ---: | :--- | ---: | :---: | :--- |
+| :--- | ---: | :---: | ---: | :---: | :--- |
 | **Viggle Turbo** | 4 / 5 | ![bf16][badge-bf16] | 19.33 GB | [![][gh-Viggle]](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/resolve/main/Qwen-Image-2.1-viggle-turbo-4step-lora-r64.safetensors) | Source repo. `4step-lora-r64` and `5step-lora-r256` PEFT adapters plus a full `transformer/`. |
 | **Viggle Turbo GGUFs** | 4 | ![Q2_K][badge-Q2_K] ![Q3_K_M][badge-Q3_K_M] ![Q4_K_M][badge-Q4_K_M] ![Q5_K_M][badge-Q5_K_M] ![Q6_K][badge-Q6_K] ![Q8_0][badge-Q8_0] | 34.07 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/Viggle_Qwen-Image-2.1-Turbo_GGUFs) | Turbo in GGUF, Q2_K → Q8_0. |
 | **Viggle 4-step Turbo GGUF** | 4 | ![Q3_K_M][badge-Q3_K_M] ![Q4_K_M][badge-Q4_K_M] ![Q5_K_M][badge-Q5_K_M] ![Q6_K][badge-Q6_K] ![Q8_0][badge-Q8_0] | 29.91 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/Qwen-Image-2.1-viggle-4-steps-turbo-GGUF) | Alternate turbo GGUF set. |
@@ -280,19 +280,19 @@ SVDQ-based 4-bit for Nunchaku, which targets low-VRAM systems and 4090-class car
 Style, control, and fix adapters. All target the base DiT unless noted.
 
 | Name | Type | Precision | Size | Links | Notes |
-| :--- | :--- | :--- | ---: | :---: | :--- |
-| **Fix** | Quality fix | ![bf16][badge-bf16] | 0.11 GB | [![][gh-e--n--v--y]](https://huggingface.co/e-n-v-y/Qwen-Image-2.1-Fix/resolve/main/qwen-image-2.1-fix-1.0-comfy.safetensors) | The most-liked community LoRA. |
-| **De-AI LoRA pack** | Style | ![bf16][badge-bf16] | 2.45 GB | [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1ai-lora) | 8-file "remove the AI look" pack (CN filenames). |
-| **Object Mover Bbox Preview** | Control | ![bf16][badge-bf16] | 0.50 GB | [![][gh-prithivMLmods]](https://huggingface.co/prithivMLmods/Qwen-Image-2.1-Object-Mover-Bbox-Preview) | Bbox object *moving*, 6 checkpoints. |
-| **Object Remover Bbox Preview** | Control | ![bf16][badge-bf16] | 0.50 GB | [![][gh-prithivMLmods]](https://huggingface.co/prithivMLmods/Qwen-Image-2.1-Object-Remover-Bbox-Preview) | Bbox object removal, full-quality variant. |
-| **Natural Exposure LoRA** | Style | ![bf16][badge-bf16] | 0.42 GB | [![][gh-prithivMLmods]](https://huggingface.co/prithivMLmods/Qwen-Image-2.1-Natural-Exposure-LoRA) | Exposure correction, 5 checkpoints. |
-| **Object Remover Bbox turbo** | Control | ![bf16][badge-bf16] | 0.42 GB | [![][gh-prithivMLmods]](https://huggingface.co/prithivMLmods/Qwen-Image-2.1-Object-Remover-Bbox-turbo) | 4-step-compatible variant. |
-| **Normal2RGB** | Utility | ![bf16][badge-bf16] | 0.25 GB | [![][gh-Aero--Ex]](https://huggingface.co/Aero-Ex/Qwen-Image2.1_Normal2RGB/resolve/main/Normal2RGB_4000.safetensors) | Normal map → RGB render, 3 checkpoints. |
-| **Sts2 Cards Drawer** | Style | ![fp16][badge-fp16] | 0.10 GB | [![][gh-Airmongsity]](https://huggingface.co/Airmongsity/Qwen-Image-2.1-Sts2-Cards-Drawer) | `deckbuilder_cardart_style_lora_v1_fp16`. |
-| **RadianceChrome Voluptuous** | ⚠️ NSFW | ![bf16][badge-bf16] | 0.17 GB | ⚠️ [![][gh-AIImageStudio]](https://huggingface.co/AIImageStudio/RadianceChromeVoluptuous_QwenImage2.1_v1.0) | Character-style LoRA. |
-| **lora** | General | ![bf16][badge-bf16] | — | ⚠️ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-lora) **Empty** | No files uploaded. |
-| **aio-nsfw-lora** | ⚠️ NSFW | ![bf16][badge-bf16] | — | ⚠️ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-aio-nsfw-lora) **Empty** | No files uploaded. |
-| **breasts-slider-lora** | ⚠️ NSFW | ![bf16][badge-bf16] | — | ⚠️ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-breasts-slider-lora) **Empty** | No files uploaded. |
+| :--- | :---: | :---: | ---: | :---: | :--- |
+| **Fix** | ![Fix][ltype-fix] | ![bf16][badge-bf16] | 0.11 GB | [![][gh-e--n--v--y]](https://huggingface.co/e-n-v-y/Qwen-Image-2.1-Fix/resolve/main/qwen-image-2.1-fix-1.0-comfy.safetensors) | The most-liked community LoRA. |
+| **De-AI LoRA pack** | ![Style][ltype-style] | ![bf16][badge-bf16] | 2.45 GB | [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1ai-lora) | 8-file "remove the AI look" pack (CN filenames). |
+| **Object Mover Bbox Preview** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.50 GB | [![][gh-prithivMLmods]](https://huggingface.co/prithivMLmods/Qwen-Image-2.1-Object-Mover-Bbox-Preview) | Bbox object *moving*, 6 checkpoints. |
+| **Object Remover Bbox Preview** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.50 GB | [![][gh-prithivMLmods]](https://huggingface.co/prithivMLmods/Qwen-Image-2.1-Object-Remover-Bbox-Preview) | Bbox object removal, full-quality variant. |
+| **Natural Exposure LoRA** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.42 GB | [![][gh-prithivMLmods]](https://huggingface.co/prithivMLmods/Qwen-Image-2.1-Natural-Exposure-LoRA) | Exposure correction, 5 checkpoints. |
+| **Object Remover Bbox turbo** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.42 GB | [![][gh-prithivMLmods]](https://huggingface.co/prithivMLmods/Qwen-Image-2.1-Object-Remover-Bbox-turbo) | 4-step-compatible variant. |
+| **Normal2RGB** | ![Utility][ltype-utility] | ![bf16][badge-bf16] | 0.25 GB | [![][gh-Aero--Ex]](https://huggingface.co/Aero-Ex/Qwen-Image2.1_Normal2RGB/resolve/main/Normal2RGB_4000.safetensors) | Normal map → RGB render, 3 checkpoints. |
+| **Sts2 Cards Drawer** | ![Style][ltype-style] | ![fp16][badge-fp16] | 0.10 GB | [![][gh-Airmongsity]](https://huggingface.co/Airmongsity/Qwen-Image-2.1-Sts2-Cards-Drawer) | `deckbuilder_cardart_style_lora_v1_fp16`. |
+| **RadianceChrome Voluptuous** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.17 GB | ⚠️ [![][gh-AIImageStudio]](https://huggingface.co/AIImageStudio/RadianceChromeVoluptuous_QwenImage2.1_v1.0) | Character-style LoRA. |
+| **lora** | ![General][ltype-general] | ![bf16][badge-bf16] | — | ⚠️ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-lora) **Empty** | No files uploaded. |
+| **aio-nsfw-lora** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | — | ⚠️ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-aio-nsfw-lora) **Empty** | No files uploaded. |
+| **breasts-slider-lora** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | — | ⚠️ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-breasts-slider-lora) **Empty** | No files uploaded. |
 
 > [!CAUTION]
 > Repos marked ⚠️ are uncensored, abliterated, or NSFW. They are listed for completeness because they are widely used — the uncensored GGUF in particular is the most-downloaded repo in this ecosystem. They carry the same **Qwen Research License** as the base model; a research license is not a license to do whatever you want, and you remain responsible for how you use them. Several are empty placeholders created on release day — check before planning around them.
@@ -308,7 +308,7 @@ Non-CUDA runtimes and specialized accelerator backends.
 ### ▣ Apple Silicon
 
 | Name | Format | Precision | Size | Links | Notes |
-| :--- | :--- | :--- | ---: | :---: | :--- |
+| :--- | :---: | :---: | ---: | :---: | :--- |
 | **MLX 8bit** | MLX (mflux) | ![int8][badge-int8] | 24.04 GB | [![][gh-JoyFusionAI]](https://huggingface.co/JoyFusionAI/Qwen-Image-2.1-MLX-8bit) | For [mflux](https://github.com/filipstrand/mflux). 13 TE shards. |
 | **Coreml** | CoreML `.mlpackage` | ![bf16][badge-bf16] | 14.74 GB | [![][gh-devin--lai]](https://huggingface.co/devin-lai/Qwen-Image-2.1-Coreml) | 4 transformer blocks (~3.5 GB each) + embed + VAE decoder. |
 | **MLX 4bit** | MLX | ![int4][badge-int4] | 11.59 GB | [![][gh-themindstudio]](https://huggingface.co/themindstudio/Qwen-Image-2.1-MLX-4bit) | Smallest viable Apple build. |
@@ -320,7 +320,7 @@ Non-CUDA runtimes and specialized accelerator backends.
 Alibaba MNN runtime for on-device inference. The full repos are large — the MNN build bundles the text encoder, DiT, and VAE together.
 
 | Name | Precision | Size | Links | Notes |
-| :--- | :--- | ---: | :---: | :--- |
+| :--- | :---: | ---: | :---: | :--- |
 | **MNN fp16** | ![fp16][badge-fp16] | 30.72 GB | [![][gh-yunfengwang]](https://huggingface.co/yunfengwang/Qwen-Image-2.1-MNN-fp16) | Highest fidelity, and by far the largest. |
 | **MNN int8** | ![int8][badge-int8] | 21.42 GB | [![][gh-yunfengwang]](https://huggingface.co/yunfengwang/Qwen-Image-2.1-MNN-int8) | |
 | **MNN int4** | ![int4][badge-int4] | 14.39 GB | [![][gh-yunfengwang]](https://huggingface.co/yunfengwang/Qwen-Image-2.1-MNN-int4) | |
@@ -337,7 +337,7 @@ Alibaba MNN runtime for on-device inference. The full repos are large — the MN
 **FlagOS** ships eight builds for Chinese NPUs, same 28-file layout in each:
 
 | Name | Target | Precision | Size | Links |
-| :--- | :--- | :--- | ---: | :---: |
+| :--- | :---: | :---: | ---: | :---: |
 | **BF16 nvidia** | NVIDIA (FlagOS path) | ![bf16][badge-bf16] | 33.13 GB | [![][gh-FlagRelease]](https://huggingface.co/FlagRelease/Qwen-Image-2.1-BF16-nvidia-FlagOS) |
 | **BF16 hygon** | Hygon DCU | ![bf16][badge-bf16] | 33.13 GB | [![][gh-FlagRelease]](https://huggingface.co/FlagRelease/Qwen-Image-2.1-BF16-hygon-FlagOS) |
 | **BF16 ascend** | Ascend NPU | ![bf16][badge-bf16] | 33.13 GB | [![][gh-FlagRelease]](https://huggingface.co/FlagRelease/Qwen-Image-2.1-BF16-ascend-FlagOS) |
@@ -352,7 +352,7 @@ Alibaba MNN runtime for on-device inference. The full repos are large — the MN
 ### ▣ Experimental VAE
 
 | Name | Precision | Size | Links | Notes |
-| :--- | :--- | ---: | :---: | :--- |
+| :--- | :---: | ---: | :---: | :--- |
 | **hdr vae test** | ![fp16][badge-fp16] | 0.68 GB | [![][gh-471Def]](https://huggingface.co/471Def/qwen_image_2.1_hdr_vae_test) | Untested in the wild; treat as an experiment, not a drop-in replacement. |
 
 <p id="tools" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
@@ -360,12 +360,12 @@ Alibaba MNN runtime for on-device inference. The full repos are large — the MN
 ## ⚙ Tools &amp; notebooks
 
 | Name | Type | Links | Notes |
-| :--- | :--- | :---: | :--- |
-| **training assistant v1** | LoRA for training | [![][gh-SimpleTuner]](https://huggingface.co/SimpleTuner/Qwen-Image-2.1-training-assistant-v1) | A working `pytorch_lora_weights.safetensors` + `training_details.json` you can inspect to learn a real SimpleTuner config. |
-| **qwen_image2.1_colab** | Colab notebook | [![][gh-bluemorpholimited]](https://huggingface.co/bluemorpholimited/qwen_image2.1_colab) | 7-cell notebook with form UI and `enable_model_cpu_offload()`. Works on L4 22 GB; **T4 16 GB will OOM by design**. |
-| **qwen_image2.1_molab** | Marimo MoLab | [![][gh-bluemorpholimited]](https://huggingface.co/bluemorpholimited/qwen_image2.1_molab) | Script version of the above, tuned for Marimo and Blackwell. |
-| **Qwen-Image-2.1-Skills** | Agent skill | [![][gh-iamvts]](https://huggingface.co/iamvts/Qwen-Image-2.1-Skills) | Turns a short scene into a structured prompt for believable casual phone photography. 22 example images. |
-| **qwen-image-2.1-p150** | Inference port | [![][gh-changh95]](https://huggingface.co/changh95/qwen-image-2.1-p150) | Tenstorrent Blackhole p150a. `tt-model pull --with-weights` then `tt-model serve`. |
+| :--- | :---: | :---: | :--- |
+| **training assistant v1** | ![Training][ltype-training] | [![][gh-SimpleTuner]](https://huggingface.co/SimpleTuner/Qwen-Image-2.1-training-assistant-v1) | A working `pytorch_lora_weights.safetensors` + `training_details.json` you can inspect to learn a real SimpleTuner config. |
+| **qwen_image2.1_colab** | ![Notebook][ltype-notebook] | [![][gh-bluemorpholimited]](https://huggingface.co/bluemorpholimited/qwen_image2.1_colab) | 7-cell notebook with form UI and `enable_model_cpu_offload()`. Works on L4 22 GB; **T4 16 GB will OOM by design**. |
+| **qwen_image2.1_molab** | ![Notebook][ltype-notebook] | [![][gh-bluemorpholimited]](https://huggingface.co/bluemorpholimited/qwen_image2.1_molab) | Script version of the above, tuned for Marimo and Blackwell. |
+| **Qwen-Image-2.1-Skills** | ![Agent skill][ltype-skill] | [![][gh-iamvts]](https://huggingface.co/iamvts/Qwen-Image-2.1-Skills) | Turns a short scene into a structured prompt for believable casual phone photography. 22 example images. |
+| **qwen-image-2.1-p150** | ![Port][ltype-port] | [![][gh-changh95]](https://huggingface.co/changh95/qwen-image-2.1-p150) | Tenstorrent Blackhole p150a. `tt-model pull --with-weights` then `tt-model serve`. |
 
 **Gotchas that will save you an afternoon**
 
