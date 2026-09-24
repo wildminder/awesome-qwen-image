@@ -199,13 +199,8 @@ Start with the **TE GGUF** build if you want one download: Q4_K_M (5.03 GB), fp8
 | **PE-I2I MLX** | MLX (4/8/16-bit) | ![int4][badge-int4] ![int8][badge-int8] ![bf16][badge-bf16] | 35.20 GB | [![][gh-prithivMLmods]](https://huggingface.co/prithivMLmods/Qwen-Image-2.1-PE-I2I-MLX) |
 | **Prompt Enhancement INT8** | int8 ConvRot | ![int8][badge-int8] | 24.69 GB | [![][gh-foofifoo]](https://huggingface.co/foofifoo/Qwen-Image-2.1-Prompt-Enhancement-INT8-Convrot) |
 | **Heretic T2I int8 tensorwise** | int8 tensorwise ConvRot | ![int8][badge-int8] | 9.99 GB | [![][gh-diffnamehard]](https://huggingface.co/diffnamehard/Qwen-Image-2.1-PE-T2I-Heretic-int8-tensorwise-convrot) |
-| **PE-I2I Heretic MLX oQ3 G64** | MLX | ![Q3][badge-Q3] | — | ⚠️ [![][gh-groxaxo]](https://huggingface.co/groxaxo/Qwen-Image-2.1-PE-I2I-Heretic-MLX-oQ3-G64) **Empty** |
-| **PE-I2I Heretic MLX oQ4 G64** | MLX | ![Q4][badge-Q4] | — | ⚠️ [![][gh-groxaxo]](https://huggingface.co/groxaxo/Qwen-Image-2.1-PE-I2I-Heretic-MLX-oQ4-G64) **Empty** |
-| **PE-I2I Heretic MLX oQ5 G64** | MLX | ![Q5][badge-Q5] | — | ⚠️ [![][gh-groxaxo]](https://huggingface.co/groxaxo/Qwen-Image-2.1-PE-I2I-Heretic-MLX-oQ5-G64) **Empty** |
-| **PE-I2I Heretic MLX oQ6 G64** | MLX | ![Q6][badge-Q6] | — | ⚠️ [![][gh-groxaxo]](https://huggingface.co/groxaxo/Qwen-Image-2.1-PE-I2I-Heretic-MLX-oQ6-G64) **Empty** |
-| **PE-I2I Heretic MLX oQ8 G64** | MLX | ![Q8][badge-Q8] | — | ⚠️ [![][gh-groxaxo]](https://huggingface.co/groxaxo/Qwen-Image-2.1-PE-I2I-Heretic-MLX-oQ8-G64) **Empty** |
 
-The INT8 ConvRot pack is the only single download covering both PE-T2I and PE-I2I. The five `groxaxo` MLX repos contain only `.gitattributes` — nothing to download yet.
+The INT8 ConvRot pack is the only single download covering both PE-T2I and PE-I2I.
 
 <p id="quant" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
 
@@ -274,7 +269,6 @@ Every FP4 / NVFP4 / MXFP4 / INT8 / INT4 / W4A4 conversion in one place.
 | **FP8** | ![fp8][badge-fp8] | 17.96 GB | [![][gh-Rin247]](https://huggingface.co/Rin247/Qwen-Image-2.1-FP8) | Closest thing to a drop-in smaller BF16. |
 | **Uncensored BF16 SafeTensor** | ![bf16][badge-bf16] | 14.23 GB | ⚠️ [![][gh-dh123456789123]](https://huggingface.co/dh123456789123/Qwen-Image-2.1-Uncensored-BF16-SafeTensor/resolve/main/qwen-image-2.1-UC-BF16_bf16.safetensors) | Single file. |
 | **DF11 ComfyUI** | ![bf16][badge-bf16] | 9.72 GB | [![][gh-mingyi456]](https://huggingface.co/mingyi456/Qwen-Image-2.1-DF11-ComfyUI/resolve/main/qwen_image_2.1_bf16-DF11.safetensors) | `qwen_image_2.1_bf16-DF11.safetensors`. |
-| **bf16 unet** | ![bf16][badge-bf16] | — | ⚠️ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-bf16-unet) **Empty** | No files uploaded yet. |
 
 <p id="quant-nunchaku" align="center">· · · · · · · · · · · · · ·</p>
 
@@ -329,7 +323,6 @@ Repo links: **[Viggle](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo
 | **Turbo BF16 diffusers** | 4 | ![bf16][badge-bf16] | 32.44 GB | [![][gh-addlabsviral]](https://huggingface.co/addlabsviral/qwen-image2.1-turbo-bf16) | Full pipeline (TE + DiT + VAE), ready to load with `QwenImage21Pipeline`. DiT is byte-identical in size to the v0.1 transformer above, re-sharded 2-way. |
 | **Turbo FP4 diffusers** | 4 | ![fp4][badge-fp4] | 11.41 GB | [![][gh-addlabsviral]](https://huggingface.co/addlabsviral/qwen-image2.1-turbo-fp4) | Same v0.1 pipeline with an FP4 DiT; the TE is the larger half at 6.73 GB. |
 | **Turbo ONNX (browser)** | 4 | ![int4][badge-int4] | ~17.2 GB | [![][gh-cgb]](https://huggingface.co/cgb/Qwen-Image-2.1-Turbo-ONNX) | r64 LoRA merged into the denoiser, then Q4 MatMulNBits. WebGPU in-browser; needs the FreeGen pipeline and a desktop adapter. Experimental. |
-| **turbo 4step lora** | 4 | ![bf16][badge-bf16] | — | ⚠️ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-turbo-4step-lora) **Empty** | Created 2026-09-23, still no files. |
 <p id="lora" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
 
 ## ◉ LoRA &amp; adapters
@@ -347,12 +340,12 @@ Style, control, and fix adapters. All target the base DiT unless noted.
 | **Normal2RGB** | ![Utility][ltype-utility] | ![bf16][badge-bf16] | 0.25 GB | [![][gh-Aero--Ex]](https://huggingface.co/Aero-Ex/Qwen-Image2.1_Normal2RGB/resolve/main/Normal2RGB_4000.safetensors) | Normal map → RGB render, 3 checkpoints. |
 | **Sts2 Cards Drawer** | ![Style][ltype-style] | ![fp16][badge-fp16] | 0.10 GB | [![][gh-Airmongsity]](https://huggingface.co/Airmongsity/Qwen-Image-2.1-Sts2-Cards-Drawer) | `deckbuilder_cardart_style_lora_v1_fp16`. |
 | **RadianceChrome Voluptuous** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.17 GB | ⚠️ [![][gh-AIImageStudio]](https://huggingface.co/AIImageStudio/RadianceChromeVoluptuous_QwenImage2.1_v1.0) | Character-style LoRA. |
-| **lora** | ![General][ltype-general] | ![bf16][badge-bf16] | — | ⚠️ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-lora) **Empty** | No files uploaded. |
-| **aio-nsfw-lora** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | — | ⚠️ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-aio-nsfw-lora) **Empty** | No files uploaded. |
-| **breasts-slider-lora** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | — | ⚠️ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-breasts-slider-lora) **Empty** | No files uploaded. |
+| **Fix 1.0** | ![Fix][ltype-fix] | ![bf16][badge-bf16] | 0.11 GB | [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-lora/resolve/main/qwen-image-2.1-fix-1.0-comfy.safetensors) | Same `fix-1.0` weights as e-n-v-y, uploaded 2026-09-24. |
+| **NSFW Image Edit** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.08 GB | ⚠️ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-aio-nsfw-lora/resolve/main/Qwen-Image-2.1%20NSFW%20Image%20Edit.safetensors) | Editing LoRA, uploaded 2026-09-24. |
+| **Breasts Slider V1** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.003 GB | ⚠️ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-breasts-slider-lora/resolve/main/Pornmaster_QI2.1_Breasts_Slider_V1.safetensors) | Slider control, 3 MB. |
 
 > [!CAUTION]
-> Repos marked ⚠️ are uncensored, abliterated, or NSFW. They are listed for completeness because they are widely used — the uncensored GGUF in particular is the most-downloaded repo in this ecosystem. They carry the same **Qwen Research License** as the base model; a research license is not a license to do whatever you want, and you remain responsible for how you use them. Several are empty placeholders created on release day — check before planning around them.
+> Repos marked ⚠️ are uncensored, abliterated, or NSFW. They are listed for completeness because they are widely used — the uncensored GGUF in particular is the most-downloaded repo in this ecosystem. They carry the same **Qwen Research License** as the base model; a research license is not a license to do whatever you want, and you remain responsible for how you use them. Sizes are the LoRA file only; none of these merge a base model.
 
 <p id="port" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
 
@@ -503,7 +496,6 @@ new number.
 [gh-e--n--v--y]: https://img.shields.io/badge/e--n--v--y-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-evankuo]: https://img.shields.io/badge/evankuo-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-foofifoo]: https://img.shields.io/badge/foofifoo-lightgrey?style=flat-square&logo=huggingface&logoColor=white
-[gh-groxaxo]: https://img.shields.io/badge/groxaxo-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-iamvts]: https://img.shields.io/badge/iamvts-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-kkxao]: https://img.shields.io/badge/kkxao-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-mingyi456]: https://img.shields.io/badge/mingyi456-lightgrey?style=flat-square&logo=huggingface&logoColor=white
@@ -540,11 +532,6 @@ new number.
 [badge-int4]: https://img.shields.io/badge/int4-ffc107?style=flat-square
 [badge-w4a8]: https://img.shields.io/badge/w4a8-fe7d37?style=flat-square
 [badge-w8a8]: https://img.shields.io/badge/w8a8-fe7d37?style=flat-square
-[badge-Q3]: https://img.shields.io/badge/Q3-fe7d37?style=flat-square
-[badge-Q4]: https://img.shields.io/badge/Q4-dfb317?style=flat-square
-[badge-Q5]: https://img.shields.io/badge/Q5-97c00f?style=flat-square
-[badge-Q6]: https://img.shields.io/badge/Q6-0077cc?style=flat-square
-[badge-Q8]: https://img.shields.io/badge/Q8-28a745?style=flat-square
 [badge-Q2_K]: https://img.shields.io/badge/Q2__K-e05d44?style=flat-square
 [badge-q2k]: https://img.shields.io/badge/Q2__K-e05d44?style=flat-square
 [badge-Q3_K_M]: https://img.shields.io/badge/Q3__K__M-fe7d37?style=flat-square
@@ -569,7 +556,6 @@ new number.
 [ltype-style]: https://img.shields.io/badge/Style-6f42c1?style=flat-square
 [ltype-control]: https://img.shields.io/badge/Control-17a2b8?style=flat-square
 [ltype-utility]: https://img.shields.io/badge/Utility-28a745?style=flat-square
-[ltype-general]: https://img.shields.io/badge/General-6c757d?style=flat-square
 [ltype-nsfw]: https://img.shields.io/badge/NSFW-b02a37?style=flat-square
 [ltype-training]: https://img.shields.io/badge/Training-6f42c1?style=flat-square
 [ltype-notebook]: https://img.shields.io/badge/Notebook-0077cc?style=flat-square

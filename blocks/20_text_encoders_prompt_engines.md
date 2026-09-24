@@ -60,11 +60,6 @@ Start with the **TE GGUF** build if you want one download: Q4_K_M (5.03 GB), fp8
 | **PE-I2I MLX** | MLX (4/8/16-bit) | ![int4][badge-int4] ![int8][badge-int8] ![bf16][badge-bf16] | 35.20 GB | [![][gh-prithivMLmods]](https://huggingface.co/prithivMLmods/Qwen-Image-2.1-PE-I2I-MLX) |
 | **Prompt Enhancement INT8** | int8 ConvRot | ![int8][badge-int8] | 24.69 GB | [![][gh-foofifoo]](https://huggingface.co/foofifoo/Qwen-Image-2.1-Prompt-Enhancement-INT8-Convrot) |
 | **Heretic T2I int8 tensorwise** | int8 tensorwise ConvRot | ![int8][badge-int8] | 9.99 GB | [![][gh-diffnamehard]](https://huggingface.co/diffnamehard/Qwen-Image-2.1-PE-T2I-Heretic-int8-tensorwise-convrot) |
-| **PE-I2I Heretic MLX oQ3 G64** | MLX | ![Q3][badge-Q3] | — | ⚠️ [![][gh-groxaxo]](https://huggingface.co/groxaxo/Qwen-Image-2.1-PE-I2I-Heretic-MLX-oQ3-G64) **Empty** |
-| **PE-I2I Heretic MLX oQ4 G64** | MLX | ![Q4][badge-Q4] | — | ⚠️ [![][gh-groxaxo]](https://huggingface.co/groxaxo/Qwen-Image-2.1-PE-I2I-Heretic-MLX-oQ4-G64) **Empty** |
-| **PE-I2I Heretic MLX oQ5 G64** | MLX | ![Q5][badge-Q5] | — | ⚠️ [![][gh-groxaxo]](https://huggingface.co/groxaxo/Qwen-Image-2.1-PE-I2I-Heretic-MLX-oQ5-G64) **Empty** |
-| **PE-I2I Heretic MLX oQ6 G64** | MLX | ![Q6][badge-Q6] | — | ⚠️ [![][gh-groxaxo]](https://huggingface.co/groxaxo/Qwen-Image-2.1-PE-I2I-Heretic-MLX-oQ6-G64) **Empty** |
-| **PE-I2I Heretic MLX oQ8 G64** | MLX | ![Q8][badge-Q8] | — | ⚠️ [![][gh-groxaxo]](https://huggingface.co/groxaxo/Qwen-Image-2.1-PE-I2I-Heretic-MLX-oQ8-G64) **Empty** |
 
-The INT8 ConvRot pack is the only single download covering both PE-T2I and PE-I2I. The five `groxaxo` MLX repos contain only `.gitattributes` — nothing to download yet.
+The INT8 ConvRot pack is the only single download covering both PE-T2I and PE-I2I.
 

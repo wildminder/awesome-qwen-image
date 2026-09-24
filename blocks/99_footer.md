@@ -42,7 +42,6 @@
 [gh-e--n--v--y]: https://img.shields.io/badge/e--n--v--y-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-evankuo]: https://img.shields.io/badge/evankuo-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-foofifoo]: https://img.shields.io/badge/foofifoo-lightgrey?style=flat-square&logo=huggingface&logoColor=white
-[gh-groxaxo]: https://img.shields.io/badge/groxaxo-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-iamvts]: https://img.shields.io/badge/iamvts-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-kkxao]: https://img.shields.io/badge/kkxao-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-mingyi456]: https://img.shields.io/badge/mingyi456-lightgrey?style=flat-square&logo=huggingface&logoColor=white
@@ -79,11 +78,6 @@
 [badge-int4]: https://img.shields.io/badge/int4-ffc107?style=flat-square
 [badge-w4a8]: https://img.shields.io/badge/w4a8-fe7d37?style=flat-square
 [badge-w8a8]: https://img.shields.io/badge/w8a8-fe7d37?style=flat-square
-[badge-Q3]: https://img.shields.io/badge/Q3-fe7d37?style=flat-square
-[badge-Q4]: https://img.shields.io/badge/Q4-dfb317?style=flat-square
-[badge-Q5]: https://img.shields.io/badge/Q5-97c00f?style=flat-square
-[badge-Q6]: https://img.shields.io/badge/Q6-0077cc?style=flat-square
-[badge-Q8]: https://img.shields.io/badge/Q8-28a745?style=flat-square
 [badge-Q2_K]: https://img.shields.io/badge/Q2__K-e05d44?style=flat-square
 [badge-q2k]: https://img.shields.io/badge/Q2__K-e05d44?style=flat-square
 [badge-Q3_K_M]: https://img.shields.io/badge/Q3__K__M-fe7d37?style=flat-square
@@ -108,7 +102,6 @@
 [ltype-style]: https://img.shields.io/badge/Style-6f42c1?style=flat-square
 [ltype-control]: https://img.shields.io/badge/Control-17a2b8?style=flat-square
 [ltype-utility]: https://img.shields.io/badge/Utility-28a745?style=flat-square
-[ltype-general]: https://img.shields.io/badge/General-6c757d?style=flat-square
 [ltype-nsfw]: https://img.shields.io/badge/NSFW-b02a37?style=flat-square
 [ltype-training]: https://img.shields.io/badge/Training-6f42c1?style=flat-square
 [ltype-notebook]: https://img.shields.io/badge/Notebook-0077cc?style=flat-square
