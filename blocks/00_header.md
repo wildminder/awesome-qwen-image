@@ -11,6 +11,7 @@
     50_loras.md                         LoRA & adapters
     60_platform_ports.md                Apple, MNN, AMD/domestic, VAE
     70_tools.md                         tools & notebooks
+    80_contributing.md                  how to add an entry
     99_footer.md                        badge and link definitions
 
   The GGUF table in 30_quantizations.md is generated from Hugging Face API
@@ -57,6 +58,7 @@ A curated list of checkpoints, quants, prompt engines, LoRAs, and tooling for **
   * [AMD &amp; domestic accelerators](#port-alt)
   * [Experimental VAE](#port-vae)
 * [Tools &amp; notebooks](#tools)
+* [Contributing](#contributing)
 
 </details>
 
