@@ -2,18 +2,7 @@
 __pycache__/
 .pytest_cache/
 *.pyc
-
-# WorkBuddy project data
 .workbuddy-ai/
-
-# Tooling and source data -- not part of the published list.
-# Regenerate with:
-#   python scripts/fetch_meta.py
-#   python scripts/fetch_cards.py
-#   python scripts/fetch_sizes.py
-#   python scripts/classify.py
-#   python scripts/build_readme.py
 scripts/
 docs/
-
-# Only the compiled document and its source blocks are tracked.
+_backup/
