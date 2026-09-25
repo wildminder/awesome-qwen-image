@@ -310,11 +310,13 @@ Two ComfyUI conversions of the v0.2.1 adapters exist and are not interchangeable
 | **v0.1 full fine-tune** | 4 | ![bf16][badge-bf16] | 14.23 GB | [![][gh-Viggle]](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/tree/main/transformer) | Merged transformer, no LoRA needed. This is what the GGUF quants above were built from. |
 | **v0.1 LoRA r64** | 4 | ![bf16][badge-bf16] | 0.34 GB | [![][gh-Viggle]](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/resolve/main/Qwen-Image-2.1-viggle-turbo-4step-lora-r64.safetensors) ┊ [![][gh-t8star]](https://huggingface.co/t8star/Qwen-Image-2.1-viggle-turbo-4step-r64-comfy/resolve/main/Qwen-Image-2.1-viggle-turbo-4step-r64-comfyui-T8.safetensors) ┊ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-viggle-turbo-4step-r64-comfyui-t8-lora/resolve/main/Qwen-Image-2.1-viggle-turbo-4step-r64-comfyui-T8.safetensors) | Superseded — diversity collapsed to 0.75× base and the output was visibly softer. Kept for reproducibility. |
 | **Fun-Acc 4Step (PDD)** | 4 | ![bf16][badge-bf16] | 0.35 GB | [![][gh-alibaba--pai]](https://huggingface.co/alibaba-pai/Qwen-Image-2.1-Fun-Acc-LoRAs/resolve/main/models/Qwen-Image-2.1-Fun-Acc-4Step.safetensors) | **Official Alibaba PAI line**, rank 64, via Parallel Decoding Distillation. Independent of Viggle — 4 NFE for both T2I and instruction editing. | 
-| **Pruna 8Step** | 8 | ![bf16][badge-bf16] | 0.34 GB | [![][gh-PrunaAI]](https://huggingface.co/PrunaAI/Pruna-Qwen-Image-2.1/resolve/main/p_qwen_image_2.1_8step_v0.1.safetensors) | Third-party DMD line, rank 64 / alpha 128. Better of the two and the card's default, but v0.1 is marked work in progress. |
-| **Pruna 5Step** | 5 | ![bf16][badge-bf16] | 0.34 GB | [![][gh-PrunaAI]](https://huggingface.co/PrunaAI/Pruna-Qwen-Image-2.1/resolve/main/p_qwen_image_2.1_5step_v0.1.safetensors) | Same line, faster and visibly weaker. One adapter at a time — see the schedule note above. |
+| **Pruna 8Step** | 8 | ![bf16][badge-bf16] | 0.34 GB | [![][gh-PrunaAI]](https://huggingface.co/PrunaAI/Pruna-Qwen-Image-2.1/resolve/main/p_qwen_image_2.1_8step_v0.1.safetensors) ┊ [![][gh-t8star]](https://huggingface.co/t8star/Pruna-Qwen-Image-2.1-Comfy/resolve/main/p_qwen_image_2.1_8step_v0.1-comfyui-T8.safetensors) | Third-party DMD line, rank 64 / alpha 128. Better of the two and the card's default, but v0.1 is marked work in progress. |
+| **Pruna 5Step** | 5 | ![bf16][badge-bf16] | 0.34 GB | [![][gh-PrunaAI]](https://huggingface.co/PrunaAI/Pruna-Qwen-Image-2.1/resolve/main/p_qwen_image_2.1_5step_v0.1.safetensors) ┊ [![][gh-t8star]](https://huggingface.co/t8star/Pruna-Qwen-Image-2.1-Comfy/resolve/main/p_qwen_image_2.1_5step_v0.1-comfyui-T8.safetensors) | Same line, faster and visibly weaker. One adapter at a time — see the schedule note above. |
+| **UltraFast 8Step** | 8 | ![bf16][badge-bf16] | 0.17 GB | [![][gh-Haverbex]](https://huggingface.co/Haverbex/Qwen-Image-2.1-UltraFast/tree/main/adapter) | Editing-focused rather than T2I, trained on MagicBrush. Rank 32, but loaded by the repo's own `inject_dit_lora` script, **not** a stock PEFT or ComfyUI loader. |
 | **Turbo BF16 diffusers** | 4 | ![bf16][badge-bf16] | 32.44 GB | [![][gh-addlabsviral]](https://huggingface.co/addlabsviral/qwen-image2.1-turbo-bf16) | Full pipeline (TE + DiT + VAE), ready to load with `QwenImage21Pipeline`. |
 | **Turbo FP4 diffusers** | 4 | ![fp4][badge-fp4] | 11.41 GB | [![][gh-addlabsviral]](https://huggingface.co/addlabsviral/qwen-image2.1-turbo-fp4) | Same v0.1 pipeline with an FP4 DiT; the TE is the larger half at 6.73 GB. |
 | **Turbo ONNX (browser)** | 4 | ![int4][badge-int4] | ~17.2 GB | [![][gh-cgb]](https://huggingface.co/cgb/Qwen-Image-2.1-Turbo-ONNX) | r64 LoRA merged into the denoiser, then Q4 MatMulNBits. WebGPU in-browser; needs the FreeGen pipeline and a desktop adapter. Experimental. |
+| **UltraFast Q4_K** | 8 | ![Q4_K][badge-Q4_K] | 4.05 GB | [![][gh-Haverbex]](https://huggingface.co/Haverbex/Qwen-Image-2.1-UltraFast-GGUF/resolve/main/Qwen-Image-2.1-UltraFast-Q4_K.gguf) | DiT-only Q4_K with the UltraFast adapter **already merged** — do not stack the adapter on top. Still needs the text/vision encoders and the matching VAE. Quality and speed unbenchmarked. |
 
 <p id="lora" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
 
@@ -328,17 +330,21 @@ Style, control, and fix adapters. All target the base DiT unless noted. Grouped 
 | **Object Mover Bbox Preview** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.50 GB | [![][gh-prithivMLmods]](https://huggingface.co/prithivMLmods/Qwen-Image-2.1-Object-Mover-Bbox-Preview) | Bbox object *moving*, 6 checkpoints. |
 | **Object Remover Bbox Preview** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.50 GB | [![][gh-prithivMLmods]](https://huggingface.co/prithivMLmods/Qwen-Image-2.1-Object-Remover-Bbox-Preview) | Bbox object removal, full-quality variant. |
 | **Object Remover Bbox turbo** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.42 GB | [![][gh-prithivMLmods]](https://huggingface.co/prithivMLmods/Qwen-Image-2.1-Object-Remover-Bbox-turbo) | 4-step-compatible variant. |
-| **Orbit Alpha** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.17 GB | [![][gh-ML--Intern--lab]](https://huggingface.co/ML-Intern-lab/Qwen-Image-2.1-camera-control/resolve/main/checkpoints/steps2000res768/orbit_alpha_lora_gate_up_split.safetensors) | **Official ML-Intern-lab.** One RGBA image in, the same object from a new viewpoint out. Rank 32, 2,000 steps at 768 px. Use the `_gate_up_split` file — the other checkpoint in the repo does not load correctly. `<orbit>` grammar, 40 steps, no CFG. |
+| **Orbit Alpha** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.17 GB | [![][gh-ML--Intern--lab]](https://huggingface.co/ML-Intern-lab/Qwen-Image-2.1-viewpoint-orbit-LoRA/resolve/main/checkpoints/steps2000res768/orbit_alpha_lora_gate_up_split.safetensors) | **Official ML-Intern-lab.** One RGBA image in, the same object from a new viewpoint out. Rank 32, 2,000 steps at 768 px. Use the `_gate_up_split` file — the other checkpoint in the repo does not load correctly. `<orbit>` grammar, 40 steps, no CFG. |
 |  |  |  |  |  |  |
 | **Fix** | ![Fix][ltype-fix] | ![bf16][badge-bf16] | 0.11 GB | [![][gh-e--n--v--y]](https://huggingface.co/e-n-v-y/Qwen-Image-2.1-Fix/resolve/main/qwen-image-2.1-fix-1.0-comfy.safetensors) | The most-liked community LoRA. |
 |  |  |  |  |  |  |
 | **De-AI LoRA pack** | ![Style][ltype-style] | ![bf16][badge-bf16] | 2.45 GB | [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1ai-lora) | 8-file "remove the AI look" pack (CN filenames). |
 | **Natural Exposure LoRA** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.42 GB | [![][gh-prithivMLmods]](https://huggingface.co/prithivMLmods/Qwen-Image-2.1-Natural-Exposure-LoRA) | Exposure correction, 5 checkpoints. |
+| **De-AI + lighting v5** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.17 GB | [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-lora-2071763057486946305/resolve/main/Qwen%20Image%202.1%E5%8E%BB%E9%99%A4ai%2B%E5%85%89%E5%BD%B1%E4%BC%98%E5%8C%96v5.safetensors) | Two revisions of the same de-AI + lighting adapter; v5 is the newer. The repo also has two lighting-only adapters, 0.24 and 0.09 GB. CN filenames. |
 | **Sts2 Cards Drawer** | ![Style][ltype-style] | ![fp16][badge-fp16] | 0.10 GB | [![][gh-Airmongsity]](https://huggingface.co/Airmongsity/Qwen-Image-2.1-Sts2-Cards-Drawer) | `deckbuilder_cardart_style_lora_v1_fp16`. |
 |  |  |  |  |  |  |
 | **Normal2RGB** | ![Utility][ltype-utility] | ![bf16][badge-bf16] | 0.25 GB | [![][gh-Aero--Ex]](https://huggingface.co/Aero-Ex/Qwen-Image2.1_Normal2RGB/resolve/main/Normal2RGB_4000.safetensors) | Normal map → RGB render, 3 checkpoints. |
 |  |  |  |  |  |  |
+| **Hips / buttocks** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.47 GB | ⚠️ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-lora/resolve/main/qwen2509%E8%87%80%E9%83%A8%E6%94%BE%E5%A4%A7.safetensors) | Body-shape slider, ported from a Qwen-2.5-09 derivative. CN filename. |
+| **Breasts and hips** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.17 GB | ⚠️ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-lora/resolve/main/Qwen%20Image%202.1%E5%A4%A7%E8%83%B8%E5%A4%A7%E8%87%80.safetensors) | Combined body-shape adapter from the same pack. CN filename. |
 | **RadianceChrome Voluptuous** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.17 GB | ⚠️ [![][gh-AIImageStudio]](https://huggingface.co/AIImageStudio/RadianceChromeVoluptuous_QwenImage2.1_v1.0) | Character-style LoRA. |
+| **NSFW LoRA** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.16 GB | ⚠️ [![][gh-Wickedlizerd]](https://huggingface.co/Wickedlizerd/NSFW-Qwen-Image-2.1-LoRA/resolve/main/nsfw_qwen_21.safetensors) | Civitai original by TheseAlpacas, mirrored unmodified. Rank 32, 192 targets. The author asks for **25+ steps**, `er_sde` and the `beta` scheduler on an INT8 ConvRot base — it is not a few-step adapter. |
 | **NSFW Image Edit** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.08 GB | ⚠️ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-aio-nsfw-lora/resolve/main/Qwen-Image-2.1%20NSFW%20Image%20Edit.safetensors) | Editing LoRA, uploaded 2026-09-24. |
 | **Breasts Slider V1** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.003 GB | ⚠️ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-breasts-slider-lora/resolve/main/Pornmaster_QI2.1_Breasts_Slider_V1.safetensors) | Slider control, 3 MB. |
 
@@ -363,7 +369,7 @@ Non-CUDA runtimes and specialized accelerator backends.
 | **QIPACK distilled** | QIPACK1 `.qipack` | ![fp16][badge-fp16] | 14.23 GB | [![][gh-netdur]](https://huggingface.co/netdur/Qwen-Image-2.1-QIPACK) | Same runtime, 4-step. The Viggle v0.1 **full fine-tune**, not its LoRA and not v0.2.1. |
 | **MLX 4bit** | MLX | ![int4][badge-int4] | 11.59 GB | [![][gh-themindstudio]](https://huggingface.co/themindstudio/Qwen-Image-2.1-MLX-4bit) | Smallest viable Apple build. |
 
-The two QIPACK packs carry the transformer only — the text encoder, VAE, tokenizer and processor still come from the official Qwen snapshot, so you need a local copy of those alongside them. Needs macOS 14+. 1024×1024 works; 2048×2048 does not yet.
+The repo is self-contained: alongside the two packs it now ships the Qwen3-VL-8B text encoder (4 shards, 17.53 GB), the VAE (1.35 GB) and the processor files, so the support download is no longer needed. Needs macOS 14+. 1024×1024 works; 2048×2048 does not yet.
 
 <p id="port-mnn" align="center">· · · · · · · · · · · · · ·</p>
 
@@ -385,6 +391,15 @@ Alibaba MNN runtime for on-device inference. The full repos are large — the MN
 **p150** is the standout entry here. A full port to a **single Tenstorrent Blackhole p150a** via `tt-nn`, with all three sub-models resident on-chip. ~20.5 s for a 40-step 1024² generation (513 ms/step sustained), and it beats an RTX 5090 with CPU offload by 1.4–1.6× end to end. Includes editing support for 1–4 condition images. No weights are redistributed — it pulls the official ones.
 
 **[ROCm gfx1151](https://huggingface.co/kingjones777/Qwen-Image-2.1-ROCm-gfx1151)** targets AMD Strix Halo / RX 9070-class iGPUs. Code only; no weights in the repo.
+
+**Intel Arc (SYCL).** **[Frosty40](https://huggingface.co/Frosty40/Qwen-Image-2.1-SYCL-Turbo-GGUF)** is a serving package for the `sd.cpp` SYCL backend, not a fine-tune — "turbo" refers to the recipe, not to step distillation. Despite the name the weights are Qwen's own, quantized from a BF16 master.
+
+| Name | Precision | Size | Links | Notes |
+| :--- | :---: | :---: | :---: | :--- |
+| **SYCL quality** | ![q5_0][badge-Q5_0] | 7.89 GB | [![][gh-Frosty40]](https://huggingface.co/Frosty40/Qwen-Image-2.1-SYCL-Turbo-GGUF) | Attention qkv/o kept at F16; 73 BF16 + 128 F16 + 96 Q5_0. |
+| **SYCL lean** | ![q5_0][badge-Q5_0] | 5.07 GB | [![][gh-Frosty40]](https://huggingface.co/Frosty40/Qwen-Image-2.1-SYCL-Turbo-GGUF) | All-exception Q5_0, 73 BF16 + 224 Q5_0. |
+
+Both ship with a pinned Qwen3-VL-8B-Instruct Q8_0 text encoder (8.71 GB) and the BF16 VAE (0.68 GB). Two non-obvious requirements: `--vae-tiling` is mandatory at 1024² or the SYCL VAE overflows int32, and **one `sd-cli` per GPU** — a second concurrent run wedges the xe driver and needs a root-only reset. The 3.84× speedup comes from `--eager-load --cache-mode easycache`, not from fewer steps.
 
 **FlagOS** ships eight builds for Chinese NPUs, same 28-file layout in each:
 
@@ -484,8 +499,10 @@ new number.
 [gh-Comfy--Org]: https://img.shields.io/badge/Comfy--Org-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-EliovpAI]: https://img.shields.io/badge/EliovpAI-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-FlagRelease]: https://img.shields.io/badge/FlagRelease-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-Frosty40]: https://img.shields.io/badge/Frosty40-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-HangGlidersRule]: https://img.shields.io/badge/HangGlidersRule-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-HarleyWang]: https://img.shields.io/badge/HarleyWang-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-Haverbex]: https://img.shields.io/badge/Haverbex-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-JoyFusionAI]: https://img.shields.io/badge/JoyFusionAI-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Karsus1997]: https://img.shields.io/badge/Karsus1997-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-ML--Intern--lab]: https://img.shields.io/badge/ML--Intern--lab-lightgrey?style=flat-square&logo=huggingface&logoColor=white
@@ -523,6 +540,7 @@ new number.
 [gh-t8star]: https://img.shields.io/badge/t8star-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-themindstudio]: https://img.shields.io/badge/themindstudio-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-unsloth]: https://img.shields.io/badge/unsloth-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-Wickedlizerd]: https://img.shields.io/badge/Wickedlizerd-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-xingewh]: https://img.shields.io/badge/xingewh-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-yunfengwang]: https://img.shields.io/badge/yunfengwang-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-zcf0508]: https://img.shields.io/badge/zcf0508-lightgrey?style=flat-square&logo=huggingface&logoColor=white
@@ -554,9 +572,11 @@ new number.
 [badge-q2k]: https://img.shields.io/badge/Q2__K-e05d44?style=flat-square
 [badge-Q3_K_M]: https://img.shields.io/badge/Q3__K__M-fe7d37?style=flat-square
 [badge-q3km]: https://img.shields.io/badge/Q3__K__M-fe7d37?style=flat-square
+[badge-Q4_K]: https://img.shields.io/badge/Q4__K-dfb317?style=flat-square
 [badge-Q4_K_M]: https://img.shields.io/badge/Q4__K__M-dfb317?style=flat-square
 [badge-q4km]: https://img.shields.io/badge/Q4__K__M-dfb317?style=flat-square
 [badge-Q4_K_S]: https://img.shields.io/badge/Q4__K__S-dfb317?style=flat-square
+[badge-Q5_0]: https://img.shields.io/badge/Q5__0-97c00f?style=flat-square
 [badge-Q5_K_M]: https://img.shields.io/badge/Q5__K__M-97c00f?style=flat-square
 [badge-q5km]: https://img.shields.io/badge/Q5__K__M-97c00f?style=flat-square
 [badge-Q6_K]: https://img.shields.io/badge/Q6__K-0077cc?style=flat-square

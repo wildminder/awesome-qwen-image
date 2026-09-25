@@ -17,8 +17,10 @@
 [gh-Comfy--Org]: https://img.shields.io/badge/Comfy--Org-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-EliovpAI]: https://img.shields.io/badge/EliovpAI-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-FlagRelease]: https://img.shields.io/badge/FlagRelease-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-Frosty40]: https://img.shields.io/badge/Frosty40-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-HangGlidersRule]: https://img.shields.io/badge/HangGlidersRule-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-HarleyWang]: https://img.shields.io/badge/HarleyWang-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-Haverbex]: https://img.shields.io/badge/Haverbex-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-JoyFusionAI]: https://img.shields.io/badge/JoyFusionAI-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Karsus1997]: https://img.shields.io/badge/Karsus1997-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-ML--Intern--lab]: https://img.shields.io/badge/ML--Intern--lab-lightgrey?style=flat-square&logo=huggingface&logoColor=white
@@ -56,6 +58,7 @@
 [gh-t8star]: https://img.shields.io/badge/t8star-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-themindstudio]: https://img.shields.io/badge/themindstudio-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-unsloth]: https://img.shields.io/badge/unsloth-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-Wickedlizerd]: https://img.shields.io/badge/Wickedlizerd-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-xingewh]: https://img.shields.io/badge/xingewh-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-yunfengwang]: https://img.shields.io/badge/yunfengwang-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-zcf0508]: https://img.shields.io/badge/zcf0508-lightgrey?style=flat-square&logo=huggingface&logoColor=white
@@ -87,9 +90,11 @@
 [badge-q2k]: https://img.shields.io/badge/Q2__K-e05d44?style=flat-square
 [badge-Q3_K_M]: https://img.shields.io/badge/Q3__K__M-fe7d37?style=flat-square
 [badge-q3km]: https://img.shields.io/badge/Q3__K__M-fe7d37?style=flat-square
+[badge-Q4_K]: https://img.shields.io/badge/Q4__K-dfb317?style=flat-square
 [badge-Q4_K_M]: https://img.shields.io/badge/Q4__K__M-dfb317?style=flat-square
 [badge-q4km]: https://img.shields.io/badge/Q4__K__M-dfb317?style=flat-square
 [badge-Q4_K_S]: https://img.shields.io/badge/Q4__K__S-dfb317?style=flat-square
+[badge-Q5_0]: https://img.shields.io/badge/Q5__0-97c00f?style=flat-square
 [badge-Q5_K_M]: https://img.shields.io/badge/Q5__K__M-97c00f?style=flat-square
 [badge-q5km]: https://img.shields.io/badge/Q5__K__M-97c00f?style=flat-square
 [badge-Q6_K]: https://img.shields.io/badge/Q6__K-0077cc?style=flat-square
