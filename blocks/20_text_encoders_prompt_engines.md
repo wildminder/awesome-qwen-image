@@ -60,6 +60,7 @@ Start with the **TE GGUF** build if you want one download: Q4_K_M (5.03 GB), fp8
 | **PE-I2I MLX** | MLX (4/8/16-bit) | ![int4][badge-int4] ![int8][badge-int8] ![bf16][badge-bf16] | 35.20 GB | [![][gh-prithivMLmods]](https://huggingface.co/prithivMLmods/Qwen-Image-2.1-PE-I2I-MLX) |
 | **Prompt Enhancement INT8** | int8 ConvRot | ![int8][badge-int8] | 24.69 GB | [![][gh-foofifoo]](https://huggingface.co/foofifoo/Qwen-Image-2.1-Prompt-Enhancement-INT8-Convrot) |
 | **Heretic T2I int8 tensorwise** | int8 tensorwise ConvRot | ![int8][badge-int8] | 9.99 GB | [![][gh-diffnamehard]](https://huggingface.co/diffnamehard/Qwen-Image-2.1-PE-T2I-Heretic-int8-tensorwise-convrot) |
+| **Heretic PE int8 ConvRot** | int8 ConvRot (T2I + I2I) | ![int8][badge-int8] | 19.91 GB | [![][gh-netrunner--exe]](https://huggingface.co/netrunner-exe/Qwen-Image-2.1-PE-Heretic) |
 
-The INT8 ConvRot pack is the only single download covering both PE-T2I and PE-I2I.
+The INT8 ConvRot pack covers both PE-T2I and PE-I2I in one download. The heretic int8 ConvRot pair does too, and unlike the tensorwise build it keeps the MTP head — 1,395 tensors against 829, one file per task at 9.96 GB.
 
