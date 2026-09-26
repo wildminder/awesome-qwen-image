@@ -15,6 +15,7 @@ Non-CUDA runtimes and specialized accelerator backends.
 | **QIPACK base** | QIPACK1 `.qipack` | ![fp16][badge-fp16] | 14.23 GB | [![][gh-netdur]](https://huggingface.co/netdur/Qwen-Image-2.1-QIPACK) | For the native C++/Metal [qwen-image-cplus](https://github.com/netdur/qwen-image-cplus) runtime. 40-step base, defaults to TaylorSeer caching. |
 | **QIPACK distilled** | QIPACK1 `.qipack` | ![fp16][badge-fp16] | 14.23 GB | [![][gh-netdur]](https://huggingface.co/netdur/Qwen-Image-2.1-QIPACK) | Same runtime, 4-step. The Viggle v0.1 **full fine-tune**, not its LoRA and not v0.2.1. |
 | **MLX 4bit** | MLX | ![int4][badge-int4] | 11.59 GB | [![][gh-themindstudio]](https://huggingface.co/themindstudio/Qwen-Image-2.1-MLX-4bit) | Smallest viable Apple build. |
+| **Uncensored MLX** | MLX (4/6/8-bit) | ![int4][badge-int4] ![int8][badge-int8] | 7.56 GB | ⚠️ [![][gh-abenzerps]](https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF) | The uncensored line's Apple build, from the GGUF repo. **DiT only** — 7.56 GB at 8-bit, 5.78 at 6-bit, 4.00 at 4-bit, and the repo ships no MLX text encoder or config, so pair it with one of the two repos above. |
 
 The repo is self-contained: alongside the two packs it now ships the Qwen3-VL-8B text encoder (4 shards, 17.53 GB), the VAE (1.35 GB) and the processor files, so the support download is no longer needed. Needs macOS 14+. 1024×1024 works; 2048×2048 does not yet.
 

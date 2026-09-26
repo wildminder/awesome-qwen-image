@@ -208,7 +208,7 @@ Transformer-only weights for llama.cpp, sorted from the highest quant down. **Q4
 | ![Q5_K_M][badge-q5km] | 5.39 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF/resolve/main/qwen-image-2.1-Q5_K_M.gguf) |
 | ![Q5_K_S][badge-q5km] | 4.50 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF/resolve/main/qwen-image-2.1-Q5_K_S.gguf) |
 | ![Q4 · HVQ3 (sd.cpp)][badge-q4km] | 5.96 GB | [![][gh-zcf0508]](https://huggingface.co/zcf0508/qwen-image-2.1-hqv3-sdcpp-fixed/resolve/main/Qwen-Image-2.1-Q4-sd.cpp.gguf) |
-| ![NVFP4][badge-nvfp4] | 4.05 GB | [![][gh-gguf-org]](https://huggingface.co/gguf-org/qwen-image-2.1-gguf/resolve/main/qwen-image-2.1-nvfp4.gguf) |
+| ![NVFP4][badge-nvfp4] | 4.05 GB | [![][gh-gguf-org]](https://huggingface.co/gguf-org/qwen-image-2.1-gguf/resolve/main/qwen-image-2.1-nvfp4.gguf) ┊ [![][gh-abenzerps]](https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF/resolve/main/qwen-image-2.1-UC-NVFP4.gguf) |
 | ![Q4_K_M][badge-q4km] | 4.20 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF/resolve/main/qwen-image-2.1-Q4_K_M.gguf) |
 | ![Q4_0][badge-q4km] | 4.15 GB | [![][gh-abenzerps]](https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF/resolve/main/qwen-image-2.1-UC-Q4_0.gguf) ┊ [![][gh-ped4enko]](https://huggingface.co/ped4enko/Qwen-Image-2.1-Dessi/resolve/main/qwen-image-2.1-Q4_0.gguf) |
 | ![Q4_K_S][badge-q4km] | 3.91 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF/resolve/main/qwen-image-2.1-Q4_K_S.gguf) |
@@ -318,6 +318,7 @@ Two ComfyUI conversions of the v0.2.1 adapters exist and are not interchangeable
 | **Turbo FP4 diffusers** | 4 | ![fp4][badge-fp4] | 11.41 GB | [![][gh-addlabsviral]](https://huggingface.co/addlabsviral/qwen-image2.1-turbo-fp4) | Same v0.1 pipeline with an FP4 DiT; the TE is the larger half at 6.73 GB. |
 | **Turbo ONNX (browser)** | 4 | ![int4][badge-int4] | ~17.2 GB | [![][gh-cgb]](https://huggingface.co/cgb/Qwen-Image-2.1-Turbo-ONNX) | r64 LoRA merged into the denoiser, then Q4 MatMulNBits. WebGPU in-browser; needs the FreeGen pipeline and a desktop adapter. Experimental. |
 | **UltraFast Q4_K** | 8 | ![Q4_K][badge-Q4_K] | 4.05 GB | [![][gh-Haverbex]](https://huggingface.co/Haverbex/Qwen-Image-2.1-UltraFast-GGUF/resolve/main/Qwen-Image-2.1-UltraFast-Q4_K.gguf) | DiT-only Q4_K with the UltraFast adapter **already merged** — do not stack the adapter on top. Still needs the text/vision encoders and the matching VAE. Quality and speed unbenchmarked. |
+| **Pruna 8Step SDNQ** | 8 | ![int4][badge-int4] | 11.51 GB | [![][gh-SamuelTallet]](https://huggingface.co/SamuelTallet/Pruna-Qwen-Image-2.1-8steps-SDNQ-4bit-dynamic-hadamard256) | The Pruna 8-step adapter **merged** into the base and re-quantized with [SDNQ](https://github.com/Disty0/sdnq) — UINT4 dynamic, Hadamard rotation at group size 256. Full diffusers pipeline (DiT 4.10 + TE 6.74 + VAE 0.68), so the text encoder is quantized too. Needs SDNQ 0.2.0+, Triton and diffusers from git. Follows the Pruna sigma schedule above. |
 
 <p id="lora" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
 
@@ -331,6 +332,7 @@ Style, control, and fix adapters. All target the base DiT unless noted. Grouped 
 | **Object Mover Bbox Preview** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.50 GB | [![][gh-prithivMLmods]](https://huggingface.co/prithivMLmods/Qwen-Image-2.1-Object-Mover-Bbox-Preview) | Bbox object *moving*, 6 checkpoints. |
 | **Object Remover Bbox Preview** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.50 GB | [![][gh-prithivMLmods]](https://huggingface.co/prithivMLmods/Qwen-Image-2.1-Object-Remover-Bbox-Preview) | Bbox object removal, full-quality variant. |
 | **Object Remover Bbox turbo** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.42 GB | [![][gh-prithivMLmods]](https://huggingface.co/prithivMLmods/Qwen-Image-2.1-Object-Remover-Bbox-turbo) | 4-step-compatible variant. |
+| **BFS Head Swap v1** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.32 GB | [![][gh-Alissonerdx]](https://huggingface.co/Alissonerdx/BFS-Best-Face-Swap/resolve/main/bfs_head_v1_qwen_2.1.safetensors) | Head replacement, **not** a whole-face blend: identity, hair, eye colour and nose come from image 2 while gaze direction, head rotation and expression stay with image 1. Rank 64, 5,000 steps, MIT. **Image order is load-bearing** — swapping the two inputs swaps who is retargeted. Trigger with the `head_swap:` prefix. The repo's other 17 adapters target Qwen Image Edit 2509/2511, Flux 2 Klein, Krea 2 and LTX-2, not this base. |
 | **Orbit Alpha** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.17 GB | [![][gh-ML--Intern--lab]](https://huggingface.co/ML-Intern-lab/Qwen-Image-2.1-viewpoint-orbit-LoRA/resolve/main/checkpoints/steps2000res768/orbit_alpha_lora_gate_up_split.safetensors) | **Official ML-Intern-lab.** One RGBA image in, the same object from a new viewpoint out. Rank 32, 2,000 steps at 768 px. Use the `_gate_up_split` file — the other checkpoint in the repo does not load correctly. `<orbit>` grammar, 40 steps, no CFG. |
 | **Outpaint v2** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.16 GB | [![][gh-ausboss]](https://huggingface.co/ausboss/Qwen-Image-2.1-Outpaint-LoRA/resolve/main/qwen-image-2.1-outpaint-v2.safetensors) | Pad the picture with flat `#808080`, hand the padded canvas to the model as the reference; the adapter fills the gray and keeps the original pixel-registered. One side, a corner, or all four. Rank 32, ComfyUI keys, 2,000 steps. 25 steps, CFG 1, `resolution` 0, target 1–2 MP. Do **not** pin the known area with a latent noise mask — on this model it draws a visible rectangle at the seam. |
 | **Outpaint v1** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.16 GB | [![][gh-ausboss]](https://huggingface.co/ausboss/Qwen-Image-2.1-Outpaint-LoRA/resolve/main/qwen-image-2.1-outpaint.safetensors) | Same adapter one step earlier, trained at ≤1 MP over more extreme zoom-outs. The better of the two on very large extensions; the two are within noise on ordinary crops. The repo also keeps the step-500 and step-1250 intermediates. |
@@ -371,6 +373,7 @@ Non-CUDA runtimes and specialized accelerator backends.
 | **QIPACK base** | QIPACK1 `.qipack` | ![fp16][badge-fp16] | 14.23 GB | [![][gh-netdur]](https://huggingface.co/netdur/Qwen-Image-2.1-QIPACK) | For the native C++/Metal [qwen-image-cplus](https://github.com/netdur/qwen-image-cplus) runtime. 40-step base, defaults to TaylorSeer caching. |
 | **QIPACK distilled** | QIPACK1 `.qipack` | ![fp16][badge-fp16] | 14.23 GB | [![][gh-netdur]](https://huggingface.co/netdur/Qwen-Image-2.1-QIPACK) | Same runtime, 4-step. The Viggle v0.1 **full fine-tune**, not its LoRA and not v0.2.1. |
 | **MLX 4bit** | MLX | ![int4][badge-int4] | 11.59 GB | [![][gh-themindstudio]](https://huggingface.co/themindstudio/Qwen-Image-2.1-MLX-4bit) | Smallest viable Apple build. |
+| **Uncensored MLX** | MLX (4/6/8-bit) | ![int4][badge-int4] ![int8][badge-int8] | 7.56 GB | ⚠️ [![][gh-abenzerps]](https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF) | The uncensored line's Apple build, from the GGUF repo. **DiT only** — 7.56 GB at 8-bit, 5.78 at 6-bit, 4.00 at 4-bit, and the repo ships no MLX text encoder or config, so pair it with one of the two repos above. |
 
 The repo is self-contained: alongside the two packs it now ships the Qwen3-VL-8B text encoder (4 shards, 17.53 GB), the VAE (1.35 GB) and the processor files, so the support download is no longer needed. Needs macOS 14+. 1024×1024 works; 2048×2048 does not yet.
 
@@ -493,6 +496,7 @@ new number.
 [gh-gguf-org]: https://img.shields.io/badge/gguf-org-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-471Def]: https://img.shields.io/badge/471Def-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-AIImageStudio]: https://img.shields.io/badge/AIImageStudio-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-Alissonerdx]: https://img.shields.io/badge/Alissonerdx-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Abiray]: https://img.shields.io/badge/Abiray-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Aero--Ex]: https://img.shields.io/badge/Aero--Ex-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-addlabsviral]: https://img.shields.io/badge/addlabsviral-lightgrey?style=flat-square&logo=huggingface&logoColor=white
@@ -513,6 +517,7 @@ new number.
 [gh-Qwen]: https://img.shields.io/badge/Qwen-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Rin247]: https://img.shields.io/badge/Rin247-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-RunningHubAI]: https://img.shields.io/badge/RunningHubAI-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-SamuelTallet]: https://img.shields.io/badge/SamuelTallet-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-SimpleTuner]: https://img.shields.io/badge/SimpleTuner-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Viggle]: https://img.shields.io/badge/Viggle-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-abenzerps]: https://img.shields.io/badge/abenzerps-lightgrey?style=flat-square&logo=huggingface&logoColor=white
