@@ -9,6 +9,7 @@
 | **qwen_image2.1_molab** | ![Notebook][ltype-notebook] | [![][gh-bluemorpholimited]](https://huggingface.co/bluemorpholimited/qwen_image2.1_molab) | Script version of the above, tuned for Marimo and Blackwell. |
 | **Qwen-Image-2.1-Skills** | ![Agent skill][ltype-skill] | [![][gh-iamvts]](https://huggingface.co/iamvts/Qwen-Image-2.1-Skills) | Turns a short scene into a structured prompt for believable casual phone photography. 22 example images. |
 | **qwen-image-2.1-p150** | ![Port][ltype-port] | [![][gh-changh95]](https://huggingface.co/changh95/qwen-image-2.1-p150) | Tenstorrent Blackhole p150a. `tt-model pull --with-weights` then `tt-model serve`. |
+| **Qwen-Image-2.1 VRAM calculator** | ![Utility][ltype-utility] | [![][gh-modelvram]](https://modelvram.com/qwen-image-2-1-vram-calculator/) | Pick the DiT, text encoder and VAE files (BF16, FP8, INT8, GGUF), where the encoder runs and the image size; shows the peak VRAM range and which 8–32 GB GPUs fit, next to peaks people measured in ComfyUI and diffusers. |
 
 **Gotchas that will save you an afternoon**
 

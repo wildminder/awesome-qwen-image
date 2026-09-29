@@ -52,6 +52,7 @@
 [gh-kkxao]: https://img.shields.io/badge/kkxao-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-ling0322]: https://img.shields.io/badge/ling0322-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-mingyi456]: https://img.shields.io/badge/mingyi456-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-modelvram]: https://img.shields.io/badge/modelvram.com-lightgrey?style=flat-square
 [gh-netdur]: https://img.shields.io/badge/netdur-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-netrunner--exe]: https://img.shields.io/badge/netrunner--exe-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-ped4enko]: https://img.shields.io/badge/ped4enko-lightgrey?style=flat-square&logo=huggingface&logoColor=white
