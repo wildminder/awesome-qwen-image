@@ -9,6 +9,7 @@
 | **qwen_image2.1_molab** | ![Notebook][ltype-notebook] | [![][gh-bluemorpholimited]](https://huggingface.co/bluemorpholimited/qwen_image2.1_molab) | Script version of the above, tuned for Marimo and Blackwell. |
 | **Qwen-Image-2.1-Skills** | ![Agent skill][ltype-skill] | [![][gh-iamvts]](https://huggingface.co/iamvts/Qwen-Image-2.1-Skills) | Turns a short scene into a structured prompt for believable casual phone photography. 22 example images. |
 | **qwen-image-2.1-p150** | ![Port][ltype-port] | [![][gh-changh95]](https://huggingface.co/changh95/qwen-image-2.1-p150) | Tenstorrent Blackhole p150a. `tt-model pull --with-weights` then `tt-model serve`. |
+| **Image Studio** | ![Utility][ltype-utility] | [![][gh-tamimKTH]](https://github.com/tamimKTH/image-studio) | Local web app for Apple Silicon (64 GB+): text-to-image, edits with up to 10 reference images, transparent PNGs, background removal, and a node canvas that chains steps. Runs the Uncensored Q8_0 GGUF on ComfyUI, with bf16 copies of the int8 text encoders because MPS has no int8 matmul. AGPL. |
 
 **Gotchas that will save you an afternoon**
 
