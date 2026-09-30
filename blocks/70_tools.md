@@ -10,6 +10,7 @@
 | **Qwen-Image-2.1-Skills** | ![Agent skill][ltype-skill] | [![][gh-iamvts]](https://huggingface.co/iamvts/Qwen-Image-2.1-Skills) | Turns a short scene into a structured prompt for believable casual phone photography. 22 example images. |
 | **qwen-image-2.1-p150** | ![Port][ltype-port] | [![][gh-changh95]](https://huggingface.co/changh95/qwen-image-2.1-p150) | Tenstorrent Blackhole p150a. `tt-model pull --with-weights` then `tt-model serve`. |
 | **ComfyUI-AlphaTrace** | ![Node pack][ltype-nodes] | [![Nynxz](https://img.shields.io/badge/Nynxz-17a2b8?style=flat-square&logo=github&logoColor=white)](https://github.com/Nynxz/ComfyUI-AlphaTrace) | Diagnostic sampler nodes for the native RGBA output: they emit the predicted image, the alpha map and per-step alpha statistics at every step. Purely observational. For 2.1 pass **LTXVScheduler** as `sigmas` (`max_shift` 0.69, `base_shift` 0.54, `stretch` on, `terminal` 0.02) to match the official schedule. MIT, no extra dependencies, example workflow included. |
+| **Qwen-Image-2.1 VRAM calculator** | ![Utility][ltype-utility] | [![][gh-modelvram]](https://modelvram.com/qwen-image-2-1-vram-calculator/) | Pick the DiT, text encoder and VAE files (BF16, FP8, INT8, GGUF), where the encoder runs and the image size; shows the peak VRAM range and which 8–32 GB GPUs fit, next to peaks people measured in ComfyUI and diffusers. |
 
 **Gotchas that will save you an afternoon**
 
