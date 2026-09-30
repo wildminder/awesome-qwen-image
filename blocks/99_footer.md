@@ -69,6 +69,7 @@
 [gh-prithivMLmods]: https://img.shields.io/badge/prithivMLmods-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-realrebelai]: https://img.shields.io/badge/realrebelai-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-t8star]: https://img.shields.io/badge/t8star-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-tamimKTH]: https://img.shields.io/badge/tamimKTH-lightgrey?style=flat-square&logo=github&logoColor=white
 [gh-themindstudio]: https://img.shields.io/badge/themindstudio-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-trmz]: https://img.shields.io/badge/trmz-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-unsloth]: https://img.shields.io/badge/unsloth-lightgrey?style=flat-square&logo=huggingface&logoColor=white
