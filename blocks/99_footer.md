@@ -18,6 +18,7 @@
 [gh-EliovpAI]: https://img.shields.io/badge/EliovpAI-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-FlagRelease]: https://img.shields.io/badge/FlagRelease-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Frosty40]: https://img.shields.io/badge/Frosty40-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-Gogodr]: https://img.shields.io/badge/Gogodr-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-HangGlidersRule]: https://img.shields.io/badge/HangGlidersRule-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-HarleyWang]: https://img.shields.io/badge/HarleyWang-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Haverbex]: https://img.shields.io/badge/Haverbex-lightgrey?style=flat-square&logo=huggingface&logoColor=white
@@ -54,6 +55,7 @@
 [gh-e--n--v--y]: https://img.shields.io/badge/e--n--v--y-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-evankuo]: https://img.shields.io/badge/evankuo-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-foofifoo]: https://img.shields.io/badge/foofifoo-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-glowleaf]: https://img.shields.io/badge/glowleaf-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-houseofboern]: https://img.shields.io/badge/houseofboern-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-iamvts]: https://img.shields.io/badge/iamvts-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-kkxao]: https://img.shields.io/badge/kkxao-lightgrey?style=flat-square&logo=huggingface&logoColor=white
@@ -75,6 +77,7 @@
 [gh-unsloth]: https://img.shields.io/badge/unsloth-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-wesjos]: https://img.shields.io/badge/wesjos-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-xingewh]: https://img.shields.io/badge/xingewh-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-yhzr2222]: https://img.shields.io/badge/yhzr2222-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-ysharma]: https://img.shields.io/badge/ysharma-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-yunfengwang]: https://img.shields.io/badge/yunfengwang-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-zcf0508]: https://img.shields.io/badge/zcf0508-lightgrey?style=flat-square&logo=huggingface&logoColor=white
