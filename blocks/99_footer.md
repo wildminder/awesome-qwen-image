@@ -19,6 +19,7 @@
 [gh-EliovpAI]: https://img.shields.io/badge/EliovpAI-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-FlagRelease]: https://img.shields.io/badge/FlagRelease-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Frosty40]: https://img.shields.io/badge/Frosty40-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-GabrieleLozupone]: https://img.shields.io/badge/GabrieleLozupone-lightgrey?style=flat-square&logo=github&logoColor=white
 [gh-Gogodr]: https://img.shields.io/badge/Gogodr-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-HangGlidersRule]: https://img.shields.io/badge/HangGlidersRule-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-HarleyWang]: https://img.shields.io/badge/HarleyWang-lightgrey?style=flat-square&logo=huggingface&logoColor=white
