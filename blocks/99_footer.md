@@ -58,6 +58,7 @@
 [gh-dh123456789123]: https://img.shields.io/badge/dh123456789123-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-diffnamehard]: https://img.shields.io/badge/diffnamehard-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-e--n--v--y]: https://img.shields.io/badge/e--n--v--y-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-elapen]: https://img.shields.io/badge/elapen-lightgrey?style=flat-square&logo=github&logoColor=white
 [gh-empero--ai]: https://img.shields.io/badge/empero--ai-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-evankuo]: https://img.shields.io/badge/evankuo-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-foofifoo]: https://img.shields.io/badge/foofifoo-lightgrey?style=flat-square&logo=huggingface&logoColor=white
