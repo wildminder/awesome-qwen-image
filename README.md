@@ -33,6 +33,7 @@ A curated list of checkpoints, quants, prompt engines, LoRAs, and tooling for **
   * [4-bit &amp; 8-bit](#quant-lowbit)
   * [FP8 &amp; bf16](#quant-fp8)
   * [Nunchaku (SVDQ)](#quant-nunchaku)
+  * [EXL3](#quant-exl3)
 * [Turbo &amp; step distillation](#turbo)
   * [Turbo GGUF](#turbo-gguf)
   * [Official &amp; converted](#turbo-models)
@@ -267,6 +268,7 @@ Every FP4 / NVFP4 / MXFP4 / INT8 / INT4 / W4A4 conversion in one place.
 | **Pipi** | ![int8][badge-int8] | 7.26 GB | ⚠️ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-pipi-qwen-image-2.1-int8-01-unet) | Merged photorealistic DiT in int8 ConvRot, single file for `models/diffusion_models/`, no LoRA needed. Trigger `photorealistic`, Euler, 40 steps, CFG 1.0, and no LoRA stacked on it. Uncensored. |
 | **Noct Q** | ![int8][badge-int8] | 7.26 GB | ⚠️ [![][gh-Noctaluna]](https://huggingface.co/Noctaluna/Noct-Q-Uncensored-Qwen-Image-2.1) | The photorealistic line, parent of the Anime row below. Merged int8 ConvRot DiT, single file for `models/diffusion_models/`. **Take V4**: the card measures it rendering explicit scenes as asked three times as often as V3. 25 steps, `euler`/`simple`, CFG 3 with a negative prompt. The wider int4/fp8/bf16 ladder and prompt gallery live on Civitai. |
 | **Noct Q Anime** | ![int8][badge-int8] | 7.26 GB | ⚠️ [![][gh-Noctaluna]](https://huggingface.co/Noctaluna/Noct-Q-Anime-Uncensored-Qwen-Image-2.1) | Merged anime fine-tune of the DiT, single file, int8 ConvRot, fits 8–12 GB cards. Without the word "anime" in the prompt you get a photo. 25 steps, `euler`/`simple`, CFG 3. Uncensored. |
+| **Fwaun Tune** | ![int8][badge-int8] ![bf16][badge-bf16] | 6.76 / 13.25 GB | [![][cv-fwaunstp733]](https://civitai.com/models/2846802/fwaun-tune?modelVersionId=3373014) | Merged fine-tune for flat colour, no lineart, deformed character art. |
 | **Ray Qwen2.1 edit-enhanced** | ![int8][badge-int8] | 6.76 GB | ⚠️ [![][cv-Ray3780]](https://civitai.com/models/2972899/ray-qwen21?modelVersionId=3369126) | Custom editing merged into the base DiT; keeps base step counts. |
 | **Ray Qwen2.1 turbo v1.3** | ![int8][badge-int8] | 6.70 GB | ⚠️ [![][cv-Ray3780]](https://civitai.com/models/2972899/ray-qwen21?modelVersionId=3395380) | The same editing work folded into the official Turbo checkpoint. |
 | **W4A4 NVFP4** | ![nvfp4][badge-nvfp4] | 4.88 GB | [![][gh-ModelsLab]](https://huggingface.co/ModelsLab/Qwen-Image-2.1-W4A4-nvfp4) | DiT only; near-identical to the INT4 build. |
@@ -296,6 +298,16 @@ SVDQ-based 4-bit for Nunchaku, which targets low-VRAM systems and 4090-class car
 | **nunchaku** | ![fp4][badge-fp4] | 8.75 GB | [![][gh-catplusplus]](https://huggingface.co/catplusplus/nunchaku-qwen-image-2.1/resolve/main/best_quality_fp4.safetensors) | Two builds: `best_quality_fp4` and `svdq-fp4_r32`. |
 | **nunchaku lite int4** | ![int4][badge-int4] | 4.15 GB | [![][gh-BlazeMCworld]](https://huggingface.co/BlazeMCworld/Qwen-Image-2.1-nunchaku-lite-int4) | Half the size of the FP4 build. |
 
+
+<p id="quant-exl3" align="center">· · · · · · · · · · · · · ·</p>
+
+### ▣ EXL3
+
+EXL3 DiT quantizations for AMD ROCm. The text encoder and VAE stay BF16 and the weights need the [rocm_exl3_forme](https://github.com/jyohukuchan/rocm_exl3_forme) engine: these are custom EXL3 diffusion checkpoints, not a diffusers folder, GGUF, NF4 or Nunchaku checkpoint.
+
+| Name | Precision | Size | Links | Notes |
+| :--- | :---: | :---: | :---: | :--- |
+| **EXL3** | ![EXL3 3bit][badge-exl3-3bit] ![EXL3 4bit][badge-exl3-4bit] ![EXL3 5bit][badge-exl3-5bit] | 2.89 / 3.77 / 4.64 GB | [![][gh-jyohukuchan]](https://huggingface.co/jyohukuchan/Qwen-Image-2.1-EXL3) | Base DiT in 3, 4 and 5 bit; validated on Radeon AI PRO R9700 and Radeon PRO V620. |
 <p id="turbo" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
 
 ## ▸ Turbo &amp; step distillation
@@ -352,7 +364,7 @@ Only **v0.2.1** has third-party conversions. For v0.3, ComfyUI support means cop
 
 | Name | Steps | Precision | Size | Links | Notes |
 | :--- | :---: | :---: | :---: | :---: | :--- |
-| **Sarvam Tez** | 2 | ![bf16][badge-bf16] | 1.34 GB | [![][gh-sarvamaigc]](https://huggingface.co/sarvamaigc/Qwen-Image-2.1-Sarvam-Tez/resolve/main/Qwen-Image-2.1-sarvam-tez-2step-lora-r256.safetensors) | **The shortest schedule on this page**, from Sarvam AI: 2 steps, no CFG, a plain LoRA on the stock pipeline. The card claims 86.44 against the 40-step base's 84.30 on DPG-Bench, both without CFG. Rank 256, the widest adapter here. Needs the repo's `sarvam_tez.py` helper; no ComfyUI path. Research licence, non-commercial. |
+| **Sarvam Tez** | 2 | ![bf16][badge-bf16] | 1.34 GB | [![][gh-sarvamaigc]](https://huggingface.co/sarvamaigc/Qwen-Image-2.1-Sarvam-Tez/resolve/main/Qwen-Image-2.1-sarvam-tez-2step-lora-r256.safetensors) | **The shortest schedule on this page**, from Sarvam AI: 2 steps, no CFG, a plain LoRA on the stock pipeline. v1.1 retrain: DPG-Bench 86.79 against the base model's 84.30, both without CFG. Rank 256, the widest adapter here. Needs the repo's `sarvam_tez.py` helper, text-to-image only, and seed variety is about half the base model's. Research licence, non-commercial. |
 | **v0.3 LoRA r256** | 6 | ![bf16][badge-bf16] | 1.36 GB | [![][gh-Viggle]](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/resolve/main/Qwen-Image-2.1-viggle-turbo-v0.3-6step-lora-r256.safetensors) | **Start here.** The current official release. Load on the base transformer at runtime, do not merge, keep strength 1.0. The r128 cut is an exact per-layer SVD of this update. |
 | **v0.3 LoRA r128** | 6 | ![bf16][badge-bf16] | 0.68 GB | [![][gh-Viggle]](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/resolve/main/Qwen-Image-2.1-viggle-turbo-v0.3-6step-lora-r128.safetensors) | What the shipped ComfyUI workflows use. |
 | **v0.3 adapter (peft)** | 6 | ![fp32][badge-fp32] | 2.72 GB | [![][gh-Viggle]](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/tree/main/peft_v0.3) | The v0.3 LoRA in PEFT key format, F32 as trained. Same weights as the r256 file under different key names; load one or the other, never both. |
@@ -374,11 +386,13 @@ Only **v0.2.1** has third-party conversions. For v0.3, ComfyUI support means cop
 | **Turbo FP8 (unsloth)** | 8 | ![fp8][badge-fp8] | 7.12 GB | [![][gh-unsloth]](https://huggingface.co/unsloth/Qwen-Image-2.1-Turbo-FP8/resolve/main/Qwen-Image-2.1-Turbo-FP8.safetensors) | Weight-only FP8 e4m3 with per-row scales. Smallest of the three, LPIPS 0.125. Same loader conditions as the INT8 rows. |
 | **Turbo NVFP4/BF16 hybrid** | 8 | ![nvfp4][badge-nvfp4] | 14.46 GB | [![][gh-myllmbox]](https://huggingface.co/myllmbox/Qwen-Image-2.1-Turbo-hibrid) | The whole Turbo pipeline quantized to fit one **16 GB Blackwell** card: DiT 5.69 + text encoder 8.09 + VAE 0.68 GB, torchao NVFP4 tensors in safetensors. Measured **8.0 s** at 1024². Needs Blackwell FP4 tensor cores, `mslk` 1.3.0 and pinned torch / diffusers builds; non-commercial research license. |
 | **Turbo ONNX (browser)** | 4 | ![int4][badge-int4] | ~17.2 GB | [![][gh-cgb]](https://huggingface.co/cgb/Qwen-Image-2.1-Turbo-ONNX) | r64 LoRA merged into the denoiser, then Q4 MatMulNBits. WebGPU in-browser; needs the FreeGen pipeline and a desktop adapter. Experimental. |
+| **Turbo EXL3** | 8 | ![EXL3 3bit][badge-exl3-3bit] ![EXL3 4bit][badge-exl3-4bit] ![EXL3 5bit][badge-exl3-5bit] | 2.89 / 3.77 / 4.64 GB | [![][gh-jyohukuchan]](https://huggingface.co/jyohukuchan/Qwen-Image-2.1-Turbo-EXL3) | The official Turbo in EXL3 for the same AMD ROCm engine; the text encoder and VAE stay BF16. |
 | **v0.3 merged int8** | 6 | ![int8][badge-int8] | 7.26 GB | [![][gh-Viggle]](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/resolve/main/Qwen-Image-2.1-viggle-turbo-v0.3-6step-int8_convrot.safetensors) | Base transformer with the r256 LoRA merged in FP32, then quantized once. Goes in `models/diffusion_models/` with the stock loader; still needs the **Viggle Turbo Sigmas** node and the Comfy-Org text encoder and VAE. |
 | **v0.3 merged fp8** | 6 | ![fp8][badge-fp8] | 7.25 GB | [![][gh-Viggle]](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/resolve/main/Qwen-Image-2.1-viggle-turbo-v0.3-6step-fp8_e4m3fn.safetensors) | Same, weight-only fp8 e4m3fn. Picks up the workflow's fp8 branch; the int8 file is the default. |
 | **v0.3 merged Q8_0** | 6 | ![Q8_0][badge-Q8_0] | 7.69 GB | [![][gh-Viggle]](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/resolve/main/Qwen-Image-2.1-viggle-turbo-v0.3-6step-Q8_0.gguf) | Closest of the merged files to the LoRA path, and needs ComfyUI-GGUF. Q6_K, Q5_K_M and Q4_K_M sit in the same directory under the same naming. |
 | **6NFE Distill** | 6 | ![fp32][badge-fp32] | 28.46 GB | [![][gh-Sutoonq]](https://huggingface.co/Sutoonq/Qwen-Image-2.1-6NFE-Distill/tree/main/transformer) | Full transformer distill in 8 shards, FP32, no LoRA to load. Handles T2I and editing. **Needs `shift_terminal=0.4`** and conditional-only sampling (`true_cfg_scale=1.0`, no negative prompt) while keeping the base's dynamic shift. Ships its own `inference.py`. Third-party, same research license. |
 | **HDR full fine-tune** | 4 | ![bf16][badge-bf16] | 14.23 GB | [![][gh-yhzr2222]](https://huggingface.co/yhzr2222/qwen_image_2.1_bf16_hdr_ViggleHDR_noised) | Full-parameter BF16 fine-tune (single file) through a 3-stage curriculum: artistic style, Chinese mythology/guofeng, then 4-step distillation. **The one row here that wants CFG above 1**; the card tests 2.5. 4 steps, or 20–30 for extra detail, `euler`/`simple`. Goes in `models/unet/`. Marked experimental. |
+| **Aisha NSFW v4** | 8 | ![bf16][badge-bf16] | 13.25 GB | ⚠️ [![][cv-AishaAI]](https://civitai.com/models/3009275/aisha-nsfw-v4-qwen-21-turbo?modelVersionId=3414853) | Merged Turbo fine-tune for adult content, still a preview build. |
 | **UltraFast Q4_K** | 8 | ![Q4_K][badge-Q4_K] | 4.05 GB | [![][gh-Haverbex]](https://huggingface.co/Haverbex/Qwen-Image-2.1-UltraFast-GGUF/resolve/main/Qwen-Image-2.1-UltraFast-Q4_K.gguf) | DiT-only Q4_K with the UltraFast adapter **already merged**, so do not stack the adapter on top. Still needs the text/vision encoders and the matching VAE. Quality and speed unbenchmarked. |
 | **Pruna 8Step SDNQ** | 8 | ![int4][badge-int4] | 11.51 GB | [![][gh-SamuelTallet]](https://huggingface.co/SamuelTallet/Pruna-Qwen-Image-2.1-8steps-SDNQ-4bit-dynamic-hadamard256) | The Pruna 8-step adapter **merged** into the base and re-quantized with [SDNQ](https://github.com/Disty0/sdnq) (UINT4 dynamic, Hadamard rotation at group size 256). Full diffusers pipeline, so the text encoder is quantized too. Needs SDNQ 0.2.0+, Triton and diffusers from git. Follows the Pruna sigma schedule above. |
 | **Official Turbo diffusers** | 8 | ![bf16][badge-bf16] | 32.44 GB | [![][gh-Qwen]](https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo) | The reference 8-step checkpoint itself, listed in full under [official checkpoints](#official-turbo): CFG 1.0, schedule carried in the weights, prefix KV cache on. The point of comparison for every row here. |
@@ -431,9 +445,12 @@ Style, control, and fix adapters. All target the base DiT unless noted. Grouped 
 |  |  |  |  |  |  |
 | **De-AI LoRA pack** | ![Style][ltype-style] | ![bf16][badge-bf16] | 2.45 GB | [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1ai-lora) | An 8-file pack for removing the AI look. |
 | **Fyre** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.81 GB | [![][cv-jandordoe]](https://civitai.com/models/2386526/fyre-fictional-character?modelVersionId=3353158) | Fictional redhead character with freckles. |
+| **Fwaun Style** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.61 GB | [![][cv-fwaunstp733]](https://civitai.com/models/2593831/fwaun-style?modelVersionId=3373050) | Semi-chibi character style with photorealistic backgrounds. |
+| **Asian portrait photography** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.59 GB | [![][cv-Dream2046]](https://civitai.com/models/3011109/asian-portrait-photography-or-qwen-image-21-600px-lora?modelVersionId=3417262) | Portrait photography look for East Asian subjects. |
 | **Natural Exposure LoRA** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.42 GB | [![][gh-prithivMLmods]](https://huggingface.co/prithivMLmods/Qwen-Image-2.1-Natural-Exposure-LoRA) | Exposure correction. |
 | **ZAvali Qwen2.1** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.31 GB | [![][cv-Zarj]](https://civitai.com/models/3001929/zavali-qwen21?modelVersionId=3405375) | Character-style LoRA rebuilt for Qwen 2.1. |
 | **Anything2RealCharacters** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.30 GB | [![][cv-AIGC--Singularity]](https://civitai.com/models/2808492/anything2realcharacters?modelVersionId=3363600) | Turns 2D or painted input into a photorealistic character. |
+| **35mm Film Texture** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.30 GB | [![][cv-Deno2026]](https://civitai.com/models/3010645/qwen-image-21-krea2-35mm-film-texture-and-realism-lora?modelVersionId=3416647) | 35mm film texture and realism. |
 | **Fantasy Art Style** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.27 GB | [![][cv-aimann]](https://civitai.com/models/2996512/art-styles-qwen-image-21?modelVersionId=3399871) | Painterly fantasy-art style. |
 | **Flux Pro Ultra Style** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.27 GB | [![][cv-aimann]](https://civitai.com/models/2836241/flux-pro-ultra-style?modelVersionId=3399725) | The saturated Flux.1 Pro Ultra look. |
 | **Clay Sculpture** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.25 GB | [![][gh-prithivMLmods]](https://huggingface.co/prithivMLmods/Qwen-Image-2.1-Clay-Sculpture-Style/resolve/main/Qwen-Image-2.1-Clay-Sculpture-Style-2000.safetensors) | Turns a photo into a clay-sculpture look. |
@@ -462,6 +479,7 @@ Style, control, and fix adapters. All target the base DiT unless noted. Grouped 
 | **Jianna** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.15 GB | [![][cv-chloeana]](https://civitai.com/models/2403689/jianna-fictional-character?modelVersionId=3401938) | Fictional-character LoRA. |
 | **Olesya Poryadko** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.15 GB | [![][cv-rakamik]](https://civitai.com/models/2868124/olesya-poryadko-this-person-does-not-exist?modelVersionId=3412071) | Fictional-person character LoRA. |
 | **DeepSeek Whalegirl** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.15 GB | [![][cv-updatemp]](https://civitai.com/models/2947136/deepseek-whalegirl?modelVersionId=3410681) | Character LoRA for the whalegirl persona. |
+| **Njsemi Fantasy Style** | ![Style][ltype-style] | ![fp16][badge-fp16] | 0.15 GB | [![][cv-NoahGreyWood]](https://civitai.com/models/3009320/njsemi-cinematic-fantasy-style-for-qwen-image-21?modelVersionId=3414917) | Cinematic fantasy style for the njsemi character; it pushes figures toward fuller bodies. |
 | **Sts2 Cards Drawer** | ![Style][ltype-style] | ![fp16][badge-f16] | 0.10 GB | [![][gh-Airmongsity]](https://huggingface.co/Airmongsity/Qwen-Image-2.1-Sts2-Cards-Drawer) | 2D card-art style. |
 | **ZZZ chibi** | ![Style][ltype-style] | ![f16][badge-f16] | 0.08 GB | [![][gh-wesjos]](https://huggingface.co/wesjos/Qwen-Image2.1-ZenlessZoneZeroChibi-Lora/resolve/main/zzz_chibi_v2_st2500.safetensors) | Compresses proportions to chibi rather than just restyling. |
 | **2anime** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.08 GB | [![][gh-NicknickAI]](https://huggingface.co/NicknickAI/QwenImage2.1-2anime/resolve/main/2anime-QwenImage2.1.safetensors) | Turns a photo into anime, image to image. |
@@ -478,6 +496,7 @@ Style, control, and fix adapters. All target the base DiT unless noted. Grouped 
 | **Y2K digicam** | ![Style][ltype-style] | ![fp32][badge-fp32] | 0.07 GB | [![][gh-empero--ai]](https://huggingface.co/empero-ai/Homebrew-Qwen-Image-2.1-Y2K/resolve/main/pytorch_lora_weights.safetensors) | Early-2000s digicam look with direct-flash highlights and soft detail. |
 | **Remix** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.07 GB | [![][cv-NO8D]](https://civitai.com/models/2937570/remix?modelVersionId=3405269) | Experimental restyle pass. |
 | **Lenovo UltraReal** | ![Style][ltype-style] | ![fp16][badge-f16] | 0.07 GB | [![][cv-Danrisi]](https://civitai.com/models/1662740/lenovo-ultrareal?modelVersionId=3349565) | Candid ultrareal portrait style. |
+| **2000s Analog Core** | ![Style][ltype-style] | ![fp16][badge-fp16] | 0.07 GB | [![][cv-Danrisi]](https://civitai.com/models/1134895/2000s-analog-core?modelVersionId=3378081) | 2000s analog video look: scan lines, tape noise and faded colour. |
 | **Skeletor** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.02 GB | [![][cv-DialUpDialDown]](https://civitai.com/models/2835069/skeletor-masters-of-the-universe?modelVersionId=3345001) | Skeletor character from Masters of the Universe. |
 | **Realism (Nano Banana)** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.004 GB | [![][gh-houseofboern]](https://huggingface.co/houseofboern/realism-nano-banana-qwen-image-2.1-lokr/resolve/main/realism-nb-qwen-image-2.1-lokr-step1000.safetensors) | Makes a generated image read as a real phone photo. |
 |  |  |  |  |  |  |
@@ -505,6 +524,7 @@ Style, control, and fix adapters. All target the base DiT unless noted. Grouped 
 | **Cosplay** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.15 GB | ⚠️ [![][cv-mrkakapopoloch]](https://civitai.com/models/2791428/cosplay?modelVersionId=3400404) | Cosplay outfit style; also works for editing. |
 | **Anime Flat Style** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.15 GB | ⚠️ [![][cv-Agino]](https://civitai.com/models/1952560/anime-flat-style?modelVersionId=3361221) | Flat cel-shaded anime style. |
 | **Natural Body Hair** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.15 GB | ⚠️ [![][cv-Rimya]](https://civitai.com/models/2822722/natural-body-hair-qwen21-krea2?modelVersionId=3408091) | Adds natural body-hair detail. |
+| **Rear reshape** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.15 GB | ⚠️ [![][cv-auxilia]](https://civitai.com/models/2181576/fake-ass-silicone-bubble-butt?modelVersionId=3397263) | Adds a rounded, silicone-like rear shape. |
 | **NSFW Image Edit** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.08 GB | ⚠️ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-aio-nsfw-lora/resolve/main/Qwen-Image-2.1%20NSFW%20Image%20Edit.safetensors) | Adult-content editing adapter. |
 | **Glamour Realism** | ![NSFW][ltype-nsfw] | ![f16][badge-f16] | 0.07 GB | ⚠️ [![][cv-TP--AI--63]](https://civitai.com/models/2986100/qwen-image-21-glamour-realism-lora-16-gb-tested?modelVersionId=3385496) | Gentle glamour-portrait polish with natural skin. |
 | **Miniskirt style** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.07 GB | ⚠️ [![][cv-mrkakapopoloch]](https://civitai.com/models/1498700/micro-skirt?modelVersionId=3400203) | Short-skirt outfit subject. |
@@ -735,6 +755,7 @@ new number.
 [gh-gribbliest]: https://img.shields.io/badge/gribbliest-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-houseofboern]: https://img.shields.io/badge/houseofboern-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-iamvts]: https://img.shields.io/badge/iamvts-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-jyohukuchan]: https://img.shields.io/badge/jyohukuchan-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-kkxao]: https://img.shields.io/badge/kkxao-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-lightx2v]: https://img.shields.io/badge/lightx2v-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-lilylilith]: https://img.shields.io/badge/lilylilith-lightgrey?style=flat-square&logo=huggingface&logoColor=white
@@ -767,13 +788,16 @@ new number.
 [cv-AHEKOT]: https://img.shields.io/badge/AHEKOT-lightgrey?style=flat-square
 [cv-AIGC--Singularity]: https://img.shields.io/badge/AIGC--Singularity-lightgrey?style=flat-square
 [cv-Agino]: https://img.shields.io/badge/Agino-lightgrey?style=flat-square
+[cv-AishaAI]: https://img.shields.io/badge/AishaAI-lightgrey?style=flat-square
 [cv-Danrisi]: https://img.shields.io/badge/Danrisi-lightgrey?style=flat-square
+[cv-Deno2026]: https://img.shields.io/badge/Deno2026-lightgrey?style=flat-square
 [cv-DialUpDialDown]: https://img.shields.io/badge/DialUpDialDown-lightgrey?style=flat-square
 [cv-Dream2046]: https://img.shields.io/badge/Dream2046-lightgrey?style=flat-square
 [cv-Exis10ce]: https://img.shields.io/badge/Exis10ce-lightgrey?style=flat-square
 [cv-FASCIUM]: https://img.shields.io/badge/FASCIUM-lightgrey?style=flat-square
 [cv-Luntrix]: https://img.shields.io/badge/Luntrix-lightgrey?style=flat-square
 [cv-NO8D]: https://img.shields.io/badge/NO8D-lightgrey?style=flat-square
+[cv-NoahGreyWood]: https://img.shields.io/badge/NoahGreyWood-lightgrey?style=flat-square
 [cv-PromptHippo]: https://img.shields.io/badge/PromptHippo-lightgrey?style=flat-square
 [cv-RICK666]: https://img.shields.io/badge/RICK666-lightgrey?style=flat-square
 [cv-Ray3780]: https://img.shields.io/badge/Ray3780-lightgrey?style=flat-square
@@ -787,6 +811,7 @@ new number.
 [cv-coachbate]: https://img.shields.io/badge/coachbate-lightgrey?style=flat-square
 [cv-dushuai]: https://img.shields.io/badge/dushuai-lightgrey?style=flat-square
 [cv-eznorb]: https://img.shields.io/badge/eznorb-lightgrey?style=flat-square
+[cv-fwaunstp733]: https://img.shields.io/badge/fwaunstp733-lightgrey?style=flat-square
 [cv-imagC]: https://img.shields.io/badge/imagC-lightgrey?style=flat-square
 [cv-jandordoe]: https://img.shields.io/badge/jandordoe-lightgrey?style=flat-square
 [cv-jblm]: https://img.shields.io/badge/jblm-lightgrey?style=flat-square
@@ -828,6 +853,9 @@ new number.
 [badge-int4]: https://img.shields.io/badge/int4-ffc107?style=flat-square
 [badge-w4a8]: https://img.shields.io/badge/w4a8-fe7d37?style=flat-square
 [badge-w8a8]: https://img.shields.io/badge/w8a8-fe7d37?style=flat-square
+[badge-exl3-5bit]: https://img.shields.io/badge/EXL3%205bit-6f42c1?style=flat-square
+[badge-exl3-4bit]: https://img.shields.io/badge/EXL3%204bit-6f42c1?style=flat-square
+[badge-exl3-3bit]: https://img.shields.io/badge/EXL3%203bit-6f42c1?style=flat-square
 [badge-Q2_K]: https://img.shields.io/badge/Q2__K-e05d44?style=flat-square
 [badge-q2k]: https://img.shields.io/badge/Q2__K-e05d44?style=flat-square
 [badge-Q3_K_M]: https://img.shields.io/badge/Q3__K__M-fe7d37?style=flat-square

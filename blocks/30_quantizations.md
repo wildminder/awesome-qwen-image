@@ -33,6 +33,7 @@ Every FP4 / NVFP4 / MXFP4 / INT8 / INT4 / W4A4 conversion in one place.
 | **Pipi** | ![int8][badge-int8] | 7.26 GB | ⚠️ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-pipi-qwen-image-2.1-int8-01-unet) | Merged photorealistic DiT in int8 ConvRot, single file for `models/diffusion_models/`, no LoRA needed. Trigger `photorealistic`, Euler, 40 steps, CFG 1.0, and no LoRA stacked on it. Uncensored. |
 | **Noct Q** | ![int8][badge-int8] | 7.26 GB | ⚠️ [![][gh-Noctaluna]](https://huggingface.co/Noctaluna/Noct-Q-Uncensored-Qwen-Image-2.1) | The photorealistic line, parent of the Anime row below. Merged int8 ConvRot DiT, single file for `models/diffusion_models/`. **Take V4**: the card measures it rendering explicit scenes as asked three times as often as V3. 25 steps, `euler`/`simple`, CFG 3 with a negative prompt. The wider int4/fp8/bf16 ladder and prompt gallery live on Civitai. |
 | **Noct Q Anime** | ![int8][badge-int8] | 7.26 GB | ⚠️ [![][gh-Noctaluna]](https://huggingface.co/Noctaluna/Noct-Q-Anime-Uncensored-Qwen-Image-2.1) | Merged anime fine-tune of the DiT, single file, int8 ConvRot, fits 8–12 GB cards. Without the word "anime" in the prompt you get a photo. 25 steps, `euler`/`simple`, CFG 3. Uncensored. |
+| **Fwaun Tune** | ![int8][badge-int8] ![bf16][badge-bf16] | 6.76 / 13.25 GB | [![][cv-fwaunstp733]](https://civitai.com/models/2846802/fwaun-tune?modelVersionId=3373014) | Merged fine-tune for flat colour, no lineart, deformed character art. |
 | **Ray Qwen2.1 edit-enhanced** | ![int8][badge-int8] | 6.76 GB | ⚠️ [![][cv-Ray3780]](https://civitai.com/models/2972899/ray-qwen21?modelVersionId=3369126) | Custom editing merged into the base DiT; keeps base step counts. |
 | **Ray Qwen2.1 turbo v1.3** | ![int8][badge-int8] | 6.70 GB | ⚠️ [![][cv-Ray3780]](https://civitai.com/models/2972899/ray-qwen21?modelVersionId=3395380) | The same editing work folded into the official Turbo checkpoint. |
 | **W4A4 NVFP4** | ![nvfp4][badge-nvfp4] | 4.88 GB | [![][gh-ModelsLab]](https://huggingface.co/ModelsLab/Qwen-Image-2.1-W4A4-nvfp4) | DiT only; near-identical to the INT4 build. |
@@ -62,3 +63,13 @@ SVDQ-based 4-bit for Nunchaku, which targets low-VRAM systems and 4090-class car
 | **nunchaku** | ![fp4][badge-fp4] | 8.75 GB | [![][gh-catplusplus]](https://huggingface.co/catplusplus/nunchaku-qwen-image-2.1/resolve/main/best_quality_fp4.safetensors) | Two builds: `best_quality_fp4` and `svdq-fp4_r32`. |
 | **nunchaku lite int4** | ![int4][badge-int4] | 4.15 GB | [![][gh-BlazeMCworld]](https://huggingface.co/BlazeMCworld/Qwen-Image-2.1-nunchaku-lite-int4) | Half the size of the FP4 build. |
 
+
+<p id="quant-exl3" align="center">· · · · · · · · · · · · · ·</p>
+
+### ▣ EXL3
+
+EXL3 DiT quantizations for AMD ROCm. The text encoder and VAE stay BF16 and the weights need the [rocm_exl3_forme](https://github.com/jyohukuchan/rocm_exl3_forme) engine: these are custom EXL3 diffusion checkpoints, not a diffusers folder, GGUF, NF4 or Nunchaku checkpoint.
+
+| Name | Precision | Size | Links | Notes |
+| :--- | :---: | :---: | :---: | :--- |
+| **EXL3** | ![EXL3 3bit][badge-exl3-3bit] ![EXL3 4bit][badge-exl3-4bit] ![EXL3 5bit][badge-exl3-5bit] | 2.89 / 3.77 / 4.64 GB | [![][gh-jyohukuchan]](https://huggingface.co/jyohukuchan/Qwen-Image-2.1-EXL3) | Base DiT in 3, 4 and 5 bit; validated on Radeon AI PRO R9700 and Radeon PRO V620. |

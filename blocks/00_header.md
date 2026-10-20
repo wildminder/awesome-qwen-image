@@ -33,6 +33,7 @@ A curated list of checkpoints, quants, prompt engines, LoRAs, and tooling for **
   * [4-bit &amp; 8-bit](#quant-lowbit)
   * [FP8 &amp; bf16](#quant-fp8)
   * [Nunchaku (SVDQ)](#quant-nunchaku)
+  * [EXL3](#quant-exl3)
 * [Turbo &amp; step distillation](#turbo)
   * [Turbo GGUF](#turbo-gguf)
   * [Official &amp; converted](#turbo-models)
