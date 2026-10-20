@@ -104,6 +104,7 @@
 [cv-AIGC--Singularity]: https://img.shields.io/badge/AIGC--Singularity-lightgrey?style=flat-square
 [cv-Agino]: https://img.shields.io/badge/Agino-lightgrey?style=flat-square
 [cv-AishaAI]: https://img.shields.io/badge/AishaAI-lightgrey?style=flat-square
+[cv-ArsMachina]: https://img.shields.io/badge/ArsMachina-lightgrey?style=flat-square
 [cv-Danrisi]: https://img.shields.io/badge/Danrisi-lightgrey?style=flat-square
 [cv-Deno2026]: https://img.shields.io/badge/Deno2026-lightgrey?style=flat-square
 [cv-DialUpDialDown]: https://img.shields.io/badge/DialUpDialDown-lightgrey?style=flat-square
@@ -119,6 +120,7 @@
 [cv-Rimya]: https://img.shields.io/badge/Rimya-lightgrey?style=flat-square
 [cv-TP--AI--63]: https://img.shields.io/badge/TP--AI--63-lightgrey?style=flat-square
 [cv-VividMuse]: https://img.shields.io/badge/VividMuse-lightgrey?style=flat-square
+[cv-Wimile]: https://img.shields.io/badge/Wimile-lightgrey?style=flat-square
 [cv-Zarj]: https://img.shields.io/badge/Zarj-lightgrey?style=flat-square
 [cv-aimann]: https://img.shields.io/badge/aimann-lightgrey?style=flat-square
 [cv-auxilia]: https://img.shields.io/badge/auxilia-lightgrey?style=flat-square
@@ -143,6 +145,7 @@
 [cv-rakamik]: https://img.shields.io/badge/rakamik-lightgrey?style=flat-square
 [cv-saladin]: https://img.shields.io/badge/saladin-lightgrey?style=flat-square
 [cv-updatemp]: https://img.shields.io/badge/updatemp-lightgrey?style=flat-square
+[cv-wolfcatz]: https://img.shields.io/badge/wolfcatz-lightgrey?style=flat-square
 
 <!-- HEADER BADGES -->
 [hf-shield]: https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black

@@ -480,6 +480,7 @@ Style, control, and fix adapters. All target the base DiT unless noted. Grouped 
 | **Olesya Poryadko** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.15 GB | [![][cv-rakamik]](https://civitai.com/models/2868124/olesya-poryadko-this-person-does-not-exist?modelVersionId=3412071) | Fictional-person character LoRA. |
 | **DeepSeek Whalegirl** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.15 GB | [![][cv-updatemp]](https://civitai.com/models/2947136/deepseek-whalegirl?modelVersionId=3410681) | Character LoRA for the whalegirl persona. |
 | **Njsemi Fantasy Style** | ![Style][ltype-style] | ![fp16][badge-fp16] | 0.15 GB | [![][cv-NoahGreyWood]](https://civitai.com/models/3009320/njsemi-cinematic-fantasy-style-for-qwen-image-21?modelVersionId=3414917) | Cinematic fantasy style for the njsemi character; it pushes figures toward fuller bodies. |
+| **Colored Pencil** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.15 GB | [![][cv-ArsMachina]](https://civitai.com/models/1155749/hyperdetailed-colored-pencil?modelVersionId=3417967) | Hyperdetailed colored-pencil illustration style. |
 | **Sts2 Cards Drawer** | ![Style][ltype-style] | ![fp16][badge-f16] | 0.10 GB | [![][gh-Airmongsity]](https://huggingface.co/Airmongsity/Qwen-Image-2.1-Sts2-Cards-Drawer) | 2D card-art style. |
 | **ZZZ chibi** | ![Style][ltype-style] | ![f16][badge-f16] | 0.08 GB | [![][gh-wesjos]](https://huggingface.co/wesjos/Qwen-Image2.1-ZenlessZoneZeroChibi-Lora/resolve/main/zzz_chibi_v2_st2500.safetensors) | Compresses proportions to chibi rather than just restyling. |
 | **2anime** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.08 GB | [![][gh-NicknickAI]](https://huggingface.co/NicknickAI/QwenImage2.1-2anime/resolve/main/2anime-QwenImage2.1.safetensors) | Turns a photo into anime, image to image. |
@@ -525,7 +526,9 @@ Style, control, and fix adapters. All target the base DiT unless noted. Grouped 
 | **Anime Flat Style** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.15 GB | ⚠️ [![][cv-Agino]](https://civitai.com/models/1952560/anime-flat-style?modelVersionId=3361221) | Flat cel-shaded anime style. |
 | **Natural Body Hair** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.15 GB | ⚠️ [![][cv-Rimya]](https://civitai.com/models/2822722/natural-body-hair-qwen21-krea2?modelVersionId=3408091) | Adds natural body-hair detail. |
 | **Rear reshape** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.15 GB | ⚠️ [![][cv-auxilia]](https://civitai.com/models/2181576/fake-ass-silicone-bubble-butt?modelVersionId=3397263) | Adds a rounded, silicone-like rear shape. |
+| **Chastity gear** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.15 GB | ⚠️ [![][cv-Wimile]](https://civitai.com/models/3011844/chastity-belt-and-chastity-bra-for-qwen21?modelVersionId=3418236) | Chastity belt, bra and cuff set. |
 | **NSFW Image Edit** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.08 GB | ⚠️ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-aio-nsfw-lora/resolve/main/Qwen-Image-2.1%20NSFW%20Image%20Edit.safetensors) | Adult-content editing adapter. |
+| **Tiny Panties** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.08 GB | ⚠️ [![][cv-kermitfrog1202]](https://civitai.com/models/2756100/tiny-panties?modelVersionId=3373101) | Very small underwear. |
 | **Glamour Realism** | ![NSFW][ltype-nsfw] | ![f16][badge-f16] | 0.07 GB | ⚠️ [![][cv-TP--AI--63]](https://civitai.com/models/2986100/qwen-image-21-glamour-realism-lora-16-gb-tested?modelVersionId=3385496) | Gentle glamour-portrait polish with natural skin. |
 | **Miniskirt style** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.07 GB | ⚠️ [![][cv-mrkakapopoloch]](https://civitai.com/models/1498700/micro-skirt?modelVersionId=3400203) | Short-skirt outfit subject. |
 | **Transform To photorealism** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.07 GB | ⚠️ [![][cv-imagC]](https://civitai.com/models/3002555/transform-to-photorealism?modelVersionId=3412029) | Converts a render toward photorealism. |
@@ -539,7 +542,9 @@ Style, control, and fix adapters. All target the base DiT unless noted. Grouped 
 | **Nude figure 22** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.07 GB | ⚠️ [![][cv-dushuai]](https://civitai.com/models/2998123/nude-collection-westernwomanfullnude22qwen-image-21?modelVersionId=3400844) | Nude-figure subject LoRA. |
 | **Nude figure 11** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.07 GB | ⚠️ [![][cv-dushuai]](https://civitai.com/models/2997556/nude-collection-westernwomanfullnude11qwen-image-21?modelVersionId=3399893) | Nude-figure subject LoRA. |
 | **Flat-chest style** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.04 GB | ⚠️ [![][cv-kermitfrog1202]](https://civitai.com/models/2761774/tiny-breasts-flat-chest?modelVersionId=3372519) | Flat-chest body detail. |
+| **Cameltoe** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.04 GB | ⚠️ [![][cv-kermitfrog1202]](https://civitai.com/models/2740610/cameltoe?modelVersionId=3372777) | Nipple outline visible through clothing. |
 | **Uncensored LoRA** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.03 GB | ⚠️ [![][gh-abenzerps]](https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-Quantized/resolve/main/qwen-image-2.1-uncensored-lora.safetensors) | The uncensored behaviour as an adapter instead of merged weights. |
+| **Metal breast clamp** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.02 GB | ⚠️ [![][cv-wolfcatz]](https://civitai.com/models/2290707/breasts-clampclamp2-for-qwen21-anima-and-zit?modelVersionId=3418159) | Clamps the breasts with metal bars and screws. |
 | **Breasts Slider V1** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.003 GB | ⚠️ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-breasts-slider-lora/resolve/main/Pornmaster_QI2.1_Breasts_Slider_V1.safetensors) | Slider control. |
 
 > [!CAUTION]
@@ -789,6 +794,7 @@ new number.
 [cv-AIGC--Singularity]: https://img.shields.io/badge/AIGC--Singularity-lightgrey?style=flat-square
 [cv-Agino]: https://img.shields.io/badge/Agino-lightgrey?style=flat-square
 [cv-AishaAI]: https://img.shields.io/badge/AishaAI-lightgrey?style=flat-square
+[cv-ArsMachina]: https://img.shields.io/badge/ArsMachina-lightgrey?style=flat-square
 [cv-Danrisi]: https://img.shields.io/badge/Danrisi-lightgrey?style=flat-square
 [cv-Deno2026]: https://img.shields.io/badge/Deno2026-lightgrey?style=flat-square
 [cv-DialUpDialDown]: https://img.shields.io/badge/DialUpDialDown-lightgrey?style=flat-square
@@ -804,6 +810,7 @@ new number.
 [cv-Rimya]: https://img.shields.io/badge/Rimya-lightgrey?style=flat-square
 [cv-TP--AI--63]: https://img.shields.io/badge/TP--AI--63-lightgrey?style=flat-square
 [cv-VividMuse]: https://img.shields.io/badge/VividMuse-lightgrey?style=flat-square
+[cv-Wimile]: https://img.shields.io/badge/Wimile-lightgrey?style=flat-square
 [cv-Zarj]: https://img.shields.io/badge/Zarj-lightgrey?style=flat-square
 [cv-aimann]: https://img.shields.io/badge/aimann-lightgrey?style=flat-square
 [cv-auxilia]: https://img.shields.io/badge/auxilia-lightgrey?style=flat-square
@@ -828,6 +835,7 @@ new number.
 [cv-rakamik]: https://img.shields.io/badge/rakamik-lightgrey?style=flat-square
 [cv-saladin]: https://img.shields.io/badge/saladin-lightgrey?style=flat-square
 [cv-updatemp]: https://img.shields.io/badge/updatemp-lightgrey?style=flat-square
+[cv-wolfcatz]: https://img.shields.io/badge/wolfcatz-lightgrey?style=flat-square
 
 <!-- HEADER BADGES -->
 [hf-shield]: https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black
