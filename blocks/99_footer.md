@@ -26,6 +26,7 @@
 [gh-Haverbex]: https://img.shields.io/badge/Haverbex-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-JoyFusionAI]: https://img.shields.io/badge/JoyFusionAI-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Karsus1997]: https://img.shields.io/badge/Karsus1997-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-Keith--CY]: https://img.shields.io/badge/Keith--CY-lightgrey?style=flat-square&logo=github&logoColor=white
 [gh-LuffyTheFox]: https://img.shields.io/badge/LuffyTheFox-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-MIUProject]: https://img.shields.io/badge/MIUProject-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-ML--Intern--lab]: https://img.shields.io/badge/ML--Intern--lab-lightgrey?style=flat-square&logo=huggingface&logoColor=white
