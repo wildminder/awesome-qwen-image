@@ -15,7 +15,7 @@ Non-CUDA runtimes and specialized accelerator backends.
 | **QIPACK base** | QIPACK1 `.qipack` | ![fp16][badge-fp16] | 14.23 GB | [![][gh-netdur]](https://huggingface.co/netdur/Qwen-Image-2.1-QIPACK) | For the native C++/Metal [qwen-image-cplus](https://github.com/netdur/qwen-image-cplus) runtime. 40-step base, defaults to TaylorSeer caching. |
 | **QIPACK distilled** | QIPACK1 `.qipack` | ![fp16][badge-fp16] | 14.23 GB | [![][gh-netdur]](https://huggingface.co/netdur/Qwen-Image-2.1-QIPACK) | Same runtime, 4-step. The Viggle v0.1 **full fine-tune**, not its LoRA and not v0.2.1. |
 | **MLX 4bit** | MLX | ![int4][badge-int4] | 11.59 GB | [![][gh-themindstudio]](https://huggingface.co/themindstudio/Qwen-Image-2.1-MLX-4bit) | Smallest viable Apple build. |
-| **Uncensored MLX** | MLX (4/6/8-bit) | ![int4][badge-int4] ![int8][badge-int8] | 7.56 GB | ⚠️ [![][gh-abenzerps]](https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-Quantized) | The uncensored line's Apple build, from the GGUF repo: 7.56 GB at 8-bit, 5.78 at 6-bit, 4.00 at 4-bit. The repo also carries a BF16 text encoder (17.53 GB), an int8 ConvRot one (9.35 GB) and the VAE (0.68 GB), but those are plain diffusers-layout safetensors rather than MLX builds, so an MLX pipeline still pairs with one of the two repos above. |
+| **Uncensored MLX** | MLX (4/6/8-bit) | ![int4][badge-int4] ![int8][badge-int8] | 7.56 GB | ⚠️ [![][gh-abenzerps]](https://huggingface.co/abenzerps/Qwen-Image-2.1-Turbo-Quantized) | Apple build of the Turbo DiT: 7.56 GB at 8-bit, 5.78 at 6-bit, 4.00 at 4-bit. The repo also carries a BF16 text encoder (17.53 GB), an int8 ConvRot one (9.35 GB) and the VAE (0.68 GB), but those are plain diffusers-layout safetensors rather than MLX builds, so an MLX pipeline still pairs with one of the two repos above. |
 
 Needs macOS 14+. 1024×1024 works; 2048×2048 does not yet.
 
@@ -77,11 +77,12 @@ Same weights, re-laid-out for a ComfyUI-side loader. Each ships a YAML manifest 
 
 ### ▣ VAE alternatives
 
-Two drop-in decoder swaps and one preview-only toy. The first is a real finetune; the second is not a VAE at all.
+Two real finetunes and one preview-only toy. The second finetune is built on the first, so the two are shape-identical; the toy is not a VAE at all.
 
 | Name | Precision | Size | Links | Notes |
 | :--- | :---: | :---: | :---: | :--- |
 | **Texture-fix VAE** | ![bf16][badge-bf16] | 0.68 GB | [![][gh-madebyollin]](https://huggingface.co/madebyollin/texture-fix-vae-for-qwen-image-2.1/resolve/main/texture_fix_vae_for_qwen_image_2.1_bf16.safetensors) | **Drop-in replacement** for `qwen_image_2.1_vae_bf16.safetensors`. Decoder-only finetune targeting checkerboard artifacts and flat texture in photo-style images: rFID 3.37 → **2.08** on COCO at 256², at the cost of PSNR and LPIPS. Ships a diffusers folder too. |
+| **None VAE** | ![fp32][badge-fp32] | 1.35 GB | [![][gh-e--n--v--y]](https://huggingface.co/e-n-v-y/None-qwenimage2.1-vae-comfyui/resolve/main/None-qwenimage2.1-vae_comfy_fp32.safetensors) | **Drop-in replacement** for the stock FP32 VAE. A further finetune of the Texture-Fix VAE above, so the two are shape-identical, but kept in FP32 rather than BF16. |
 | **TAE preview decoder** | ![fp16][badge-f16] | 0.003 GB | [![][gh-AcademiaSD]](https://huggingface.co/AcademiaSD/TAE-Qwen-Image-2.1) | **Not a VAE**: a 1.63M-param 16× approximate decoder for ComfyUI live previews, ~15 ms for 1024² on an RTX 5080. **RGB only, it drops the alpha channel**, so never use it for the final decode of an RGBA generation. Goes in `models/vae_approx/` and needs **ComfyUI-KJNodes**; the built-in TAESD path only handles 8× decoders. |
 | **hdr vae test** | ![fp16][badge-fp16] | 0.68 GB | [![][gh-471Def]](https://huggingface.co/471Def/qwen_image_2.1_hdr_vae_test) | Untested in the wild; treat as an experiment, not a drop-in replacement. |
 

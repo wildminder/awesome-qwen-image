@@ -21,6 +21,7 @@
 [gh-Frosty40]: https://img.shields.io/badge/Frosty40-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-GabrieleLozupone]: https://img.shields.io/badge/GabrieleLozupone-lightgrey?style=flat-square&logo=github&logoColor=white
 [gh-Gogodr]: https://img.shields.io/badge/Gogodr-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-GooHAI]: https://img.shields.io/badge/GooHAI-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-HangGlidersRule]: https://img.shields.io/badge/HangGlidersRule-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-HarleyWang]: https://img.shields.io/badge/HarleyWang-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Haverbex]: https://img.shields.io/badge/Haverbex-lightgrey?style=flat-square&logo=huggingface&logoColor=white
@@ -35,7 +36,6 @@
 [gh-Noctaluna]: https://img.shields.io/badge/Noctaluna-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-PrunaAI]: https://img.shields.io/badge/PrunaAI-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Qwen]: https://img.shields.io/badge/Qwen-lightgrey?style=flat-square&logo=huggingface&logoColor=white
-[gh-Rin247]: https://img.shields.io/badge/Rin247-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-RunningHubAI]: https://img.shields.io/badge/RunningHubAI-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-SamuelTallet]: https://img.shields.io/badge/SamuelTallet-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-SimpleTuner]: https://img.shields.io/badge/SimpleTuner-lightgrey?style=flat-square&logo=huggingface&logoColor=white
@@ -68,19 +68,21 @@
 [gh-foprc]: https://img.shields.io/badge/foprc-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-glowleaf]: https://img.shields.io/badge/glowleaf-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-gribbliest]: https://img.shields.io/badge/gribbliest-lightgrey?style=flat-square&logo=huggingface&logoColor=white
-[gh-houseofboern]: https://img.shields.io/badge/houseofboern-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-iamvts]: https://img.shields.io/badge/iamvts-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-jyohukuchan]: https://img.shields.io/badge/jyohukuchan-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-kkxao]: https://img.shields.io/badge/kkxao-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-lightx2v]: https://img.shields.io/badge/lightx2v-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-lilylilith]: https://img.shields.io/badge/lilylilith-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-ling0322]: https://img.shields.io/badge/ling0322-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-linoyts]: https://img.shields.io/badge/linoyts-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-madebyollin]: https://img.shields.io/badge/madebyollin-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-mfxq2l]: https://img.shields.io/badge/mfxq2l-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-mingyi456]: https://img.shields.io/badge/mingyi456-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-modelvram]: https://img.shields.io/badge/modelvram.com-lightgrey?style=flat-square
 [gh-myllmbox]: https://img.shields.io/badge/myllmbox-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-netdur]: https://img.shields.io/badge/netdur-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-netrunner--exe]: https://img.shields.io/badge/netrunner--exe-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-newHashMap]: https://img.shields.io/badge/newHashMap-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-ped4enko]: https://img.shields.io/badge/ped4enko-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-pottokao]: https://img.shields.io/badge/pottokao-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-prithivMLmods]: https://img.shields.io/badge/prithivMLmods-lightgrey?style=flat-square&logo=huggingface&logoColor=white
@@ -103,6 +105,7 @@
 [cv-AHEKOT]: https://img.shields.io/badge/AHEKOT-lightgrey?style=flat-square
 [cv-AIGC--Singularity]: https://img.shields.io/badge/AIGC--Singularity-lightgrey?style=flat-square
 [cv-Agino]: https://img.shields.io/badge/Agino-lightgrey?style=flat-square
+[cv-AiMetatron]: https://img.shields.io/badge/AiMetatron-lightgrey?style=flat-square
 [cv-AishaAI]: https://img.shields.io/badge/AishaAI-lightgrey?style=flat-square
 [cv-ArsMachina]: https://img.shields.io/badge/ArsMachina-lightgrey?style=flat-square
 [cv-Danrisi]: https://img.shields.io/badge/Danrisi-lightgrey?style=flat-square
@@ -119,9 +122,11 @@
 [cv-Ray3780]: https://img.shields.io/badge/Ray3780-lightgrey?style=flat-square
 [cv-Rimya]: https://img.shields.io/badge/Rimya-lightgrey?style=flat-square
 [cv-TP--AI--63]: https://img.shields.io/badge/TP--AI--63-lightgrey?style=flat-square
+[cv-The__Midnight__Lab]: https://img.shields.io/badge/The__Midnight__Lab-lightgrey?style=flat-square
 [cv-VividMuse]: https://img.shields.io/badge/VividMuse-lightgrey?style=flat-square
 [cv-Wimile]: https://img.shields.io/badge/Wimile-lightgrey?style=flat-square
 [cv-Zarj]: https://img.shields.io/badge/Zarj-lightgrey?style=flat-square
+[cv-__Envy__]: https://img.shields.io/badge/__Envy__-lightgrey?style=flat-square
 [cv-aimann]: https://img.shields.io/badge/aimann-lightgrey?style=flat-square
 [cv-auxilia]: https://img.shields.io/badge/auxilia-lightgrey?style=flat-square
 [cv-chloeana]: https://img.shields.io/badge/chloeana-lightgrey?style=flat-square
@@ -129,10 +134,11 @@
 [cv-dushuai]: https://img.shields.io/badge/dushuai-lightgrey?style=flat-square
 [cv-eznorb]: https://img.shields.io/badge/eznorb-lightgrey?style=flat-square
 [cv-fwaunstp733]: https://img.shields.io/badge/fwaunstp733-lightgrey?style=flat-square
+[cv-henxpoi521]: https://img.shields.io/badge/henxpoi521-lightgrey?style=flat-square
 [cv-imagC]: https://img.shields.io/badge/imagC-lightgrey?style=flat-square
+[cv-itwasfake]: https://img.shields.io/badge/itwasfake-lightgrey?style=flat-square
 [cv-jandordoe]: https://img.shields.io/badge/jandordoe-lightgrey?style=flat-square
 [cv-jblm]: https://img.shields.io/badge/jblm-lightgrey?style=flat-square
-[cv-kermitfrog1202]: https://img.shields.io/badge/kermitfrog1202-lightgrey?style=flat-square
 [cv-l15625089091628]: https://img.shields.io/badge/l15625089091628-lightgrey?style=flat-square
 [cv-ladaagency]: https://img.shields.io/badge/ladaagency-lightgrey?style=flat-square
 [cv-latent--space--dreams]: https://img.shields.io/badge/latent--space--dreams-lightgrey?style=flat-square
@@ -141,11 +147,15 @@
 [cv-mastermerlin]: https://img.shields.io/badge/mastermerlin-lightgrey?style=flat-square
 [cv-mikkoph]: https://img.shields.io/badge/mikkoph-lightgrey?style=flat-square
 [cv-mrkakapopoloch]: https://img.shields.io/badge/mrkakapopoloch-lightgrey?style=flat-square
+[cv-nil__sphere]: https://img.shields.io/badge/nil__sphere-lightgrey?style=flat-square
 [cv-qingfengy36939]: https://img.shields.io/badge/qingfengy36939-lightgrey?style=flat-square
 [cv-rakamik]: https://img.shields.io/badge/rakamik-lightgrey?style=flat-square
 [cv-saladin]: https://img.shields.io/badge/saladin-lightgrey?style=flat-square
+[cv-sh1201]: https://img.shields.io/badge/sh1201-lightgrey?style=flat-square
+[cv-thedivergentai]: https://img.shields.io/badge/thedivergentai-lightgrey?style=flat-square
 [cv-updatemp]: https://img.shields.io/badge/updatemp-lightgrey?style=flat-square
 [cv-wolfcatz]: https://img.shields.io/badge/wolfcatz-lightgrey?style=flat-square
+[cv-wwwmanmoon103]: https://img.shields.io/badge/wwwmanmoon103-lightgrey?style=flat-square
 
 <!-- HEADER BADGES -->
 [hf-shield]: https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black
