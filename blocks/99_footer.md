@@ -106,8 +106,10 @@
 [cv-AIGC--Singularity]: https://img.shields.io/badge/AIGC--Singularity-lightgrey?style=flat-square
 [cv-Agino]: https://img.shields.io/badge/Agino-lightgrey?style=flat-square
 [cv-AiMetatron]: https://img.shields.io/badge/AiMetatron-lightgrey?style=flat-square
+[cv-AirbagGuy]: https://img.shields.io/badge/AirbagGuy-lightgrey?style=flat-square
 [cv-AishaAI]: https://img.shields.io/badge/AishaAI-lightgrey?style=flat-square
 [cv-ArsMachina]: https://img.shields.io/badge/ArsMachina-lightgrey?style=flat-square
+[cv-Artfat]: https://img.shields.io/badge/Artfat-lightgrey?style=flat-square
 [cv-Danrisi]: https://img.shields.io/badge/Danrisi-lightgrey?style=flat-square
 [cv-Deno2026]: https://img.shields.io/badge/Deno2026-lightgrey?style=flat-square
 [cv-DialUpDialDown]: https://img.shields.io/badge/DialUpDialDown-lightgrey?style=flat-square
@@ -115,6 +117,7 @@
 [cv-Exis10ce]: https://img.shields.io/badge/Exis10ce-lightgrey?style=flat-square
 [cv-FASCIUM]: https://img.shields.io/badge/FASCIUM-lightgrey?style=flat-square
 [cv-Luntrix]: https://img.shields.io/badge/Luntrix-lightgrey?style=flat-square
+[cv-Mister__A]: https://img.shields.io/badge/Mister__A-lightgrey?style=flat-square
 [cv-NO8D]: https://img.shields.io/badge/NO8D-lightgrey?style=flat-square
 [cv-NoahGreyWood]: https://img.shields.io/badge/NoahGreyWood-lightgrey?style=flat-square
 [cv-PromptHippo]: https://img.shields.io/badge/PromptHippo-lightgrey?style=flat-square
@@ -125,10 +128,12 @@
 [cv-The__Midnight__Lab]: https://img.shields.io/badge/The__Midnight__Lab-lightgrey?style=flat-square
 [cv-VividMuse]: https://img.shields.io/badge/VividMuse-lightgrey?style=flat-square
 [cv-Wimile]: https://img.shields.io/badge/Wimile-lightgrey?style=flat-square
+[cv-Xabsurd]: https://img.shields.io/badge/Xabsurd-lightgrey?style=flat-square
 [cv-Zarj]: https://img.shields.io/badge/Zarj-lightgrey?style=flat-square
 [cv-__Envy__]: https://img.shields.io/badge/__Envy__-lightgrey?style=flat-square
 [cv-aimann]: https://img.shields.io/badge/aimann-lightgrey?style=flat-square
 [cv-auxilia]: https://img.shields.io/badge/auxilia-lightgrey?style=flat-square
+[cv-cfgscale]: https://img.shields.io/badge/cfgscale-lightgrey?style=flat-square
 [cv-chloeana]: https://img.shields.io/badge/chloeana-lightgrey?style=flat-square
 [cv-coachbate]: https://img.shields.io/badge/coachbate-lightgrey?style=flat-square
 [cv-dushuai]: https://img.shields.io/badge/dushuai-lightgrey?style=flat-square
@@ -142,6 +147,7 @@
 [cv-l15625089091628]: https://img.shields.io/badge/l15625089091628-lightgrey?style=flat-square
 [cv-ladaagency]: https://img.shields.io/badge/ladaagency-lightgrey?style=flat-square
 [cv-latent--space--dreams]: https://img.shields.io/badge/latent--space--dreams-lightgrey?style=flat-square
+[cv-lcarspicturesdatabase]: https://img.shields.io/badge/lcarspicturesdatabase-lightgrey?style=flat-square
 [cv-lenML]: https://img.shields.io/badge/lenML-lightgrey?style=flat-square
 [cv-makimakimakima12138]: https://img.shields.io/badge/makimakimakima12138-lightgrey?style=flat-square
 [cv-mastermerlin]: https://img.shields.io/badge/mastermerlin-lightgrey?style=flat-square
@@ -152,6 +158,7 @@
 [cv-rakamik]: https://img.shields.io/badge/rakamik-lightgrey?style=flat-square
 [cv-saladin]: https://img.shields.io/badge/saladin-lightgrey?style=flat-square
 [cv-sh1201]: https://img.shields.io/badge/sh1201-lightgrey?style=flat-square
+[cv-spanking__cutie]: https://img.shields.io/badge/spanking__cutie-lightgrey?style=flat-square
 [cv-thedivergentai]: https://img.shields.io/badge/thedivergentai-lightgrey?style=flat-square
 [cv-updatemp]: https://img.shields.io/badge/updatemp-lightgrey?style=flat-square
 [cv-wolfcatz]: https://img.shields.io/badge/wolfcatz-lightgrey?style=flat-square
