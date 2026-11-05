@@ -83,6 +83,7 @@
 [gh-netdur]: https://img.shields.io/badge/netdur-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-netrunner--exe]: https://img.shields.io/badge/netrunner--exe-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-newHashMap]: https://img.shields.io/badge/newHashMap-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-og1936]: https://img.shields.io/badge/og1936-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-ped4enko]: https://img.shields.io/badge/ped4enko-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-pottokao]: https://img.shields.io/badge/pottokao-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-prithivMLmods]: https://img.shields.io/badge/prithivMLmods-lightgrey?style=flat-square&logo=huggingface&logoColor=white
@@ -116,6 +117,7 @@
 [cv-Dream2046]: https://img.shields.io/badge/Dream2046-lightgrey?style=flat-square
 [cv-Exis10ce]: https://img.shields.io/badge/Exis10ce-lightgrey?style=flat-square
 [cv-FASCIUM]: https://img.shields.io/badge/FASCIUM-lightgrey?style=flat-square
+[cv-Fenfel23]: https://img.shields.io/badge/Fenfel23-lightgrey?style=flat-square
 [cv-Luntrix]: https://img.shields.io/badge/Luntrix-lightgrey?style=flat-square
 [cv-Mister__A]: https://img.shields.io/badge/Mister__A-lightgrey?style=flat-square
 [cv-NO8D]: https://img.shields.io/badge/NO8D-lightgrey?style=flat-square
@@ -123,6 +125,7 @@
 [cv-PromptHippo]: https://img.shields.io/badge/PromptHippo-lightgrey?style=flat-square
 [cv-RICK666]: https://img.shields.io/badge/RICK666-lightgrey?style=flat-square
 [cv-Ray3780]: https://img.shields.io/badge/Ray3780-lightgrey?style=flat-square
+[cv-RaymondLuxuryYacht]: https://img.shields.io/badge/RaymondLuxuryYacht-lightgrey?style=flat-square
 [cv-Rimya]: https://img.shields.io/badge/Rimya-lightgrey?style=flat-square
 [cv-TP--AI--63]: https://img.shields.io/badge/TP--AI--63-lightgrey?style=flat-square
 [cv-The__Midnight__Lab]: https://img.shields.io/badge/The__Midnight__Lab-lightgrey?style=flat-square
