@@ -268,6 +268,8 @@ Every FP4 / NVFP4 / MXFP4 / INT8 / INT4 / W4A4 conversion in one place.
 | **Ray Qwen2.1 edit-enhanced** | ![int8][badge-int8] | 6.76 GB | ⚠️ [![][cv-Ray3780]](https://civitai.com/models/2972899/ray-qwen21?modelVersionId=3369126) | Custom editing merged into the base DiT; keeps base step counts. |
 | **Ray Qwen2.1 turbo v1.3** | ![int8][badge-int8] | 6.70 GB | ⚠️ [![][cv-Ray3780]](https://civitai.com/models/2972899/ray-qwen21?modelVersionId=3395380) | The same editing work folded into the official Turbo checkpoint. |
 | **RedCraft 3.0** | ![int4][badge-int4] ![int8][badge-int8] ![fp8][badge-fp8] | 5.34 / 6.76 / 6.63 GB | ⚠️ [![][cv-AiMetatron]](https://civitai.com/models/958009/redcraft-or?modelVersionId=3407259) | Merged DiT fine-tune in three quant levels; the version also bundles the Texture-Fix VAE. |
+| **FineView STORY3** | ![int8][badge-int8] ![fp8][badge-fp8] | 6.76 / 6.63 GB | ⚠️ [![][cv-AiMeASOP]](https://civitai.com/models/452459/fineview-or-story2?modelVersionId=3370753) | Merged uncensored DiT fine-tune (REDQW21 v2) in INT8 ConvRot and FP8; the v1 version adds BF16, NVFP4 and W4A8 builds. |
+| **Uncensored Omni (quantized)** | ![fp8][badge-fp8] ![int8][badge-int8] ![nvfp4][badge-nvfp4] ![Q4_K_M][badge-Q4_K_M] | 7.12 / 7.26 / 4.20 / 4.47 GB | ⚠️ [![][gh-chatrlabs]](https://huggingface.co/chatrlabs/Qwen-Image-2.1-Uncensored-Omni-Quantized/resolve/main/qwen-image-2.1-step90000-FP8-comfy.safetensors) ┊ [![][gh-chatrlabs]](https://huggingface.co/chatrlabs/Qwen-Image-2.1-Uncensored-Omni-Quantized/resolve/main/qwen-image-2.1-step90000-INT8-ConvRot-comfy.safetensors) ┊ [![][gh-chatrlabs]](https://huggingface.co/chatrlabs/Qwen-Image-2.1-Uncensored-Omni-Quantized/resolve/main/qwen-image-2.1-step90000-NVFP4-comfy.safetensors) ┊ [![][gh-chatrlabs]](https://huggingface.co/chatrlabs/Qwen-Image-2.1-Uncensored-Omni-Quantized/resolve/main/qwen-image-2.1-step90000-Q4_K_M.gguf) | Rank-128 Omni adapter merged into the base at strength 1.0, then requantized. Also ships a BF16-to-Q4_0 GGUF ladder and torchao/bnb diffusers folders; text encoder, processor and VAE come from the base repo. |
 | **W4A4 NVFP4** | ![nvfp4][badge-nvfp4] | 4.88 GB | [![][gh-ModelsLab]](https://huggingface.co/ModelsLab/Qwen-Image-2.1-W4A4-nvfp4) | DiT only; near-identical to the INT4 build. |
 | **W4A4 INT4** | ![int4][badge-int4] | 4.66 GB | [![][gh-ModelsLab]](https://huggingface.co/ModelsLab/Qwen-Image-2.1-W4A4-int4) | DiT only. |
 | **Uncensored NVFP4** | ![nvfp4][badge-nvfp4] | 4.20 GB | ⚠️ [![][gh-abenzerps]](https://huggingface.co/abenzerps/Qwen-Image-2.1-Turbo-Quantized/resolve/main/qwen-image-2.1-turbo-NVFP4.safetensors) | DiT only, native NVFP4 rather than a GGUF conversion. |
@@ -279,9 +281,9 @@ Every FP4 / NVFP4 / MXFP4 / INT8 / INT4 / W4A4 conversion in one place.
 | Name | Precision | Size | Links | Notes |
 | :--- | :---: | :---: | :---: | :--- |
 | **Darkstar ModelOpt FP8** | ![fp8][badge-fp8] | 26.33 GB | [![][gh-HangGlidersRule]](https://huggingface.co/HangGlidersRule/Darkstar-Qwen-Image-2.1-Base-ModelOpt-FP8) | NVIDIA ModelOpt-derived, full repo. |
+| **TailSteer** | ![bf16][badge-bf16] | 33.12 GB | [![][gh-Lyricccco]](https://huggingface.co/Lyricccco/Qwen-Image-2.1-TailSteer) | Complete BF16 fine-tune, not a quant: cuts texture drift across repeated edits (+1.22 dB PSNR, 11.5% lower LPIPS at turn 10). Drop-in model-ID swap; the repo carries the diffusers shards and a single-file ComfyUI transformer. |
 | **Uncensored BF16 SafeTensor** | ![bf16][badge-bf16] | 14.23 GB | ⚠️ [![][gh-dh123456789123]](https://huggingface.co/dh123456789123/Qwen-Image-2.1-Uncensored-BF16-SafeTensor/resolve/main/qwen-image-2.1-UC-BF16_bf16.safetensors) ┊ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-bf16-unet/resolve/main/Qwen-Image-2.1-_bf16%E6%97%A0%E5%AE%A1%E6%9F%A5.safetensors) | Single 14.23 GB file, the full DiT in one piece, mirrored by both repos. |
 | **Uncensored UC FP8 / Q4_K_M** | ![fp8][badge-fp8] ![Q4_K_M][badge-Q4_K_M] | 7.12 / 4.60 GB | ⚠️ [![][gh-og1936]](https://huggingface.co/og1936/qwen-image-2.1-uncensored-weights/resolve/main/qwen-image-2.1-UC-fp8.safetensors) ┊ [![][gh-og1936]](https://huggingface.co/og1936/qwen-image-2.1-uncensored-weights/resolve/main/qwen-image-2.1-UC-Q4_K_M.gguf) | Mirror of the abenzerps uncensored DiT removed on 2026-11-03. FP8 e4m3 DiT plus a Q4_K_M GGUF of the same weights; bring your own text encoder and VAE. |
-| **Uncensored Genesis BF16** | ![bf16][badge-bf16] | 32.46 GB | ⚠️ [![][gh-LuffyTheFox]](https://huggingface.co/LuffyTheFox/Qwen-Image-2.1-Uncensored-Genesis-BF16-GGUF) | The abenzerps uncensored DiT with the author's "Genesis" denoising pass applied, a post-training SVD repair rather than a fine-tune, so a distinct weight set rather than a re-upload. Self-contained: DiT + Genesis text encoder + `mmproj` + VAE. |
 | **DF11 ComfyUI** | ![bf16][badge-bf16] | 9.72 GB | [![][gh-mingyi456]](https://huggingface.co/mingyi456/Qwen-Image-2.1-DF11-ComfyUI/resolve/main/qwen_image_2.1_bf16-DF11.safetensors) | `qwen_image_2.1_bf16-DF11.safetensors`. |
 
 <p id="quant-nunchaku" align="center">· · · · · · · · · · · · · ·</p>
@@ -389,7 +391,8 @@ Only **v0.2.1** has third-party conversions. For v0.3, ComfyUI support means cop
 | **v0.3 merged Q8_0** | 6 | ![Q8_0][badge-Q8_0] | 7.69 GB | [![][gh-Viggle]](https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo/resolve/main/Qwen-Image-2.1-viggle-turbo-v0.3-6step-Q8_0.gguf) | Closest of the merged files to the LoRA path, and needs ComfyUI-GGUF. Q6_K, Q5_K_M and Q4_K_M sit in the same directory under the same naming. |
 | **6NFE Distill** | 6 | ![fp32][badge-fp32] | 28.46 GB | [![][gh-Sutoonq]](https://huggingface.co/Sutoonq/Qwen-Image-2.1-6NFE-Distill/tree/main/transformer) | Full transformer distill in 8 shards, FP32, no LoRA to load. Handles T2I and editing. **Needs `shift_terminal=0.4`** and conditional-only sampling (`true_cfg_scale=1.0`, no negative prompt) while keeping the base's dynamic shift. Ships its own `inference.py`. Third-party, same research license. |
 | **HDR full fine-tune** | 4 | ![bf16][badge-bf16] | 14.23 GB | [![][gh-yhzr2222]](https://huggingface.co/yhzr2222/qwen_image_2.1_bf16_hdr_ViggleHDR_noised) | Full-parameter BF16 fine-tune (single file) through a 3-stage curriculum: artistic style, Chinese mythology/guofeng, then 4-step distillation. **The one row here that wants CFG above 1**; the card tests 2.5. 4 steps, or 20–30 for extra detail, `euler`/`simple`. Goes in `models/unet/`. Marked experimental. |
-| **Aisha NSFW v4** | 8 | ![bf16][badge-bf16] | 13.25 GB | ⚠️ [![][cv-AishaAI]](https://civitai.com/models/3009275/aisha-nsfw-qwen-21-turbo?modelVersionId=3414853) | Merged Turbo fine-tune for adult content, still a preview build. |
+| **Aisha NSFW v5.1** | 8 | ![bf16][badge-bf16] | 13.25 GB | ⚠️ [![][cv-AishaAI]](https://civitai.com/models/3009275/aisha-nsfw-qwen-21-turbo?modelVersionId=3459677) | Merged Turbo fine-tune for adult content; v5.1 preview switches to Markdown captions and is still under construction. |
+| **Turbo NVFP4 (ComfyUI)** | 8 | ![nvfp4][badge-nvfp4] | 15.70 GB | [![][gh-BennyDaBall]](https://huggingface.co/BennyDaBall/Qwen-Image-2.1-Turbo-NVFP4) | NVFP4 DiT 5.69 GB + NVFP4 encoder 9.33 GB + BF16 VAE 0.68 GB. Seven ComfyUI workflows, no custom nodes; Euler, CFG 1 and the official 8-step sigmas. |
 | **UltraFast Q4_K** | 8 | ![Q4_K][badge-Q4_K] | 4.05 GB | [![][gh-Haverbex]](https://huggingface.co/Haverbex/Qwen-Image-2.1-UltraFast-GGUF/resolve/main/Qwen-Image-2.1-UltraFast-Q4_K.gguf) | DiT-only Q4_K with the UltraFast adapter **already merged**, so do not stack the adapter on top. Still needs the text/vision encoders and the matching VAE. Quality and speed unbenchmarked. |
 | **Pruna 8Step SDNQ** | 8 | ![int4][badge-int4] | 11.51 GB | [![][gh-SamuelTallet]](https://huggingface.co/SamuelTallet/Pruna-Qwen-Image-2.1-8steps-SDNQ-4bit-dynamic-hadamard256) | The Pruna 8-step adapter **merged** into the base and re-quantized with [SDNQ](https://github.com/Disty0/sdnq) (UINT4 dynamic, Hadamard rotation at group size 256). Full diffusers pipeline, so the text encoder is quantized too. Needs SDNQ 0.2.0+, Triton and diffusers from git. Follows the Pruna sigma schedule above. |
 | **Official Turbo diffusers** | 8 | ![bf16][badge-bf16] | 32.44 GB | [![][gh-Qwen]](https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo) | The reference 8-step checkpoint itself, listed in full under [official checkpoints](#official-turbo): CFG 1.0, schedule carried in the weights, prefix KV cache on. The point of comparison for every row here. |
@@ -421,6 +424,7 @@ Style, control, and fix adapters. All target the base DiT unless noted. Grouped 
 | **Multiple Angles** | ![Control][ltype-control] | ![f16][badge-f16] | 0.32 GB | [![][gh-akhaliq]](https://huggingface.co/akhaliq/Qwen-Image-2.1-Multiple-Angles-LoRA/resolve/main/checkpoints_v2%2Fangles_v2_full_qwen21_multiple_angles_v2_qwen21_multiple_angles_v2_000001500.safetensors) ┊ [![][gh-akhaliq]](https://huggingface.co/akhaliq/Qwen-Image-2.1-Multiple-Angles-LoRA/resolve/main/multiple_angles_step1000.safetensors) | Re-shoots a subject from a named camera position. |
 | **Next Scene** | ![Control][ltype-control] | ![f16][badge-f16] | 0.32 GB | [![][gh-akhaliq]](https://huggingface.co/akhaliq/Qwen-Image-2.1-Next-Scene-LoRA/resolve/main/next_scene_step2500.safetensors) | Directs the next camera move so outputs chain into a storyboard. |
 | **QMA camera angles** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.32 GB | [![][gh-gribbliest]](https://huggingface.co/gribbliest/qwen-image-2.1-qma-camera-angles/resolve/main/qwen-image-2.1-qma-camera-angles.safetensors) | Orbits the camera around a subject while the subject stays put. |
+| **Texture inpaint / outpaint** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.32 GB | [![][gh-TawusGames]](https://huggingface.co/TawusGames/QwenImage-2.1-Texture-Inpaint-Outpaint-Lora/resolve/main/loras/TextureInpaintAndOutpaintLora_000001000_V0.5.safetensors) ┊ [![][gh-TawusGames]](https://huggingface.co/TawusGames/QwenImage-2.1-Texture-Inpaint-Outpaint-Lora/resolve/main/loras/TextureInpaintAndOutpaintLora_000001200_V0.1.safetensors) | Two BF16 checkpoints for texture inpainting and outpainting; the card is frontmatter-only. |
 | **Orbit Alpha** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.17 GB | [![][gh-ML--Intern--lab]](https://huggingface.co/ML-Intern-lab/Qwen-Image-2.1-viewpoint-orbit-LoRA/resolve/main/checkpoints/steps2000res768/orbit_alpha_lora_gate_up_split.safetensors) | Renders an RGBA-cutout object from a new viewpoint. |
 | **FG extract v4** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.17 GB | [![][gh-trmz]](https://huggingface.co/trmz/qwen-image-2.1-fg-extract-lora/resolve/main/qwen-image-2.1-fg-extract-v4.safetensors) | Cuts a masked element out as an RGBA cutout at its original size and place. |
 | **Doodle-in** | ![Control][ltype-control] | ![f16][badge-f16] | 0.17 GB | [![][gh-ML--Intern--lab]](https://huggingface.co/ML-Intern-lab/Qwen-Image-2.1-doodle-in-LoRA/resolve/main/doodle_in_lora_qwen21_gate_up_split.safetensors) | Turns a magenta scribble into the object you name. |
@@ -428,7 +432,8 @@ Style, control, and fix adapters. All target the base DiT unless noted. Grouped 
 | **Outpaint v1** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.16 GB | [![][gh-ausboss]](https://huggingface.co/ausboss/Qwen-Image-2.1-Outpaint-LoRA/resolve/main/qwen-image-2.1-outpaint.safetensors) | The earlier run, better on very large extensions. |
 | **Pano 360** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.16 GB | [![][gh-Gogodr]](https://huggingface.co/Gogodr/qwen-image-2.1-edit-pano360-lora/resolve/main/pano360_qwen21_edit_v1.safetensors) | Builds a 2:1 equirectangular 360 panorama from 1-3 photos of one spot. |
 | **Grey-margin outpaint** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.16 GB | [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-lora-2111645768636518402/resolve/main/Qwen2.1_%E6%89%A9%E5%9B%BE_GH_3750.safetensors) | Seamlessly extends the picture past its edge, filling the grey mask you leave. Trained at 1536; the prompt is optional. |
-| **VNCCS PoseStudio** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.15 GB | [![][gh-MIUProject]](https://huggingface.co/MIUProject/VNCCS_PoseStudio_QI2.1) ┊ [![][cv-AHEKOT]](https://civitai.com/models/2957080/vnccs-posestudio-qwen-image-21?modelVersionId=3403775) | Pose-reference LoRA for the VNCCS ComfyUI node. |
+| **VNCCS PoseStudio** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.15 GB | [![][gh-MIUProject]](https://huggingface.co/MIUProject/VNCCS_PoseStudio_QI2.1) ┊ [![][cv-AHEKOT]](https://civitai.com/models/2957080/vnccs-posestudio-qwen-image-21?modelVersionId=3452406) | Pose-reference LoRA for the VNCCS ComfyUI node. v3.0 improves transparent images and multi-character stability. |
+| **Q21 Angle Lora** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.15 GB | [![][cv-AirbagGuy]](https://civitai.com/models/3038852/q21-angle-lora-character-creation?modelVersionId=3453524) | Keeps a character, pose and camera angle consistent across a character-sheet workflow; simple angle tags. |
 | **AnyAngle** | ![Control][ltype-control] | ![bf16][badge-bf16] | 0.12 GB | [![][gh-lilylilith]](https://huggingface.co/lilylilith/QI_2.1_AnyAngle/resolve/main/QI2.1_AnyAngle.safetensors) | Changes the camera angle using a coarse render of the angle you want. |
 |  |  |  |  |  |  |
 | **Fix Opinionated** | ![Fix][ltype-fix] | ![fp32][badge-fp32] | 0.50 GB | [![][gh-e--n--v--y]](https://huggingface.co/e-n-v-y/Qwen-Image-2.1-Fix-Opinionated-v1.0/resolve/main/qwen2.1-detail-fix-opinionated-v1.0.safetensors) | The stronger Fix variant, which also shifts composition. |
@@ -437,11 +442,14 @@ Style, control, and fix adapters. All target the base DiT unless noted. Grouped 
 | **Edit consistency** | ![Fix][ltype-fix] | ![bf16][badge-bf16] | 0.16 GB | [![][gh-ausboss]](https://huggingface.co/ausboss/Qwen-Image-2.1-Consistency-LoRA/resolve/main/qwen-image-2.1-consistency.safetensors) | Stops edits from resizing or nudging the picture. |
 | **COS auto-retouching v2** | ![Fix][ltype-fix] | ![bf16][badge-bf16] | 0.16 GB | [![][cv-l15625089091628]](https://civitai.com/models/2975411/cosv2cos-auto-retouching-v2?modelVersionId=3372259) | One-step automatic retouching for cosplay photos. |
 | **Pixel-offset fix** | ![Fix][ltype-fix] | ![bf16][badge-bf16] | 0.16 GB | [![][gh-GooHAI]](https://huggingface.co/GooHAI/Qwen-image-2.1_loras/resolve/main/Qwen2.1%20%E4%B8%80%E8%87%B4%E6%80%A7%E6%97%A0%E5%81%8F%E7%A7%BB_GH_V1.0.safetensors) | Removes the pixel offset that shifts Qwen 2.1 output. No trigger word; strength 0.7. |
+| **Cosplay retouching** | ![Fix][ltype-fix] | ![bf16][badge-bf16] | 0.16 GB | [![][cv-l15625089091628]](https://civitai.com/models/3039151/cosplay-painterlyimpasto-style?modelVersionId=3453915) | Automatic cosplay photo retouching in a painterly impasto style. |
 | **Fix** | ![Fix][ltype-fix] | ![bf16][badge-bf16] | 0.11 GB | [![][gh-e--n--v--y]](https://huggingface.co/e-n-v-y/Qwen-Image-2.1-Fix/resolve/main/qwen-image-2.1-fix-1.0-comfy.safetensors) | Removes the AI look from generations. |
 | **Deblur anything** | ![Fix][ltype-fix] | ![bf16][badge-bf16] | 0.08 GB | [![][cv-Luntrix]](https://civitai.com/models/2975487/deblur-anything?modelVersionId=3372351) | Removes defocus blur from a photograph. |
 | **Remove bokeh** | ![Fix][ltype-fix] | ![bf16][badge-bf16] | 0.08 GB | [![][cv-Luntrix]](https://civitai.com/models/2976381/edit-remove-bokeh-remove-blur-sharp-background?modelVersionId=3373431) | Sharpens a background the camera left out of focus. |
+| **NaturalSkinDetail** | ![Fix][ltype-fix] | ![bf16][badge-bf16] | 0.08 GB | [![][cv-NGC__2237__]](https://civitai.com/models/3041676/naturalskindetail-qwen-image-21?modelVersionId=3457355) | Reduces the AI-face look on realistic portraits; strength 0.6, best on close-ups. |
 | **Watermark removal** | ![Fix][ltype-fix] | ![bf16][badge-bf16] | 0.07 GB | [![][cv-saladin]](https://civitai.com/models/2969142/watermark-removal-lora?modelVersionId=3364468) | Erases watermarks without repainting the rest of the image. |
 | **Fix v2.0** | ![Fix][ltype-fix] | ![bf16][badge-bf16] | 0.05 GB | [![][gh-e--n--v--y]](https://huggingface.co/e-n-v-y/Qwen-Image-2.1-Fix-v2.0/resolve/main/qwen2.1-detail-fix-2.0.safetensors) | The Fix idea rerun at rank 8. |
+| **Mosaic removal** | ![Fix][ltype-fix] | ![bf16][badge-bf16] | 0.04 GB | [![][gh-Schwi--AI]](https://huggingface.co/Schwi-AI/Qwen-Image-2.1-MosaicMate-LoRA/resolve/main/qwen-image-2.1-mosaicmate-v1.safetensors) | Removes semi-transparent mosaic overlays up to 0.9 opacity; prompt `Remove the semi-transparent mosaic`, strength 1.0. |
 |  |  |  |  |  |  |
 | **De-AI LoRA pack** | ![Style][ltype-style] | ![bf16][badge-bf16] | 2.45 GB | [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1ai-lora) | An 8-file pack for removing the AI look. |
 | **Fyre** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.81 GB | [![][cv-jandordoe]](https://civitai.com/models/2386526/fyre-fictional-character?modelVersionId=3353158) | Fictional redhead character with freckles. |
@@ -491,6 +499,11 @@ Style, control, and fix adapters. All target the base DiT unless noted. Grouped 
 | **Claude chan (young)** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.15 GB | [![][cv-updatemp]](https://civitai.com/models/3029351/claude-claude-chan?modelVersionId=3446685) | Character LoRA trained on 30 views; the Qwen 2.1 build of the young persona. |
 | **Mecha Engrave** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.15 GB | [![][cv-Xabsurd]](https://civitai.com/models/3032793/mecha-engrave?modelVersionId=3445670) | Adds armor depth, panel lines and glowing energy parts; trigger `nijimecha`. The author ranks this Qwen build last of the five. |
 | **Siemens CX70** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.15 GB | [![][cv-Fenfel23]](https://civitai.com/models/2744351/siemens-cx70?modelVersionId=3450666) | Early-2000s CCD camera-phone look: sensor noise, highlight bloom and soft rendering; trigger `s13m3ns style.`, best at 1 MP. |
+| **Thigh Gap** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.15 GB | [![][cv-RaymondLuxuryYacht]](https://civitai.com/models/2181905/thigh-gap-qwen21-krea-2-zit-klein-9b?modelVersionId=3360736) | Body-shape concept; trigger `thighgap`, lower strength to dial the effect down. |
+| **RLY Thot Shot - Helena** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.15 GB | [![][cv-RaymondLuxuryYacht]](https://civitai.com/models/2618083/rly-thot-shot-helena-moss-qwen21-krea-2-ideogram-4-zibzit-k9b?modelVersionId=3358414) | Female character LoRA; trigger `rlyhelena` at strength 1.0. Proof-of-concept Qwen 2.1 build. |
+| **Kodak DC120** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.15 GB | [![][cv-Fenfel23]](https://civitai.com/models/2767846/kodak-dc120?modelVersionId=3452541) | Late-1990s CCD digicam look: soft optics, sensor noise and highlight bloom; trigger `kdc120 style.`. |
+| **Sabikaze** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.15 GB | [![][cv-lepetitprince716355]](https://civitai.com/models/3043848/qwen-21-sabikaze-grey-teal-dry-brush-anime-style?modelVersionId=3460073) | Grey-teal dry-brush anime style with heavy ink lines and one warm accent; trigger `@z3-sabikaze`. |
+| **Classical Greek Mythology** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.15 GB | [![][cv-bizs]](https://civitai.com/models/3043941/classical-greek-mythology-paintings-style-lora-qwen-image-21?modelVersionId=3460208) | 16th-19th century classical painting style; trigger `gr33kmyth`. |
 | **Sts2 Cards Drawer** | ![Style][ltype-style] | ![fp16][badge-f16] | 0.10 GB | [![][gh-Airmongsity]](https://huggingface.co/Airmongsity/Qwen-Image-2.1-Sts2-Cards-Drawer) | 2D card-art style. |
 | **ZZZ chibi** | ![Style][ltype-style] | ![f16][badge-f16] | 0.08 GB | [![][gh-wesjos]](https://huggingface.co/wesjos/Qwen-Image2.1-ZenlessZoneZeroChibi-Lora/resolve/main/zzz_chibi_v2_st2500.safetensors) | Compresses proportions to chibi rather than just restyling. |
 | **2anime** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.08 GB | [![][gh-NicknickAI]](https://huggingface.co/NicknickAI/QwenImage2.1-2anime/resolve/main/2anime-QwenImage2.1.safetensors) | Turns a photo into anime, image to image. |
@@ -504,6 +517,14 @@ Style, control, and fix adapters. All target the base DiT unless noted. Grouped 
 | **KreLuminA** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.08 GB | [![][cv-henxpoi521]](https://civitai.com/models/2935404/krelumina?modelVersionId=3345973) | A half-realistic look with blown highlights; trained on 11 images, so expect overfitting. |
 | **YUL-GILRS** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.08 GB | [![][cv-wwwmanmoon103]](https://civitai.com/models/2994272/yul-girls-lora?modelVersionId=3395734) | A character LoRA; the trigger starts with `yul`. Only this character of the series has a Qwen 2.1 build. |
 | **Star Trek TNG Type 2 Phaser** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.08 GB | [![][cv-lcarspicturesdatabase]](https://civitai.com/models/3025318/star-trek-tng-type-2-phaser?modelVersionId=3443413) | Object LoRA for the TNG Type 2 phaser prop; trigger `TNGTypeII2364`. |
+| **Star Trek TNG Cricket Phaser** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.08 GB | [![][cv-lcarspicturesdatabase]](https://civitai.com/models/3021909/star-trek-tng-cricket-phaser?modelVersionId=3454396) | Object LoRA for the TNG Type 1 Cricket phaser prop; trigger `TNGCricket`. |
+| **Kira** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.08 GB | [![][cv-bazya022020810]](https://civitai.com/models/3029127/kira-photorealistic-lora-moss-kreaqwen-21?modelVersionId=3455217) | Photorealistic Slavic character LoRA; V2 is the softer casual take from a failed cosplay training run. |
+| **Lada Granta FL** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.08 GB | [![][cv-bazya022020810]](https://civitai.com/models/3033576/lada-granta-fl-moss-krea-2qwen-21?modelVersionId=3453145) | Object LoRA for the facelifted Lada Granta sedan; an early beta release. |
+| **UAZ-452 Bukhanka** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.08 GB | [![][cv-bazya022020810]](https://civitai.com/models/3035100/uaz-452-bukhanka-vintage-van-or-moss-krea-2qwen-21?modelVersionId=3454112) | Object LoRA for the Soviet Bukhanka van, trained on clean stock references. |
+| **Niva Legend** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.08 GB | [![][cv-bazya022020810]](https://civitai.com/models/3037160/niva-legend-vaz-2121-or-moss-krea-2qwen-21?modelVersionId=3459089) | Object LoRA for the VAZ-2121, covering classic off-road and cyberpunk looks; trigger `niva legend`, weight 0.7-1.0. |
+| **yul-012** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.08 GB | [![][cv-YeULay190cm]](https://civitai.com/models/3039422/yul-012-qwen21?modelVersionId=3454321) | Anime character LoRA from the yul series, BJD-styled; research and learning use only. |
+| **Cheburashka** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.08 GB | [![][cv-bazya022020810]](https://civitai.com/models/3039517/cheburashka-moss-krea-2qwen-21?modelVersionId=3457539) | Object LoRA for the Soviet stop-motion puppet; trigger `cheburashka_classic`. |
+| **013yul Plus** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.08 GB | [![][cv-YeULay190cm]](https://civitai.com/models/3040029/013yulqwen21plus?modelVersionId=3455209) | Character LoRA from the yul series, full-style plus build; research and learning use only. |
 | **Canon UltraReal** | ![Style][ltype-style] | ![f16][badge-f16] | 0.07 GB | [![][cv-Danrisi]](https://civitai.com/models/2783143/canon-ultrareal?modelVersionId=3352035) | The look of a full-frame Canon camera: rich colour, deep bokeh. |
 | **GrainScape UltraReal** | ![Style][ltype-style] | ![f16][badge-f16] | 0.07 GB | [![][cv-Danrisi]](https://civitai.com/models/1332651/grainscape-ultrareal?modelVersionId=3352222) | Coarse film grain with deeper colour. |
 | **NiceGirls UltraReal** | ![Style][ltype-style] | ![f16][badge-f16] | 0.07 GB | [![][cv-Danrisi]](https://civitai.com/models/1862761/nicegirls-ultrareal?modelVersionId=3352079) | Portrait realism for female subjects. |
@@ -514,8 +535,15 @@ Style, control, and fix adapters. All target the base DiT unless noted. Grouped 
 | **2000s Analog Core** | ![Style][ltype-style] | ![fp16][badge-fp16] | 0.07 GB | [![][cv-Danrisi]](https://civitai.com/models/1134895/2000s-analog-core?modelVersionId=3378081) | 2000s analog video look: scan lines, tape noise and faded colour. |
 | **Triclops** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.07 GB | [![][cv-2__as__1]](https://civitai.com/models/3013514/triclops-three-eyes-qwen-edit?modelVersionId=3420410) | Adds a third eye; trigger `add a third eye`. |
 | **Tail - Qwen Edit** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.07 GB | [![][cv-2__as__1]](https://civitai.com/models/3031262/tail-qwen-edit?modelVersionId=3443640) | Adds a tail; trigger `add a tail`. A red line drawn on the input guides its shape. |
+| **Candid Phone Look** | ![Style][ltype-style] | ![f16][badge-f16] | 0.07 GB | [![][cv-TP--AI--63]](https://civitai.com/models/3039458/candid-phone-look-keeps-face-and-age?modelVersionId=3454370) | Subtle phone-photo feel that keeps face and age steady; trigger `cndphoto`, strength 0.5-0.8. |
+| **80sfy** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.07 GB | [![][cv-saladin]](https://civitai.com/models/3041094/80sfy-any-image-make-digital-photos-look-like-professional-film-photos-from-the-80s90s?modelVersionId=3456595) | 80s and 90s commercial film-photo look: high contrast, strong colour and grain. |
+| **Image to Line Art** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.07 GB | [![][cv-saladin]](https://civitai.com/models/3041222/image-to-line-art-transform-any-image-into-line-art?modelVersionId=3456754) | Converts an image to line art with `Transform the image into line art.`; the page also has a reverse lineart2photo version. |
+| **Disco Elysium** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.04 GB | [![][cv-wystanbelov785]](https://civitai.com/models/2487755/disco-elysium?modelVersionId=3385639) | Painterly digital-art look from the game; start the prompt with a medium such as `Oil painting of`. |
+| **Dream Loom** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.04 GB | [![][cv-wystanbelov785]](https://civitai.com/models/2605989/dream-loom?modelVersionId=3385794) | Dreamy oil-painting and watercolor look based on Sidney Sime plus the author's own generations; lower weights if it overdoes the style. |
+| **Sidney Sime** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.04 GB | [![][cv-wystanbelov785]](https://civitai.com/models/2986328/sidney-sime?modelVersionId=3385777) | Authentic Sidney Sime painting style; start the prompt with a medium, CFG 3 and higher resolutions. |
 | **Skeletor** | ![Style][ltype-style] | ![bf16][badge-bf16] | 0.02 GB | [![][cv-DialUpDialDown]](https://civitai.com/models/2835069/skeletor-masters-of-the-universe?modelVersionId=3345001) | Skeletor character from Masters of the Universe. |
 |  |  |  |  |  |  |
+| **Albedo (Spellcast3D)** | ![Utility][ltype-utility] | ![bf16][badge-bf16] | 0.68 GB | [![][gh-IgorAherne]](https://huggingface.co/IgorAherne/spellcast3d-marigold-albedo-qwen-image-2.1/resolve/main/albedo_lora.safetensors) | Extracts albedo, the base colour with lighting removed, for 3D texturing. Ships a rank-128 LoRA, a fine-tuned VAE decoder and a fixed prompt embedding; all three are needed. |
 | **Pokemon foil mask** | ![Utility][ltype-utility] | ![fp32][badge-fp32] | 0.34 GB | [![][gh-newHashMap]](https://huggingface.co/newHashMap/PokemonFoilMask-LoRA-Qwen-Image-2.1/resolve/main/pytorch_lora_weights.safetensors) | Predicts the grayscale foil mask a card shader needs. Scored on 820 held-out test cards. |
 | **Normal2RGB** | ![Utility][ltype-utility] | ![bf16][badge-bf16] | 0.25 GB | [![][gh-Aero--Ex]](https://huggingface.co/Aero-Ex/Qwen-Image2.1_Normal2RGB/resolve/main/Normal2RGB_4000.safetensors) | Normal map → RGB render, 3 checkpoints. |
 | **White model** | ![Utility][ltype-utility] | ![bf16][badge-bf16] | 0.16 GB | [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-lora-2103639501527670786/resolve/main/QI2.1Convert-to-white-model.safetensors) | Strips people down to grey mannequins while keeping posture and camera angle. |
@@ -530,10 +558,13 @@ Style, control, and fix adapters. All target the base DiT unless noted. Grouped 
 |  |  |  |  |  |  |
 | **Uncensored Omni v0.1** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.67 GB | ⚠️ [![][gh-chatrlabs]](https://huggingface.co/chatrlabs/Qwen-Image-2.1-Uncensored-Omni-LoRA-v0.1/resolve/main/chatrlabs-omni-lora-v0.1-bf16.safetensors) | One adapter for both text-to-image and image editing. |
 | **Hips / buttocks** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.47 GB | ⚠️ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-lora/resolve/main/qwen2509%E8%87%80%E9%83%A8%E6%94%BE%E5%A4%A7.safetensors) | Body-shape slider. |
+| **NSFW Edit** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.43 GB | ⚠️ [![][cv-Winchester99]](https://civitai.com/models/3040903/qwen21-nsfw-edit?modelVersionId=3456368) | Improves adult anatomy and pose understanding in T2I and single-image edits; the author warns it loses identity preservation against the base. |
 | **FUSAL Anime** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.42 GB | ⚠️ [![][gh-MicksHF]](https://huggingface.co/MicksHF/Qwen-Image-2.1-Anime-Fusal/resolve/main/loras/fusal-qwen-image-2.1-v2-exact-r80.safetensors) | Wide-domain anime style for the original Base; start at 0.7 strength with the `fusal style.` prefix. The Turbo E6 preview is a separate file for the Turbo base, and the repo bundles the matching Heretic text encoder. |
 | **Asian mix** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.32 GB | ⚠️ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen21-hina-qwenimage2.1-asianmix-lora-v3.0-rank64-lora/resolve/main/Qwen21-%E4%BA%9A%E6%B4%B2hina_QwenImage2.1_asianMix_Lora_v3.0-rank64.safetensors) | A portrait LoRA on a single named character. |
 | **Realism transform** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.30 GB | ⚠️ [![][cv-sh1201]](https://civitai.com/models/2985682/realism-transform?modelVersionId=3384983) | Anime-to-photo edit that keeps the composition. Strength 0.8-1.2, under 2 MP. Non-commercial only. |
-| **Belt Spanking QE21** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.30 GB | ⚠️ [![][cv-spanking__cutie]](https://civitai.com/models/1732301/belt-spanking-or-il-or-bdsm-or-spanking?modelVersionId=3451555) | Belt-spanking concept; trigger `make the spanker swing a leather belt`. The QE21 v1 build is a stepping stone to the upcoming v2. |
+| **Belt Spanking QE21** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.30 GB | ⚠️ [![][cv-spanking__cutie]](https://civitai.com/models/1732301/belt-spanking-or-il-or-bdsm-or-spanking?modelVersionId=3453843) | Belt-spanking concept, QE21 v2; trigger `make the character swing a leather belt`. The creator calls v2 the best build so far. |
+| **Cane Marks** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.30 GB | ⚠️ [![][cv-spanking__cutie]](https://civitai.com/models/1726963/cane-marks-or-bdsm-or-spanking?modelVersionId=3459211) | Spanking-mark concept; trigger `Add cane marks to character butt`, 1024x1024. |
+| **Sandal Spanking** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.30 GB | ⚠️ [![][cv-spanking__cutie]](https://civitai.com/models/1729114/sandal-spanking-or-bdsm-or-spanking?modelVersionId=3459193) | Composition LoRA; trigger `make the character swing a sandal`, strength 0.7-0.9. |
 | **Dual anatomy** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.24 GB | ⚠️ [![][gh-glowleaf]](https://huggingface.co/glowleaf/qwen-image-2.1-futanari-lora/resolve/main/futa_qwen21_v1_000001000.safetensors) | Adds a dual anatomy to the subject. |
 | **Breasts and hips** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.17 GB | ⚠️ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-lora/resolve/main/Qwen%20Image%202.1%E5%A4%A7%E8%83%B8%E5%A4%A7%E8%87%80.safetensors) | Combined body-shape adapter from the same pack. |
 | **RadianceChrome Voluptuous** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.17 GB | ⚠️ [![][gh-AIImageStudio]](https://huggingface.co/AIImageStudio/RadianceChromeVoluptuous_QwenImage2.1_v1.0) | Character-style LoRA. |
@@ -549,6 +580,8 @@ Style, control, and fix adapters. All target the base DiT unless noted. Grouped 
 | **PHOTOSTYLE by Sean Archer** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.15 GB | ⚠️ [![][cv-FASCIUM]](https://civitai.com/models/1632416/photostyle-by-sean-archer?modelVersionId=3402309) | Portrait-photographer photo style. |
 | **Qwen 2.1 Emote V2** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.15 GB | ⚠️ [![][cv-AirbagGuy]](https://civitai.com/models/3032955/qwen-21-emote-lora?modelVersionId=3450591) | 99 facial expressions and emotes, two of them adult; V2 works at full strength without flattening photoreal faces. |
 | **RLY Thot Shot - Jada** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.15 GB | ⚠️ [![][cv-RaymondLuxuryYacht]](https://civitai.com/models/2558101/rly-thot-shot-jada-qwen21-krea-2-ideogram-4-zibzit-k9b?modelVersionId=3357572) | Female character LoRA; trigger `rlyjada` at strength 1.0. The author calls this Qwen 2.1 build a proof of concept. |
+| **Anatomy correction** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.15 GB | ⚠️ [![][cv-nil__sphere]](https://civitai.com/models/3012772/revulva?modelVersionId=3455003) | Corrects the base model's female anatomy. v1.04 is the rank-32 retrain; trained on a varied dataset of 40 stripped images. |
+| **Anime2Real v1.2** | ![NSFW][ltype-nsfw] | ![fp16][badge-fp16] | 0.15 GB | ⚠️ [![][cv-rxtotx1111]](https://civitai.com/models/2959676/anime2real-gpt-image-25-sunburst-edition?modelVersionId=3457198) | Turns anime or illustration into a candid smartphone photo while keeping pose, outfit and scene. V1.2 is the photorealism retrain. |
 | **NSFW Image Edit** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.08 GB | ⚠️ [![][gh-RunningHubAI]](https://huggingface.co/RunningHubAI/rh-qwen-image-2.1-aio-nsfw-lora/resolve/main/Qwen-Image-2.1%20NSFW%20Image%20Edit.safetensors) | Adult-content editing adapter. |
 | **Glamour Realism** | ![NSFW][ltype-nsfw] | ![f16][badge-f16] | 0.07 GB | ⚠️ [![][cv-TP--AI--63]](https://civitai.com/models/2986100/qwen-image-21-glamour-realism-lora-16-gb-tested?modelVersionId=3385496) | Gentle glamour-portrait polish with natural skin. |
 | **Miniskirt style** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.07 GB | ⚠️ [![][cv-mrkakapopoloch]](https://civitai.com/models/1498700/micro-skirt?modelVersionId=3400203) | Short-skirt outfit subject. |
@@ -562,7 +595,6 @@ Style, control, and fix adapters. All target the base DiT unless noted. Grouped 
 | **Legs with stockings 1** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.07 GB | ⚠️ [![][cv-dushuai]](https://civitai.com/models/2999253/nude-collection-westernwomanlegswithstockings1qwen-image-21?modelVersionId=3401970) | Stocking-leg subject LoRA. |
 | **Nude figure 22** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.07 GB | ⚠️ [![][cv-dushuai]](https://civitai.com/models/2998123/nude-collection-westernwomanfullnude22qwen-image-21?modelVersionId=3400844) | Nude-figure subject LoRA. |
 | **Nude figure 11** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.07 GB | ⚠️ [![][cv-dushuai]](https://civitai.com/models/2997556/nude-collection-westernwomanfullnude11qwen-image-21?modelVersionId=3399893) | Nude-figure subject LoRA. |
-| **Anatomy correction** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.07 GB | ⚠️ [![][cv-nil__sphere]](https://civitai.com/models/3012772/revulva?modelVersionId=3419430) | Corrects the base model's female anatomy. Trained on 40 stripped images. |
 | **Milkmaid** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.07 GB | ⚠️ [![][cv-mrkakapopoloch]](https://civitai.com/models/377718/hucow-milking?modelVersionId=3397155) | A milking theme; trigger `m1lk1ng`. Also works for editing. |
 | **Showa shibari** | ![NSFW][ltype-nsfw] | ![bf16][badge-bf16] | 0.07 GB | ⚠️ [![][cv-wolfcatz]](https://civitai.com/models/136849/bondage-go-bdsm-lora-for-moss-qwen21-zib-f1-and-xl?modelVersionId=3422389) | Showa-era shibari; trigger `shibari` plus the era name. Weight 0.3-1.0. |
 | **SamsungCam** | ![NSFW][ltype-nsfw] | ![f16][badge-f16] | 0.07 GB | ⚠️ [![][cv-Danrisi]](https://civitai.com/models/1551668/samsungcam-ultrareal?modelVersionId=3354434) | The S-series phone look; strength 0.7, retrained on S25 Ultra shots. |
@@ -729,6 +761,7 @@ new number.
 [gh-Aero--Ex]: https://img.shields.io/badge/Aero--Ex-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Airmongsity]: https://img.shields.io/badge/Airmongsity-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Alissonerdx]: https://img.shields.io/badge/Alissonerdx-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-BennyDaBall]: https://img.shields.io/badge/BennyDaBall-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-BlazeMCworld]: https://img.shields.io/badge/BlazeMCworld-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Comfy--Org]: https://img.shields.io/badge/Comfy--Org-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-EliovpAI]: https://img.shields.io/badge/EliovpAI-lightgrey?style=flat-square&logo=huggingface&logoColor=white
@@ -740,9 +773,10 @@ new number.
 [gh-HangGlidersRule]: https://img.shields.io/badge/HangGlidersRule-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-HarleyWang]: https://img.shields.io/badge/HarleyWang-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Haverbex]: https://img.shields.io/badge/Haverbex-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-IgorAherne]: https://img.shields.io/badge/IgorAherne-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-JoyFusionAI]: https://img.shields.io/badge/JoyFusionAI-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Karsus1997]: https://img.shields.io/badge/Karsus1997-lightgrey?style=flat-square&logo=huggingface&logoColor=white
-[gh-LuffyTheFox]: https://img.shields.io/badge/LuffyTheFox-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-Lyricccco]: https://img.shields.io/badge/Lyricccco-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-MIUProject]: https://img.shields.io/badge/MIUProject-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-ML--Intern--lab]: https://img.shields.io/badge/ML--Intern--lab-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-MicksHF]: https://img.shields.io/badge/MicksHF-lightgrey?style=flat-square&logo=huggingface&logoColor=white
@@ -753,8 +787,10 @@ new number.
 [gh-Qwen]: https://img.shields.io/badge/Qwen-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-RunningHubAI]: https://img.shields.io/badge/RunningHubAI-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-SamuelTallet]: https://img.shields.io/badge/SamuelTallet-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-Schwi--AI]: https://img.shields.io/badge/Schwi--AI-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-SimpleTuner]: https://img.shields.io/badge/SimpleTuner-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Sutoonq]: https://img.shields.io/badge/Sutoonq-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-TawusGames]: https://img.shields.io/badge/TawusGames-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Viggle]: https://img.shields.io/badge/Viggle-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Wickedlizerd]: https://img.shields.io/badge/Wickedlizerd-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Zabin]: https://img.shields.io/badge/Zabin-lightgrey?style=flat-square&logo=huggingface&logoColor=white
@@ -821,6 +857,7 @@ new number.
 [cv-AHEKOT]: https://img.shields.io/badge/AHEKOT-lightgrey?style=flat-square
 [cv-AIGC--Singularity]: https://img.shields.io/badge/AIGC--Singularity-lightgrey?style=flat-square
 [cv-Agino]: https://img.shields.io/badge/Agino-lightgrey?style=flat-square
+[cv-AiMeASOP]: https://img.shields.io/badge/AiMeASOP-lightgrey?style=flat-square
 [cv-AiMetatron]: https://img.shields.io/badge/AiMetatron-lightgrey?style=flat-square
 [cv-AirbagGuy]: https://img.shields.io/badge/AirbagGuy-lightgrey?style=flat-square
 [cv-AishaAI]: https://img.shields.io/badge/AishaAI-lightgrey?style=flat-square
@@ -835,6 +872,7 @@ new number.
 [cv-Fenfel23]: https://img.shields.io/badge/Fenfel23-lightgrey?style=flat-square
 [cv-Luntrix]: https://img.shields.io/badge/Luntrix-lightgrey?style=flat-square
 [cv-Mister__A]: https://img.shields.io/badge/Mister__A-lightgrey?style=flat-square
+[cv-NGC__2237__]: https://img.shields.io/badge/NGC__2237__-lightgrey?style=flat-square
 [cv-NO8D]: https://img.shields.io/badge/NO8D-lightgrey?style=flat-square
 [cv-NoahGreyWood]: https://img.shields.io/badge/NoahGreyWood-lightgrey?style=flat-square
 [cv-PromptHippo]: https://img.shields.io/badge/PromptHippo-lightgrey?style=flat-square
@@ -846,11 +884,15 @@ new number.
 [cv-The__Midnight__Lab]: https://img.shields.io/badge/The__Midnight__Lab-lightgrey?style=flat-square
 [cv-VividMuse]: https://img.shields.io/badge/VividMuse-lightgrey?style=flat-square
 [cv-Wimile]: https://img.shields.io/badge/Wimile-lightgrey?style=flat-square
+[cv-Winchester99]: https://img.shields.io/badge/Winchester99-lightgrey?style=flat-square
 [cv-Xabsurd]: https://img.shields.io/badge/Xabsurd-lightgrey?style=flat-square
+[cv-YeULay190cm]: https://img.shields.io/badge/YeULay190cm-lightgrey?style=flat-square
 [cv-Zarj]: https://img.shields.io/badge/Zarj-lightgrey?style=flat-square
 [cv-__Envy__]: https://img.shields.io/badge/__Envy__-lightgrey?style=flat-square
 [cv-aimann]: https://img.shields.io/badge/aimann-lightgrey?style=flat-square
 [cv-auxilia]: https://img.shields.io/badge/auxilia-lightgrey?style=flat-square
+[cv-bazya022020810]: https://img.shields.io/badge/bazya022020810-lightgrey?style=flat-square
+[cv-bizs]: https://img.shields.io/badge/bizs-lightgrey?style=flat-square
 [cv-cfgscale]: https://img.shields.io/badge/cfgscale-lightgrey?style=flat-square
 [cv-chloeana]: https://img.shields.io/badge/chloeana-lightgrey?style=flat-square
 [cv-coachbate]: https://img.shields.io/badge/coachbate-lightgrey?style=flat-square
@@ -867,6 +909,7 @@ new number.
 [cv-latent--space--dreams]: https://img.shields.io/badge/latent--space--dreams-lightgrey?style=flat-square
 [cv-lcarspicturesdatabase]: https://img.shields.io/badge/lcarspicturesdatabase-lightgrey?style=flat-square
 [cv-lenML]: https://img.shields.io/badge/lenML-lightgrey?style=flat-square
+[cv-lepetitprince716355]: https://img.shields.io/badge/lepetitprince716355-lightgrey?style=flat-square
 [cv-makimakimakima12138]: https://img.shields.io/badge/makimakimakima12138-lightgrey?style=flat-square
 [cv-mastermerlin]: https://img.shields.io/badge/mastermerlin-lightgrey?style=flat-square
 [cv-mikkoph]: https://img.shields.io/badge/mikkoph-lightgrey?style=flat-square
@@ -874,6 +917,7 @@ new number.
 [cv-nil__sphere]: https://img.shields.io/badge/nil__sphere-lightgrey?style=flat-square
 [cv-qingfengy36939]: https://img.shields.io/badge/qingfengy36939-lightgrey?style=flat-square
 [cv-rakamik]: https://img.shields.io/badge/rakamik-lightgrey?style=flat-square
+[cv-rxtotx1111]: https://img.shields.io/badge/rxtotx1111-lightgrey?style=flat-square
 [cv-saladin]: https://img.shields.io/badge/saladin-lightgrey?style=flat-square
 [cv-sh1201]: https://img.shields.io/badge/sh1201-lightgrey?style=flat-square
 [cv-spanking__cutie]: https://img.shields.io/badge/spanking__cutie-lightgrey?style=flat-square
@@ -881,6 +925,7 @@ new number.
 [cv-updatemp]: https://img.shields.io/badge/updatemp-lightgrey?style=flat-square
 [cv-wolfcatz]: https://img.shields.io/badge/wolfcatz-lightgrey?style=flat-square
 [cv-wwwmanmoon103]: https://img.shields.io/badge/wwwmanmoon103-lightgrey?style=flat-square
+[cv-wystanbelov785]: https://img.shields.io/badge/wystanbelov785-lightgrey?style=flat-square
 
 <!-- HEADER BADGES -->
 [hf-shield]: https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black
