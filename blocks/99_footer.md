@@ -79,6 +79,7 @@
 [gh-lilylilith]: https://img.shields.io/badge/lilylilith-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-ling0322]: https://img.shields.io/badge/ling0322-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-linoyts]: https://img.shields.io/badge/linoyts-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-localai]: https://img.shields.io/badge/localai.hexmobius.com-lightgrey?style=flat-square
 [gh-madebyollin]: https://img.shields.io/badge/madebyollin-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-mfxq2l]: https://img.shields.io/badge/mfxq2l-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-mingyi456]: https://img.shields.io/badge/mingyi456-lightgrey?style=flat-square&logo=huggingface&logoColor=white
