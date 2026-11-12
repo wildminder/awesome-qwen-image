@@ -42,6 +42,7 @@
 [gh-SamuelTallet]: https://img.shields.io/badge/SamuelTallet-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Schwi--AI]: https://img.shields.io/badge/Schwi--AI-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-SimpleTuner]: https://img.shields.io/badge/SimpleTuner-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-StillDeadcode]: https://img.shields.io/badge/StillDeadcode-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Sutoonq]: https://img.shields.io/badge/Sutoonq-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-TawusGames]: https://img.shields.io/badge/TawusGames-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Viggle]: https://img.shields.io/badge/Viggle-lightgrey?style=flat-square&logo=huggingface&logoColor=white
@@ -147,8 +148,10 @@
 [cv-bazya022020810]: https://img.shields.io/badge/bazya022020810-lightgrey?style=flat-square
 [cv-bizs]: https://img.shields.io/badge/bizs-lightgrey?style=flat-square
 [cv-cfgscale]: https://img.shields.io/badge/cfgscale-lightgrey?style=flat-square
+[cv-chase1johnson1]: https://img.shields.io/badge/chase1johnson1-lightgrey?style=flat-square
 [cv-chloeana]: https://img.shields.io/badge/chloeana-lightgrey?style=flat-square
 [cv-coachbate]: https://img.shields.io/badge/coachbate-lightgrey?style=flat-square
+[cv-cupra]: https://img.shields.io/badge/cupra-lightgrey?style=flat-square
 [cv-dushuai]: https://img.shields.io/badge/dushuai-lightgrey?style=flat-square
 [cv-eznorb]: https://img.shields.io/badge/eznorb-lightgrey?style=flat-square
 [cv-fwaunstp733]: https://img.shields.io/badge/fwaunstp733-lightgrey?style=flat-square
