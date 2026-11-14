@@ -57,6 +57,7 @@
 [gh-catplusplus]: https://img.shields.io/badge/catplusplus-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-cgb]: https://img.shields.io/badge/cgb-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-changh95]: https://img.shields.io/badge/changh95-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-charliewwdev]: https://img.shields.io/badge/charliewwdev-lightgrey?style=flat-square&logo=github&logoColor=white
 [gh-chatrlabs]: https://img.shields.io/badge/chatrlabs-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-chfm]: https://img.shields.io/badge/chfm-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-circulus]: https://img.shields.io/badge/circulus-lightgrey?style=flat-square&logo=huggingface&logoColor=white
